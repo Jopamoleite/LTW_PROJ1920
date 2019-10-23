@@ -28,7 +28,7 @@ Create a website where owners can list their houses and apartments for tourists 
 
 #### The minimum expected requirements are the following:
 
-- All users should be able to (users can be simultaneously owners and tourists):
+### All users should be able to (users can be simultaneously owners and tourists):
 
 - Register a new account.
 
