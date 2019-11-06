@@ -1,0 +1,35 @@
+
+
+CREATE TABLE User(
+    id INTEGER PRIMARY KEY,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE Place(
+    id INTEGER PRIMARY KEY,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL UNIQUE,
+    precoDia REAL CHECK (precoDia > 0),
+    numMaximo INTEGER NOT NULL CHECK (numMaximo > 0),
+    descricao TEXT NOT NULL,
+    ownerID INTEGER NOT NULL,
+
+    FOREIGN KEY (ownerID) REFERENCES User(id)
+    ON DELETE CASCADE ON UPDATE CASCADE 
+);
+
+CREATE TABLE Reservations(
+    id INTEGER PRIMARY KEY,
+    placeID INTEGER NOT NULL,
+    touristID INTEGER NOT NULL,
+    dataInicio DATE NOT NULL,
+    duracao INTEGER NOT NULL,
+
+    FOREIGN KEY (placeID) REFERENCES Place(id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+
+    FOREIGN KEY (touristID) REFERENCES User(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
