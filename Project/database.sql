@@ -1,35 +1,51 @@
+/* LTW project 2019/2020
+ * Authors: Joao Leite, Marcia Teixeira, Joao Campos
+ * SQLite database file
+ */
 
 
-CREATE TABLE User(
+-- Users login using username and password
+-- Users edit their biography and e-mail
+-- Users can be owners
+    -- Owners manage their places for rental
+    -- Owners list reservations for their places
+-- Users can be tourists
+    -- Tourists search places to rent using criteria
+    -- Tourists rent a place if the place is available
+CREATE TABLE User_(
     id INTEGER PRIMARY KEY,
     username TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL
+    password_ TEXT NOT NULL,
+    bio TEXT,
+    email TEXT
 );
 
+-- Places have a title, address, price/day, capacity and description
+-- Places belong to a owner (user)
 CREATE TABLE Place(
     id INTEGER PRIMARY KEY,
-    nome TEXT NOT NULL,
-    morada TEXT NOT NULL UNIQUE,
-    precoDia REAL CHECK (precoDia > 0),
-    numMaximo INTEGER NOT NULL CHECK (numMaximo > 0),
-    descricao TEXT NOT NULL,
+    title TEXT NOT NULL,
+    address_ TEXT NOT NULL UNIQUE,
+    price_day REAL CHECK (price_day > 0),
+    capacity INTEGER NOT NULL CHECK (capacity > 0),
+    description_ TEXT NOT NULL,
     ownerID INTEGER NOT NULL,
 
-    FOREIGN KEY (ownerID) REFERENCES User(id)
-    ON DELETE CASCADE ON UPDATE CASCADE 
+    FOREIGN KEY (ownerID) REFERENCES User_(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- Reservation have a starting date and a duration
 CREATE TABLE Reservations(
     id INTEGER PRIMARY KEY,
     placeID INTEGER NOT NULL,
     touristID INTEGER NOT NULL,
-    dataInicio DATE NOT NULL,
-    duracao INTEGER NOT NULL,
+    begin_date DATE NOT NULL,
+    duration INTEGER NOT NULL,
 
     FOREIGN KEY (placeID) REFERENCES Place(id)
     ON DELETE CASCADE ON UPDATE CASCADE,
 
-    FOREIGN KEY (touristID) REFERENCES User(id)
+    FOREIGN KEY (touristID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
-
