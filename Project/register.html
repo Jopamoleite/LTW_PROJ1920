@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Register</title>    
+    <title>Login</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -9,8 +9,16 @@
     <header>
       <div id="signup">
         <a href="index.html">Back to Main Page</a>
-        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
       </div>
     </header>
+    <body>
+      <form action="register.php" method="post">
+          <p><label>Username: <input type="text" name="username" id="username"></label></p>
+          <p><label>Password: <input type="password" name="password" id="password"></label></p>
+          <p><label>Confirm Password: <input type="password" name="passwordConfirmation" id="passwordConfirmation"></label></p>
+          <input type="submit" value="Send">
+      </form>
+  </body>
   </body>
 </html>
