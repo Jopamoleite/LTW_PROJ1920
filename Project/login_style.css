@@ -20,8 +20,7 @@ header{
 	line-height: 0.4em;
     word-spacing: 15%;
     text-align: center;
-    box-shadow: 0em -5.5em 0.5em black,
-                0em 1.3em 0.5em black;
+    box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
 header h1{
@@ -37,7 +36,7 @@ input {
     appearance: none;
 }
 
-#user_input form{
+form{
     color:#252525;
 	background-color: #FFFFFF;
     font-family: "Roboto";
@@ -46,20 +45,23 @@ input {
 	line-height: 0.4em;
     word-spacing: 15%;
     text-align: center;
-    box-shadow: 0em 1.4em 0.5em black;
+    box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
 #leave_login{
-    color:#252525;
-	background-color: #FFFFFF;
+    background-color: #252525;
+    color: #FFFFFF;
+    padding: 0.7em;
     font-family: "Roboto";
     font-weight: lighter;
-	padding: 1em;
-	padding-bottom: 0.5em;
-	line-height: 0.4em;
-    word-spacing: 15%;
-    text-align: center;
-    box-shadow: 0em 1.4em 0.5em black;
+}
+
+button{
+    background-color: #252525;
+    color: #FFFFFF;
+    padding: 0em;
+    font-family: "Roboto";
+    font-weight: lighter;
 }
 
 
