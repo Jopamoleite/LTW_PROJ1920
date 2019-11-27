@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Login</title>    
+    <title>Casinhas - Login</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="login_style.css" rel="stylesheet">
+    <link href="login_layout.css" rel="stylesheet">
   </head>
   <body>
     <header>
-        <h1><a href="login.html">Login</a></h1>
+        <h1><a href="login.html">Casinhas</a></h1>
     </header>
-    <body>
+    <div id="user_input">
       <form action="login.php" method="post">
-          <p><label>Username: <input type="text" name="username" id="username"></label></p>
-          <p><label>Password: <input type="password" name="password" id="password"></label></p>
-          <input type="submit" value="Send">
+            <p><label>Username: <input type="text" name="username" id="username"></label></p>
+            <p><label>Password: <input type="password" name="password" id="password"></label></p>
+            <input type="submit" value="Send">
       </form>
       <div id="leave_login">
-        <a href="index.html">Back to Main Page</a>
-        <a href="register.html">Register</a>
+          <a href="index.html">Back to Main Page</a>
+          <a href="register.html">Register</a>
       </div>
-  </body>
+    </div>
   </body>
 </html>
