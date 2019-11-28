@@ -2,7 +2,7 @@
 
 <body>
   <div id="main">
-    <h1><a href="index.html">HouseHunt</a></h1>
+    <h1><a href="index.php">HouseHunt</a></h1>
     <form action="login.php" method="post">
       <p><label>Username: <input type="text" name="username" id="username"></label></p>
       <p><label>Password: <input type="password" name="password" id="password"></label></p>
