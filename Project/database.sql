@@ -6,12 +6,6 @@
 
 -- Users login using username and password
 -- Users edit their biography and e-mail
--- Users can be owners
-    -- Owners manage their places for rental
-    -- Owners list reservations for their places
--- Users can be tourists
-    -- Tourists search places to rent using criteria
-    -- Tourists rent a place if the place is available
 CREATE TABLE User_(
     id INTEGER PRIMARY KEY,
     username TEXT NOT NULL UNIQUE,
