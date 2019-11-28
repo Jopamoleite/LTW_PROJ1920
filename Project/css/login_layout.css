@@ -1,0 +1,28 @@
+body{
+    display: grid;
+    grid-template-rows: 8em 20em 2em;
+    grid-template-columns: 15em 15em;
+    grid-template-areas: "header header"
+                         "form form"
+                         "send register";
+}
+
+header{
+    grid-area: header;
+}
+
+form{
+    grid-area: form;
+}
+
+#loginbutton{
+    grid-area: send;
+    position: relative;
+    left: -60px;
+}
+
+#leave_login{
+    grid-area: register;
+    position: relative;
+    left: 60px;
+}
