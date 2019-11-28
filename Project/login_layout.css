@@ -1,6 +1,6 @@
 body{
     display: grid;
-    grid-template-rows: 6em 15em 15em;
+    grid-template-rows: 8em 20em 2em;
     grid-template-columns: 15em 15em;
     grid-template-areas: "header header"
                          "form form"

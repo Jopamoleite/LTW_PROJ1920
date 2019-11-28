@@ -14,7 +14,7 @@ body{
 header{
 	color:#252525;
 	background-color: #FFFFFF;
-	font-family: "Roboto";
+	font-family: "Roboto",sans-serif;
 	padding: 1em;
 	padding-bottom: 0.5em;
 	line-height: 0.4em;
@@ -39,7 +39,7 @@ input {
 form{
     color:#252525;
 	background-color: #FFFFFF;
-    font-family: "Roboto";
+    font-family: "Roboto",sans-serif;
     font-weight: lighter;
 	padding: 5em;
 	line-height: 0.4em;
@@ -52,7 +52,7 @@ form{
     background-color: #252525;
     color: #FFFFFF;
     padding: 0.7em;
-    font-family: "Roboto";
+    font-family: "Roboto",sans-serif;
     font-weight: lighter;
 }
 
@@ -60,7 +60,7 @@ button{
     background-color: #252525;
     color: #FFFFFF;
     padding: 0em;
-    font-family: "Roboto";
+    font-family: "Roboto",sans-serif;
     font-weight: lighter;
 }
 
