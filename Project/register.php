@@ -1,20 +1,19 @@
-<?php 
-    include_once('includes/start.php');
-    include_once('database/db_user.php');
+<?include_once 'templates/header.php' ?>
 
-   $myusername = $_POST['username'];
-   $mypassword = $_POST['password'];
-   $mypasswordConfirmation = $_POST['passwordConfirmation'];
+<body>
+  <header>
+      <h1><a href="register.html">Register</a></h1>
+  </header>
+  <form action="register.php" method="post">
+    <p><label>Username: <input type="text" name="username" id="username"></label></p>
+    <p><label>Password: <input type="password" name="password" id="password"></label></p>
+    <p><label>Confirm Password: <input type="password" name="passwordConfirmation" id="passwordConfirmation"></label></p>
+    <input type="submit" value="Send">
+  </form>
+  <div id="leave_register">
+    <a href="index.html">Back to Main Page</a>
+    <a href="login.html">Login</a>
+  </div>
+</body>
 
-   if($mypassword != $mypasswordConfirmation){
-      $error = "Your passwords must match\n";
-      echo $error;
-   }else{
-      insertUser($myusername, $mypassword);
-      header("Location: index.html");
-   }
-
-?> 
-   <body>
-	   <p> <a href="register.html">Try Again</a> </p>
-   </body>
+<?include_once 'templates/footer.php' ?>

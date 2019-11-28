@@ -11,7 +11,7 @@ body{
 	max-width: 70%;
 }
 
-header{
+div#main{
 	color:#252525;
 	background-color: #FFFFFF;
     font-family: "Roboto";
@@ -23,7 +23,7 @@ header{
     box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
-header h1{
+div#main h1{
     font-size: 2em;
     font-family: "Cambria";
     font-weight: bolder;
@@ -32,68 +32,37 @@ header h1{
     margin-bottom: 2em;
 }
 
-header h2{
+div#main h2{
     font-size: 1em;
     font-weight: lighter;
     font-style: italic;
     text-align: center;
 }
 
-input {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-/* form{
-    color:#252525;
+div#signup{
+	color:#252525;
 	background-color: #FFFFFF;
     font-family: "Roboto";
-    font-weight: lighter;
-	padding: 5em;
+	padding: 1em;
+	padding-bottom: 0.5em;
 	line-height: 0.4em;
     word-spacing: 15%;
     text-align: center;
     box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
-} */
+}
 
-#leave_login{
+.button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+
     background-color: #252525;
     color: #FFFFFF;
     padding: 0.7em;
-    font-family: "Roboto";
+    padding-left: 7em;
+    padding-right: 7em;
     font-weight: lighter;
-}
-
-button{
-    background-color: #252525;
-    color: #FFFFFF;
-    padding: 0em;
-    font-family: "Roboto";
-    font-weight: lighter;
-}
-
-#signup{
-	background-color: #FFFFFF;
-    box-shadow: 0em 0.6em 0.5em rgba(0.7,0.7,0.7, 0.4);
-    font-family: "Roboto";
-    font-weight: lighter;
-    text-align: center;
-    padding:3em;
-}
-
-#signup :nth-child(n) {
-    background-color: #252525;
-    color: #FFFFFF;
-    padding: 0.7em;
-    font-weight: lighter;
-}
-
-#signup :nth-child(1) {
-    margin-left: 1em;
-    margin-right: 0.5em;
-}
-
-#signup :nth-child(2) {
-    margin-left: 0.5em;
-    margin-right: 1em;
 }
