@@ -1,9 +1,17 @@
 <?php 
-$myusername = $_POST['username'];
-$mypassword = $_POST['password'];
+   $myusername = $_POST['username'];
+   $mypassword = $_POST['password'];
+
+   include_once('includes/start.php');
+   include_once('database/db_user.php');
+
+   if(isLoginCorrect($myusername, $mypassword)){
+      setUser($myusername);
+      header("Location: index.html");
+   }
+
 ?>
 
    <body>
-      <p> <?=$myusername?> </p>
-	   <a href="index.html">Return to Form</a>
+	   <a href="login.html">Invalid credentials</a>
    </body>
