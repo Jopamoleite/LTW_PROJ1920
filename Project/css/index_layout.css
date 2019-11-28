@@ -1,6 +1,6 @@
 body{
     display: grid;
-    grid-template-rows: 15em 10em;
+    grid-template-rows: 20em 10em;
     grid-template-columns: 30em;
 }
 
