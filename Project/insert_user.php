@@ -4,17 +4,29 @@
 
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
-   $mypasswordConfirmation = $_POST['passwordConfirmation'];
+   $repeatPass = $_POST['passwordConfirmation'];
 
-   if($mypassword != $mypasswordConfirmation){
-      $error = "Your passwords must match\n";
-      echo $error;
-   }else{
-      insertUser($myusername, $mypassword);
-      header("Location: index.html");
+   if (!empty($myusername) && !empty($mypassword)&& !empty($repeatPass)) {
+
+      $myusername = trim(htmlspecialchars($myusername));
+      $mypassword = trim(htmlspecialchars($mypassword));
+      $repeatPass = trim(htmlspecialchars($repeatPass));
+   
    }
 
-?> 
-   <body>
-	   <p> <a href="register.html">Try Again</a> </p>
-   </body>
+   if($mypassword != $repeatPass){
+      $error = "Your passwords must match\n";
+      $_SESSION["errormsg"] = $error;
+      header("Location: register.php");
+   }else{
+      $error = insertUser($myusername, $mypassword);
+
+      if(strlen($error) != 0){
+         $_SESSION["errormsg"] = $error;
+         header("Location: register.php");
+      }else{
+         header("Location: index.php");
+      }
+   }
+
+?>

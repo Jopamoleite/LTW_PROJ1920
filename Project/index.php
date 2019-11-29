@@ -1,4 +1,5 @@
 <?include_once "templates/header.php" ?>
+<?include_once('database/db_user.php') ?>
 
 <body>
   <div id="main">

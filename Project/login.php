@@ -7,11 +7,7 @@
 
    if(isLoginCorrect($myusername, $mypassword)){
       setUser($myusername);
-      header("Location: index.html");
+      header("Location: index.php");
    }
 
 ?>
-
-   <body>
-	   <a href="login.html">Invalid credentials</a>
-   </body>

@@ -13,10 +13,10 @@
         try {
             $stmt = $dbh->prepare('INSERT INTO User_(username,password_) VALUES (?, ?)');
             $stmt->execute(array($username, md5($password)));
+            return "";
         } catch (PDOException $e) { 
-            die("Username in use");
+            return "username in use";
         }
-
     }
 
 ?>
