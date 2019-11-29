@@ -2,17 +2,25 @@
 
     function isLoginCorrect($username, $password) {
         global $dbh;
-        $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ? AND password_ = ?');
-       
-        $stmt->execute(array($username, md5($password)));
-        return $stmt->fetch() !== false;
+        $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ?');
+        
+        $stmt->execute(array($username));
+        $row = $stmt->fetch();
+        $storedPassword = $row['password_'];
+
+        $valid = password_verify($password, $storedPassword);
+
+        return $valid;
     }
 
-    function insertUser($username, $password){
+    function insertUser($username, $password, $email){
         global $dbh;
         try {
-            $stmt = $dbh->prepare('INSERT INTO User_(username,password_) VALUES (?, ?)');
-            $stmt->execute(array($username, md5($password)));
+            $stmt = $dbh->prepare('INSERT INTO User_(username, password_, email) VALUES (?, ?, ?)');
+
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $stmt->execute(array($username, $hash, $email));
             return "";
         } catch (PDOException $e) { 
             return "username in use";
