@@ -1,15 +1,17 @@
 <?include_once('database/db_user.php') ?>
 
 <body>
-  <div id="main">
+  <div class="main" id="register_page">
     <h1><a href="index.php">HouseHunt</a></h1>
+    <h2><a>Crie o seu perfil uwu~~</a></h2>
     <form action="insert_user.php" method="post">
       <div>
-        <label>Username: <input type="text" name="username" id="username" placeholder="Username" required></label>
-        <br><label>Password: <input type="password" name="password" id="password" placeholder="Password" required></label>
-        <br><label>Repeat Password: <input type="password" name="repeat" id="repeat" placeholder="Repeat" required></label>
+        <label><input type="text" name="username" id="username" placeholder="  Username" required></label>
+        <br><label><input type="email" name="email" id="email" placeholder="  Email" required></label>
+        <br><label><input type="password" name="password" id="password" placeholder="  Password" required></label>
+        <br><label><input type="password" name="repeat" id="repeat" placeholder="  Confirm password" required></label>
       </div>
-      <input type="submit" value="Send">
+      <input class="button" id="create_button" type="submit" value="Create profile">
     </form>
   </div>
   <div id='alert_msg'>

@@ -40,8 +40,13 @@ div.main h2{
     margin-bottom: 4em;
 }
 
+#register_page{
+    padding-bottom: 30em;
+}
+
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     box-sizing: border-box;
     margin-bottom: 0.5em;
     padding: 0.25em;
@@ -93,4 +98,8 @@ input[type="password"] {
     position: relative;
     top: -39.4px;
     left: 78px;
+}
+
+#create_button{
+    margin-top: 2em;
 }

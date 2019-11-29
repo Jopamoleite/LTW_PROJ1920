@@ -2,7 +2,7 @@
 <?include_once "templates/common/header.php" ?>
 
 <body>
-  <div id="main">
+  <div class="main">
     <form action="logout.php" method="post">
       <input class="button" type="submit" value="Logout">
     </form>
