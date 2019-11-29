@@ -18,15 +18,3 @@ header h1{
 header h2{
 	grid-area: h2;
 }
-
-#signup{
-    grid-row: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#signup a{
-    flex-grow: 1;
-}

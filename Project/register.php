@@ -1,7 +1,7 @@
 <?include_once 'templates/header.php' ?>
 
 <body>
-  <div id="main">
+  <div class="main">
     <h1><a href="index.php">HouseHunt</a></h1>
     <form action="register.php" method="post">
       <div align="left">

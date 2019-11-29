@@ -1,7 +1,7 @@
 <?include_once "templates/header.php" ?>
 
 <body>
-  <div id="main">
+  <div class="main">
     <h1><a href="index.php">HouseHunt</a></h1>
     <form action="login.php" method="post">
       <p><label>Username: <input type="text" name="username" id="username"></label></p>
@@ -9,7 +9,7 @@
       <input class="button" type="submit" value="Login">
     </form>
   </div>
-  <div id="main">
+  <div class="main">
     <form action="register.php" method="post">
       <input class="button" type="submit" value="Register">
     </form>

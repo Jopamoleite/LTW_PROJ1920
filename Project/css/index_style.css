@@ -11,7 +11,7 @@ body{
 	max-width: 70%;
 }
 
-div#main{
+div.main{
 	color:#252525;
 	background-color: #FFFFFF;
 	font-family: "Roboto",sans-serif;
@@ -23,7 +23,7 @@ div#main{
     box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
-div#main h1{
+div.main h1{
     font-size: 2em;
     font-family: "Cambria";
     font-weight: bolder;
@@ -32,21 +32,11 @@ div#main h1{
     margin-bottom: 2em;
 }
 
-div#main h2{
+div.main h2{
     font-size: 1em;
     font-weight: lighter;
     font-style: italic;
     text-align: center;
-}
-
-div#signup{
-	color:#252525;
-	background-color: #FFFFFF;
-    box-shadow: 0em 0.6em 0.5em rgba(0.7,0.7,0.7, 0.4);
-    font-family: "Roboto",sans-serif;
-    font-weight: lighter;
-    text-align: center;
-    box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
 .button{
@@ -59,18 +49,8 @@ div#signup{
 
     background-color: #252525;
     color: #FFFFFF;
+    height: 3em;
+    width: 17em;
     padding: 0.7em;
-    padding-left: 7em;
-    padding-right: 7em;
     font-weight: lighter;
-}
-
-#signup :nth-child(1) {
-    margin-left: 1em;
-    margin-right: 0.5em;
-}
-
-#signup :nth-child(2) {
-    margin-left: 0.5em;
-    margin-right: 1em;
 }
