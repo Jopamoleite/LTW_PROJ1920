@@ -4,7 +4,7 @@
 
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
-   $repeatPass = $_POST['passwordConfirmation'];
+   $repeatPass = $_POST['repeat'];
 
    if (!empty($myusername) && !empty($mypassword)&& !empty($repeatPass)) {
 

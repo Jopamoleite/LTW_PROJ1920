@@ -1,4 +1,4 @@
-<?include_once "templates/header.php" ?>
+<?include_once "templates/common/header.php" ?>
 <?include_once('database/db_user.php') ?>
 
 <body>
@@ -17,4 +17,4 @@
   </div>
 </body>
 
-<?include_once "templates/footer.php" ?>
+<?include_once "templates/common/footer.php" ?>
