@@ -37,6 +37,31 @@ div.main h2{
     font-weight: lighter;
     font-style: italic;
     text-align: center;
+    margin-bottom: 4em;
+}
+
+input[type="text"],
+input[type="password"] {
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+    width: 19em;
+    height: 2.2em;
+    border: 1px solid #DDDDDD;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.button:hover{
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+    
+    text-shadow: 0px 0px 5px #BBBBBB;
 }
 
 .button{
@@ -45,12 +70,27 @@ div.main h2{
     appearance: button;
 
     text-decoration: none;
+    text-transform: uppercase;
     color: initial;
 
+    border: none;
+    border-radius: 2px;
+    opacity: 1;
     background-color: #252525;
     color: #FFFFFF;
     height: 3em;
-    width: 17em;
-    padding: 0.7em;
+    width: 11.1em;
+    font-family: 'Roboto', sans-serif;
     font-weight: lighter;
+}
+
+#login_button{
+    position: relative;
+    left: -78px;
+}
+
+#register_button{
+    position: relative;
+    top: -39.4px;
+    left: 78px;
 }

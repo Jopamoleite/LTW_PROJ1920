@@ -5,15 +5,16 @@
 <body>
   <div class="main">
     <h1><a href="index.php">HouseHunt</a></h1>
+    <h2><a>slogan msm deep</a></h2>
     <form action="login.php" method="post">
-      <p><label>Username: <input type="text" name="username" id="username" placeholder="Username" required></label></p>
-      <p><label>Password: <input type="password" name="password" id="password" placeholder="Password" required></label></p>
-      <input class="button" type="submit" value="Login">
+      <p><label><input type="text" name="username" id="username" placeholder="   Username" required></label></p>
+      <p><label><input type="password" name="password" id="password" placeholder="   Password" required></label></p>
+      <input id="login_button" class="button" type="submit" value="Login">
     </form>
   </div>
   <div class="main">
     <form action="register.php" method="post">
-      <input class="button" type="submit" value="Register">
+      <input id="register_button" class="button" type="submit" value="Register">
     </form>
   </div>
   <div id='alert_msg'>

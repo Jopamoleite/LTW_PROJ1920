@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    grid-row: 1;
+    grid-row: 1/2;
     display: grid;
 	grid-template-areas: "h1"
                          "h2";
@@ -18,3 +18,5 @@ header h1{
 header h2{
 	grid-area: h2;
 }
+
+
