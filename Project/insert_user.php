@@ -5,12 +5,14 @@
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
    $repeatPass = $_POST['repeat'];
+   $myemail = $_POST['email'];
 
-   if (!empty($myusername) && !empty($mypassword)&& !empty($repeatPass)) {
+   if (!empty($myusername) && !empty($mypassword) && !empty($repeatPass) && !empty($myemail)) {
 
       $myusername = trim(htmlspecialchars($myusername));
       $mypassword = trim(htmlspecialchars($mypassword));
       $repeatPass = trim(htmlspecialchars($repeatPass));
+      $myemail = trim(htmlspecialchars($myemail));
    
    }
 
@@ -19,7 +21,7 @@
       $_SESSION["errormsg"] = $error;
       header("Location: register.php");
    }else{
-      $error = insertUser($myusername, $mypassword);
+      $error = insertUser($myusername, $mypassword, $myemail);
 
       if(strlen($error) != 0){
          $_SESSION["errormsg"] = $error;
