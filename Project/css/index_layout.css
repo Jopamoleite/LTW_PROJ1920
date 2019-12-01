@@ -19,4 +19,15 @@ header h2{
 	grid-area: h2;
 }
 
+#login_button{
+    position: relative;
+    left: -78px;
+}
+
+#register_button{
+    position: relative;
+    top: -39.4px;
+    left: 78px;
+}
+
 

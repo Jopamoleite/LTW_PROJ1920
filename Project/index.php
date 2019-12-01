@@ -1,11 +1,11 @@
 <?include_once('includes/start.php') ?>
 <?include_once('database/db_user.php') ?>
-<?include_once "templates/common/header.php" ?>
+<?include_once "templates/common/initial_header.php" ?>
 
 <body>
   <div class="main">
     <h1><a href="index.php">HouseHunt</a></h1>
-    <h2><a>slogan msm deep</a></h2>
+    <h2>slogan msm deep</h2>
     <form action="login.php" method="post">
       <p><label><input type="text" name="username" id="username" placeholder="   Username" required></label></p>
       <p><label><input type="password" name="password" id="password" placeholder="   Password" required></label></p>
@@ -22,4 +22,4 @@
   </div> 
 </body>
 
-<?include_once "templates/common/footer.php" ?>
+<?include_once "templates/common/initial_footer.php" ?>

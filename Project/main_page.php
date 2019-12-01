@@ -1,5 +1,5 @@
 <?include_once('includes/start.php') ?>
-<?include_once "templates/common/header.php" ?>
+<?include_once "templates/common/initial_header.php" ?>
 
 <body>
   <div class="main">
@@ -9,4 +9,4 @@
   </div>
 </body>
 
-<?include_once "templates/common/footer.php" ?>
+<?include_once "templates/common/initial_footer.php" ?>

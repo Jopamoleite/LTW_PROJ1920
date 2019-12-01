@@ -14,7 +14,7 @@
 
    if(isLoginCorrect($myusername, $mypassword)){
       setUser($myusername);
-      header("Location: main_page.php");
+      header("Location: searchresults.php");
    }else{
       $error = "Invalid credentials\n";
       $_SESSION["errormsg"] = $error;
