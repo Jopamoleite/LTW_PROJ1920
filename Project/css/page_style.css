@@ -11,6 +11,7 @@ body{
 .page_header{
     background-color: #FFFFFF;
     color:#252525;
+    padding: 0em;
     padding-left: 1em;
     padding-right: 1em;
     box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
@@ -21,17 +22,19 @@ body{
     font-family: 'Cambria';
     font-weight: bolder;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-left: 1em;
 }
 
 #user_profile a{
     font-family: 'Open Sans', sans-serif;
-    margin-right: 1em;
     margin-top: 3em;
-    font-size: 0.8em;
+    margin-right: 1em;
+    font-size: 0.7em;
     font-weight: lighter;
-    font-style: italic;
     color: #888888;
 }
 
+#user_profile img{
+    margin-right: 1em;
+}

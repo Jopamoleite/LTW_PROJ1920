@@ -11,11 +11,11 @@
   <body>
     <div class="page_header">
       <div id="logo_name">
-          <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="30" height="30">
-          <h1><a href="index.php">HouseHunt</a></h1>
+          <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
+          <h1><a href="searchresults.php">HouseHunt</a></h1>
       </div>
       <div id="user_profile">
-          <a href="">nome_do_user</a> <!--TODO link p/ perfil e obter nome do user>-->
-          <img src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="30" height="30">
+          <a href="">Profile</a> <!--TODO link p/ perfil e obter nome/foto do user>-->
+          <a href=""><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></a>
       </div>
     </div>
