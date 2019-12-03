@@ -1,0 +1,10 @@
+.search_bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.search_form{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
