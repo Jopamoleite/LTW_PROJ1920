@@ -1,6 +1,9 @@
 .search_bar{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 30px;
 }
 
 .search_form{
