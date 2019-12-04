@@ -11,6 +11,11 @@
     <link href="css/search_bar_style.css" rel="stylesheet">
   </head>
   <body>
+    <?php 
+      if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){ 
+        header("Location: invalid_back.php"); 
+      }
+    ?>
     <div class="page_header">
       <div id="logo_name">
           <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
