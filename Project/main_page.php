@@ -1,12 +1,7 @@
 <?include_once('includes/start.php') ?>
-<?include_once "templates/common/initial_header.php" ?>
+<?include_once('database/db_user.php') ?>
+<?include_once "templates/common/header.php" ?>
 
-<body>
-  <div class="main">
-    <form action="logout.php" method="post">
-      <input class="button" type="submit" value="Logout">
-    </form>
-  </div>
-</body>
+<?include_once "templates/user/searchbar.php" ?>
 
 <?include_once "templates/common/initial_footer.php" ?>

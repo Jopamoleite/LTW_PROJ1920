@@ -19,7 +19,7 @@
     <div class="page_header">
       <div id="logo_name">
           <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
-          <h1><a href="searchresults.php">HouseHunt</a></h1>
+          <h1><a href="main_page.php">HouseHunt</a></h1>
       </div>
       <div id="user_profile_info">
           <a href="">
