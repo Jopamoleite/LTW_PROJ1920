@@ -15,7 +15,4 @@
       <input class="button" id="create_button" type="submit" value="Create profile">
     </form>
   </div>
-  <div id='alert_msg'>
-    <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
-  </div> 
 </body>
