@@ -1,5 +1,5 @@
 <div class="search_bar">
-    <form class="search_form" method="get" action="">
+    <form class="search_form flex-container" method="get" action="">
         <div class="search_input_field_large">
             <label class="search_label">Going to</label>
             <input class="search_input" type="text" placeholder="Destination">
@@ -17,5 +17,5 @@
             <input class="search_input" type="number" value="1" min="1" max="100" step="1">
         </div>
         <button class="submit_search_button" type="submit">Search</button>
-</form>
+    </form>
 </div>
