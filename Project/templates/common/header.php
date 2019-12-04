@@ -20,12 +20,14 @@
           <a href="">
           <?php echo $_SESSION["username"]; ?>
           </a> <!--TODO link p/ perfil-->
-          <a href=""><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></a>
-      
           <div class="profile_dropdown">
-            <form action="logout.php" method="post">
-              <button class="submit_search_button" type="submit">Logout</button>
-            </form>
+            <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
+            <div class="dropdown_content">
+              <a href="">My Profile</a>
+              <form action="logout.php" method="post">
+                <button class="logout_button" type="submit">Logout</button>
+              </form>
+            </div>
           </div>
-        </div>
       </div>
+    </div>

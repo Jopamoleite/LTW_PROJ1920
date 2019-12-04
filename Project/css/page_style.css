@@ -26,15 +26,66 @@ body{
     margin-left: 1em;
 }
 
-#user_profile a{
+#user_profile_info a{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3em;
     margin-right: 1em;
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-weight: lighter;
     color: #888888;
 }
 
-#user_profile img{
+#user_profile_info img{
     margin-right: 1em;
+}
+
+.profile_dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_content{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 100px;
+    padding: 10px;
+    padding-top: 20px;
+    z-index: 1;
+    display: none;
+    top: 20px;
+    right:0;
+}
+
+.profile_dropdown:hover .dropdown_content {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.dropdown_content:hover{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.dropdown_content a, .logout_button{
+    cursor: pointer;
+}
+
+.logout_button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    border: none;
+    text-decoration: none;
+    background-color: #FFFFFF;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: #888888;
+    padding-left: 0px;
 }
