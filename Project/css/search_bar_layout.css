@@ -11,3 +11,7 @@
     justify-content: space-between;
     align-content: center;
 }
+
+.submit_search_button{
+    align-self: center;
+}

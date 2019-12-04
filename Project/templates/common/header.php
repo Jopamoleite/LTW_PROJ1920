@@ -16,10 +16,16 @@
           <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
           <h1><a href="searchresults.php">HouseHunt</a></h1>
       </div>
-      <div id="user_profile">
+      <div id="user_profile_info">
           <a href="">
           <?php echo $_SESSION["username"]; ?>
-          </a> <!--TODO link p/ perfil e obter nome/foto do user>-->
+          </a> <!--TODO link p/ perfil-->
           <a href=""><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></a>
+      
+          <div class="profile_dropdown">
+            <form action="logout.php" method="post">
+              <button class="submit_search_button" type="submit">Logout</button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
