@@ -27,6 +27,12 @@
     box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
-#profile img{
+#profile_pic{
     margin: 20px 40px 20px 0px;
+}
+
+.profile_pic{
+    margin: 0px;
+    height: 15px;
+    width: 15px;
 }
