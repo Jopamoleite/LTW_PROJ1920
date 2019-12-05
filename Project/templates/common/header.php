@@ -17,13 +17,15 @@
     ?>
     <div class="page_header">
       <div id="logo_name">
-          <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
+          <a href="main_page.php">
+            <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
+          </a>
           <h1><a href="main_page.php">HouseHunt</a></h1>
       </div>
       <div id="user_profile_info">
-          <a href="">
+          <a href="user_profile.php">
           <? echo $_SESSION["username"]; ?>
-          </a> <!--TODO link p/ perfil-->
+          </a>
           <div class="profile_dropdown">
             <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">

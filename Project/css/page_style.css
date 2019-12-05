@@ -39,6 +39,10 @@ body{
     align-self: center;
 }
 
+#logo_name a{
+    align-self: center;
+}
+
 #user_profile_info a{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3em;
