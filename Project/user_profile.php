@@ -9,13 +9,21 @@
   <img src="images\default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div id="profile_info">
     <h1> Shronk </h1>
-      <p>
-        <img src="images\location.png" class="icon" alt="loca" width="15" height="15">
-        Far Far Away
-      </p>
-    <p> *111# </p>
-    <p> mostrakahooteucu@gmail.com </p>
-    <p> A tua prima é uma cadeira tuning </p>
+    <p>
+      <img src="images\location.png" class="icon" alt="loca" width="15" height="15">
+      Far Far Away
+    </p>
+    <p>
+      <img src="images\telephone.png" class="icon" alt="loca" width="15" height="15">
+      *111#
+    </p>
+    <p>
+      <img src="images\mail.png" class="icon" alt="loca" width="15" height="15">
+      mostrakahooteucu@gmail.com
+    </p>
+    <p id="description">
+      A tua prima é uma cadeira tuning
+    </p>
   </div>
 </div>
 
