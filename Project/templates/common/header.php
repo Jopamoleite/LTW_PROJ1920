@@ -23,17 +23,20 @@
           <h1><a href="main_page.php">HouseHunt</a></h1>
       </div>
       <div id="user_profile_info">
+        <div id="username_link">
           <a href="user_profile.php">
           <? echo $_SESSION["username"]; ?>
           </a>
-          <div class="profile_dropdown">
-            <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
+        </div>
+        <div class="profile_dropdown">
+          <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
-              <a href="user_profile.php">My Profile</a>
+              <br>
+              <div><a href="user_profile.php">My Profile</a></div>
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>
             </div>
-          </div>
+        </div>
       </div>
     </div>
