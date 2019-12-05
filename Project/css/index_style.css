@@ -4,11 +4,41 @@ a {
 }
 
 body{
+    display: grid;
+    grid-template-rows: 20em 10em;
+    grid-template-columns: 30em;
+
 	background-color: #E8A87C;
     margin-left: 10em;
     margin-bottom: 10em;
 	margin-top: 0;
 	max-width: 70%;
+}
+
+header{
+    grid-row: 1/2;
+    display: grid;
+	grid-template-areas: "h1"
+                         "h2";
+}
+
+header h1{
+	grid-area: h1;
+}
+
+header h2{
+	grid-area: h2;
+}
+
+#login_button{
+    position: relative;
+    left: -78px;
+}
+
+#register_button{
+    position: relative;
+    top: -39.4px;
+    left: 78px;
 }
 
 div.main{
