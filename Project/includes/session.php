@@ -9,4 +9,12 @@
         $_SESSION['username'] = "";
     }
 
+    function setID($id){
+        $_SESSION['userID'] = $id;
+    }
+    
+    function unsetID(){
+        $_SESSION['userID'] = "";
+    }
+
 ?>
