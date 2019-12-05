@@ -2,7 +2,7 @@
 <?include_once('database/db_user.php') ?>
 <body>
   <?php 
-      if(isset($_SESSION["username"]) && !empty($_SESSION["username"])){ 
+      if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])){ 
         header("Location: main_page.php"); 
       }
   ?>

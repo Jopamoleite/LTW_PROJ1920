@@ -29,6 +29,20 @@
             return "username in use";
         }
     }
+    
+    function getUserId($myusername){
+        global $dbh;
+        $stmt = $dbh->prepare('SELECT id
+                               FROM User_
+                               WHERE username = ?');
+
+        $stmt->execute(array($myusername));
+        $row = $stmt->fetch();
+
+        $id = $row['id'];
+
+        return $id;
+    }
 
     //untested
     function editBio($username, $bio){

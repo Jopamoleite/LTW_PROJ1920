@@ -11,7 +11,7 @@
   </head>
   <body>
     <?
-      if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){
+      if(!isset($_SESSION['userID']) || empty($_SESSION['userID'])){
         header("Location: invalid_back.php");
       }
     ?>

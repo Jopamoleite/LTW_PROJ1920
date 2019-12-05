@@ -2,6 +2,7 @@
   include_once('includes/start.php');
 
   unsetUser();
+  unsetID();
 
   session_destroy();
   
