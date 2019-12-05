@@ -9,6 +9,9 @@ body{
 }
 
 .page_header{
+    display: flex;
+    justify-content: space-between;
+
     background-color: #FFFFFF;
     color:#252525;
     padding: 0em;
@@ -26,6 +29,16 @@ body{
     margin-left: 1em;
 }
 
+#logo_name{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.page_header img{
+    float: right;
+    align-self: center;
+}
+
 #user_profile_info a{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3em;
@@ -37,6 +50,11 @@ body{
 
 #user_profile_info img{
     margin-right: 1em;
+}
+
+#user_profile a{
+    align-self: center;
+    position: relative;
 }
 
 .profile_dropdown{

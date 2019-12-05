@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
     <link href="css/page_style.css" rel="stylesheet">
-    <link href="css/page_layout.css" rel="stylesheet">
-    <link href="css/search_bar_layout.css" rel="stylesheet">
     <link href="css/search_bar_style.css" rel="stylesheet">
+    <link href="css/user_profile_style.css" rel="stylesheet">
   </head>
   <body>
     <?
@@ -28,7 +27,7 @@
           <div class="profile_dropdown">
             <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
-              <a href="">My Profile</a>
+              <a href="user_profile.php">My Profile</a>
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>
