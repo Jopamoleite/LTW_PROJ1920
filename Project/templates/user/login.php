@@ -12,6 +12,9 @@
     <form action="validate_login.php" method="post">
       <p><label><input type="text" name="username" id="username" placeholder="   Username" required></label></p>
       <p><label><input type="password" name="password" id="password" placeholder="   Password" required></label></p>
+      <div class='alert_msg'>
+        <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
+      </div> 
       <input id="login_button" class="button" type="submit" value="Login">
     </form>
   </div>
