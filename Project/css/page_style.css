@@ -71,7 +71,6 @@ body{
     position: absolute;
     background-color: #FFFFFF;
     min-width: 100px;
-    margin: 5px;
     padding: 5px;
     z-index: 1;
     display: none;
