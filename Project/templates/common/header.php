@@ -18,7 +18,7 @@
     <div class="page_header">
       <div id="logo_name">
           <a href="main_page.php">
-            <img src="https://image.flaticon.com/icons/png/512/86/86329.png" alt="House icon" width="20" height="20">
+            <img src="images/home.png" alt="House icon" width="20" height="20">
           </a>
           <h1><a href="main_page.php">HouseHunt</a></h1>
       </div>
@@ -29,7 +29,7 @@
           </a>
         </div>
         <div class="profile_dropdown">
-          <span><img href="" src="http://cdn.onlinewebfonts.com/svg/img_184513.png" alt="User icon" width="20" height="20"></span>
+          <span><img href="" src="images/user.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
               <br>
               <div><a href="user_profile.php">My Profile</a></div>

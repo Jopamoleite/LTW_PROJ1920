@@ -96,8 +96,8 @@
     justify-content: center;
 }
 
-div#housinhas{
-    margin: 100px 15%;
+section#housinhas{
+    margin: 100px 13%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -106,7 +106,7 @@ div#housinhas{
 
 div.house{
     background-color: #FFFFFF;
-    margin: 20px 10px;
+    margin: 1.5% 1.8%;
     padding: 0px 0px 10px 0px;
 }
 
