@@ -1,9 +1,9 @@
-<?php 
+<?php
     include_once('includes/start.php');
     include_once('database/db_user.php');
 
    $myusername = $_POST['username'];
-   $mypassword = $_POST['password'];
+   $mypassword = $_POST['password_'];
    $repeatPass = $_POST['repeat'];
    $myemail = $_POST['email'];
 
@@ -13,7 +13,7 @@
       $mypassword = trim(htmlspecialchars($mypassword));
       $repeatPass = trim(htmlspecialchars($repeatPass));
       $myemail = trim(htmlspecialchars($myemail));
-   
+
    }
 
    if($mypassword != $repeatPass){

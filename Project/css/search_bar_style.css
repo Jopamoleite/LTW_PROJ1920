@@ -110,7 +110,7 @@ a.house{
     padding: 0px 0px 10px 0px;
 }
 
-div.house h1{
+a.house h1{
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
@@ -118,7 +118,7 @@ div.house h1{
     margin: 3px 1px 3px 10px;
 }
 
-div.house h2{
+a.house h2{
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
