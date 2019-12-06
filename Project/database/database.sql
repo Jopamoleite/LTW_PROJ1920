@@ -7,11 +7,13 @@
 -- Users login using username and password
 -- Users edit their biography and e-mail
 CREATE TABLE User_(
-    id INTEGER PRIMARY KEY,
-    username TEXT NOT NULL UNIQUE,
-    password_ TEXT NOT NULL,
-    bio TEXT,
-    email TEXT
+    id          INTEGER PRIMARY KEY,
+    username    TEXT NOT NULL UNIQUE,
+    password_   TEXT NOT NULL,
+    bio         TEXT,
+    location_   TEXT,
+    phone_num TEXT,
+    email       TEXT
 );
 
 -- Places have a title, address, price/day, capacity and description
@@ -22,7 +24,7 @@ CREATE TABLE Place(
     address_ TEXT NOT NULL UNIQUE,
     price_day REAL CHECK (price_day > 0),
     capacity INTEGER NOT NULL CHECK (capacity > 0),
-    description_ TEXT NOT NULL,
+    description TEXT NOT NULL,
     ownerID INTEGER NOT NULL,
 
     FOREIGN KEY (ownerID) REFERENCES User_(id)

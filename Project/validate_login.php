@@ -1,4 +1,4 @@
-<?php 
+<?php
    include_once('includes/start.php');
    include_once('database/db_user.php');
 
@@ -9,7 +9,7 @@
 
       $myusername = trim(htmlspecialchars($myusername));
       $mypassword = trim(htmlspecialchars($mypassword));
-   
+
    }
 
    if(isLoginCorrect($myusername, $mypassword)){
