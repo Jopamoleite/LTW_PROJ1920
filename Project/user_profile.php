@@ -8,7 +8,8 @@
 <div id="profile" class="flex-container">
   <img src="images\default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div id="profile_info">
-    <h1> Shronk </h1>
+    <a href="edit-profile.php">Edit Profile</a>
+    <h1>  <? echo $_SESSION['username']; ?> </h1>
     <p>
       <img src="images\location.png" class="icon" alt="loca" width="15" height="15">
       Far Far Away
@@ -19,10 +20,16 @@
     </p>
     <p>
       <img src="images\mail.png" class="icon" alt="loca" width="15" height="15">
-      mostrakahooteucu@gmail.com
+          <? 
+            $email = getIdMail($_SESSION['userID']);
+            echo $email;
+          ?>
     </p>
     <p id="description">
-      A tua prima é uma cadeira tuning
+          <? 
+            $bio = getIdBio($_SESSION['userID']);
+            echo $bio;
+          ?>
     </p>
   </div>
 </div>
