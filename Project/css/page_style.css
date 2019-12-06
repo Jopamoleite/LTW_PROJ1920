@@ -9,6 +9,9 @@ body{
 }
 
 .page_header{
+    display: flex;
+    justify-content: space-between;
+
     background-color: #FFFFFF;
     color:#252525;
     padding: 0em;
@@ -26,9 +29,27 @@ body{
     margin-left: 1em;
 }
 
+#logo_name{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.page_header img{
+    float: right;
+    align-self: center;
+}
+
+#logo_name a{
+    align-self: center;
+}
+
+#user_profile_info{
+    display: flex;
+    justify-content: flex-end;
+}
+
 #user_profile_info a{
     font-family: 'Open Sans', sans-serif;
-    margin-top: 3em;
     margin-right: 1em;
     font-size: 0.9em;
     font-weight: lighter;
@@ -50,12 +71,16 @@ body{
     position: absolute;
     background-color: #FFFFFF;
     min-width: 100px;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 5px;
     z-index: 1;
     display: none;
     top: 20px;
-    right:0;
+    right: 0;
+}
+
+.dropdown_content div {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
 }
 
 .profile_dropdown:hover .dropdown_content {
@@ -72,6 +97,7 @@ body{
 
 .dropdown_content a, .logout_button{
     cursor: pointer;
+    margin: 10px;
 }
 
 .logout_button{

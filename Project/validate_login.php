@@ -14,6 +14,8 @@
 
    if(isLoginCorrect($myusername, $mypassword)){
       setUser($myusername);
+      $myID = getUserId($myusername);
+      setID($myID);
       header("Location: main_page.php");
    }else{
       $error = "Invalid credentials\n";
