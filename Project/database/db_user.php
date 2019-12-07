@@ -1,13 +1,16 @@
 <?
     function isLoginCorrect($username, $password) {
         global $dbh;
-        $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ?;');
-        $stmt->execute(array($username));
-        $row = $stmt->fetch();
-        $storedPassword = $row['password_'];
-        $valid = password_verify($password, $storedPassword);
-
-        return $valid;
+        try{
+            $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ?;');
+            $stmt->execute(array($username));
+            $row = $stmt->fetch();
+            $storedPassword = $row['password_'];
+            $valid = password_verify($password, $storedPassword);
+            return $valid;
+        }catch(PDOException $e){
+            error_log('Error: ' . $e->getMessage());
+        }
     }
 
     function insertUser($username, $password, $email){
@@ -16,37 +19,48 @@
             $stmt = $dbh->prepare('INSERT INTO User_(username, password_, email) VALUES (?, ?, ?);');
             $hash = passwordhash($password, PASSWORD_DEFAULT);
             $stmt->execute(array($username, $hash, $email));
-            return "";
         } catch (PDOException $e) {
-            return "username in use";
+            error_log('Error: ' . $e->getMessage());
         }
     }
 
     function getUserId($myusername){
         global $dbh;
-        $stmt = $dbh->prepare('SELECT id FROM User_ WHERE username = ?;');
-        $stmt->execute(array($myusername));
-        $row = $stmt->fetch();
-        $id = $row['id'];
-        return $id;
+        try{
+            $stmt = $dbh->prepare('SELECT id FROM User_ WHERE username = ?;');
+            $stmt->execute(array($myusername));
+            $row = $stmt->fetch();
+            $id = $row['id'];
+            return $id;
+        }catch(PDOException $e){
+            error_log('Error: ' . $e->getMessage());
+        }
     }
 
     function getIdBio($myid){
         global $dbh;
-        $stmt = $dbh->prepare('SELECT bio FROM User_ WHERE id = ?;');
-        $stmt->execute(array($myid));
-        $row = $stmt->fetch();
-        $bio = $row['bio'];
-        return $bio;
+        try{
+            $stmt = $dbh->prepare('SELECT bio FROM User_ WHERE id = ?;');
+            $stmt->execute(array($myid));
+            $row = $stmt->fetch();
+            $bio = $row['bio'];
+            return $bio;
+        }catch(PDOException $e){
+            error_log('Error: ' . $e->getMessage());
+        }
     }
 
     function getIdMail($myid){
         global $dbh;
-        $stmt = $dbh->prepare('SELECT email FROM User_ WHERE id = ?;');
-        $stmt->execute(array($myid));
-        $row = $stmt->fetch();
-        $email = $row['email'];
-        return $email;
+        try{
+            $stmt = $dbh->prepare('SELECT email FROM User_ WHERE id = ?;');
+            $stmt->execute(array($myid));
+            $row = $stmt->fetch();
+            $email = $row['email'];
+            return $email;
+        }catch(PDOException $e){
+            error_log('Error: ' . $e->getMessage());
+        }
     }
 
     function editBio($myid, $bio){
@@ -54,9 +68,8 @@
         try {
             $stmt = $dbh->prepare('UPDATE User_ SET bio = ? WHERE id = ?;');
             $stmt->execute(array($bio, $myid));
-            return "";
         } catch (PDOException $e) {
-            return "error setting bio";
+            error_log('Error: ' . $e->getMessage());
         }
     }
 
@@ -65,9 +78,8 @@
         try {
             $stmt = $dbh->prepare('UPDATE User_ SET email = ? WHERE id = ?;');
             $stmt->execute(array($email, $myid));
-            return "";
         } catch (PDOException $e) {
-            return "error setting bio";
+            error_log('Error: ' . $e->getMessage());
         }
     }
 
@@ -80,7 +92,7 @@
             if(sizeof($table) != 1) return false;
             return true;
         } catch (PDOException $e) {
-            error_log("Error: " . $e->getMessage());
+            error_log('Error: ' . $e->getMessage());
         }
     }
 
@@ -92,7 +104,7 @@
             $user = $stmt->fetch();
             return $user;
         } catch (PDOException $e) {
-            error_log("Error: " . $e->getMessage());
+            error_log('Error: ' . $e->getMessage());
         }
     }
 ?>

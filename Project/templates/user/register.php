@@ -1,5 +1,7 @@
-<?include_once('includes/start.php') ?>
-<?include_once('database/db_user.php') ?>
+<?
+  include_once 'includes/start.php';
+  include_once 'database/db_user.php';
+?>
 
 <body>
   <div class="main" id="register_page">
@@ -14,7 +16,7 @@
       </div>
       <div class='alert_msg'>
         <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
-      </div> 
+      </div>
       <input class="button" id="create_button" type="submit" value="Create profile">
     </form>
   </div>

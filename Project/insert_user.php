@@ -1,6 +1,6 @@
-<?php
-    include_once('includes/start.php');
-    include_once('database/db_user.php');
+<?
+    include_once 'includes/start.php';
+    include_once 'database/db_user.php';
 
    $myusername = $_POST['username'];
    $mypassword = $_POST['password_'];
@@ -17,17 +17,17 @@
    }
 
    if($mypassword != $repeatPass){
-      $error = "Your passwords must match\n";
-      $_SESSION["errormsg"] = $error;
-      header("Location: register_page.php");
+      $error = 'Your passwords must match';
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
    }else{
       $error = insertUser($myusername, $mypassword, $myemail);
 
-      if(strlen($error) != 0){
-         $_SESSION["errormsg"] = $error;
-         header("Location: register_page.php");
+      if($error){
+         $_SESSION['errormsg'] = $error;
+         header('Location: register_page.php');
       }else{
-         header("Location: index.php");
+         header('Location: index.php');
       }
    }
 

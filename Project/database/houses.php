@@ -5,9 +5,8 @@
         try {
             $stmt = $dbh->prepare('INSERT INTO Place(title, address, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?);');
             $stmt->execute(array($title, $address, $price_day, $capacity, $description, $ownerID));
-            return "";
         } catch (PDOException $e) {
-            return "Error inserting house.\r\n" . $e->getMessage();
+            error_log('Error: ' . $e->getMessage());
         }
     }
 
@@ -19,7 +18,7 @@
             $stmt->execute();
             return $stmt;
         } catch (PDOException $e) {
-            return "Error selecting all houses.\r\n" . $e->getMessage();
+            error_log('Error: ' . $e->getMessage());
         }
     }
 ?>

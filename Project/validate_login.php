@@ -1,6 +1,6 @@
-<?php
-   include_once('includes/start.php');
-   include_once('database/db_user.php');
+<?
+   include_once 'includes/start.php';
+   include_once 'database/db_user.php';
 
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
@@ -16,11 +16,11 @@
       setUser($myusername);
       $myID = getUserId($myusername);
       setID($myID);
-      header("Location: main_page.php");
+      header('Location: main_page.php');
    }else{
-      $error = "Invalid credentials\n";
+      $error = 'Invalid credentials\n';
       $_SESSION["errormsg"] = $error;
-      header("Location: index.php");
+      header('Location: index.php');
    }
 
 ?>
