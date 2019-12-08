@@ -18,6 +18,9 @@
   <div class="main">
     <form action="register_page.php" method="post">
       <input id="register_button" class="button" type="submit" value="Register">
+      <div class='alert_msg'>
+        <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
+      </div> 
     </form>
   </div>
 </body>

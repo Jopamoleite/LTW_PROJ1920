@@ -19,6 +19,7 @@
       header('Location: main_page.php');
    }else{
       $error = 'Invalid credentials\n';
+      $_SESSION["errormsg"] = $error;
       header('Location: index.php');
    }
 

@@ -18,11 +18,13 @@
 
    if($mypassword != $repeatPass){
       $error = 'Your passwords must match';
+      $_SESSION["errormsg"] = $error;
       header('Location: register_page.php');
    }else{
       $error = insertUser($myusername, $mypassword, $myemail);
 
       if($error){
+         $_SESSION["errormsg"] = $error;
          header('Location: register_page.php');
       }else{
          header('Location: index.php');
