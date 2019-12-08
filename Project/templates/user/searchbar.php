@@ -1,4 +1,5 @@
-<div class="search_bar">
+<script src="scripts/searchbar_scroll.js"></script> 
+<div id="search_bar">
     <form class="search_form flex-container" method="get" action="">
         <div class="search_input_field_large">
             <label class="search_label">Going to</label>

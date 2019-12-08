@@ -1,9 +1,9 @@
-#profile{
+.profile{
     border-radius: 20px;
     margin: 100px 20% 0% 20%;
     padding: 10px 50px;
     justify-content: flex-start;
-    background-color: #FFFFFF;
+    background-color: #FDFDFD;
     color:#252525;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -13,14 +13,89 @@
 #profile_pic{
     margin: 20px 40px 20px 0px;
     border-radius: 20px;
+    width: 35%;
+    height: 35%;
 }
 
 p#description{
     margin: 50px 0px;
 }
 
-.profile_pic{
-    margin: 0px;
-    height: 15px;
-    width: 15px;
+#edit_profile_link{
+    color: #41B3A3;
 }
+
+.profile_info input, .profile_info textarea{
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #DDDDDD;
+
+    margin: 3px;
+    margin-left: 0px;
+    padding: 3px;
+    padding-left: 7px;
+    width: 90%;
+    height: 100%;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 1em;
+    
+}
+
+.profile_info textarea{
+    resize: none;
+    width: 90%;
+}
+
+.profile_info input[type=number]::-webkit-inner-spin-button, 
+.profile_info input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#backtoprofile_link, #edit-profile-button{
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #41B3A3;
+    border-radius: 20px;
+    background-color: #FDFDFD; 
+
+    text-align: center;
+
+    color: #41B3A3;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 0.9em;
+
+    cursor: pointer;
+}
+
+#backtoprofile_link{
+    padding: 7.8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+
+    margin-top: 20px;
+
+    position: relative;
+    left: 110px;
+    top: -31.1px;
+}
+
+#edit-profile-button{
+    text-decoration: none;
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    height: 2.5em;
+    width: fit-content;
+    padding: 5px;
+}
+
+

@@ -1,11 +1,13 @@
-.search_bar{
+#search_bar{
     display: flex;
     justify-content: center;
     align-content: center;
-    position: relative;
-    top: 30px;
+    position: fixed;
+    top: 70px;
 
-    background-color: #FFFFFF;
+    transition: 1s ease;
+
+    background-color: #FDFDFD;
     border-radius: 20px;
     padding: 10px;
     padding-left: 20px;
@@ -38,6 +40,7 @@
     height: 30px;
     margin-left: 10px;
     margin-right: 10px;
+    outline: none;
 }
 
 .submit_search_button:hover{
@@ -65,7 +68,7 @@
     border-radius: 10px;
     opacity: 1;
     background-color: #252525;
-    color: #FFFFFF;
+    color: #FDFDFD;
     height: 3em;
     width: 11.1em;
     margin-left: 10px;
@@ -105,7 +108,7 @@ section#housinhas{
 }
 
 a.house{
-    background-color: #FFFFFF;
+    background-color: #FDFDFD;
     margin: 1.5% 1.8%;
     padding: 0px 0px 10px 0px;
 }
