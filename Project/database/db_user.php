@@ -17,7 +17,7 @@
         global $dbh;
         try {
             $stmt = $dbh->prepare('INSERT INTO User_(username, password_, email) VALUES (?, ?, ?);');
-            $hash = passwordhash($password, PASSWORD_DEFAULT);
+            $hash = password_hash($password, PASSWORD_DEFAULT);
             $stmt->execute(array($username, $hash, $email));
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
