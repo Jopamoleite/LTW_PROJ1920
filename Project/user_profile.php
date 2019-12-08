@@ -18,12 +18,9 @@
 ?>
 
 <!-- PROFILE -->
-<div id="profile" class="flex-container">
+<div class="profile flex-container">
   <img src="images\default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
-  <div id="profile_info">
-    <? if($username == $_SESSION['username'])
-      echo "<a href='edit-profile.php'>Edit Profile</a>"
-    ?>
+  <div class="profile_info">
     <h1>  <? echo $username; ?> </h1>
     <p>
       <img src="images\location.png" class="icon" alt="loca" width="15" height="15">
@@ -40,6 +37,9 @@
     <p id="description">
       <? echo $bio; ?>
     </p>
+    <? if($username == $_SESSION['username'])
+      echo "<a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>"
+    ?>
   </div>
 </div>
 

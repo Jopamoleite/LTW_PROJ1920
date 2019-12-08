@@ -43,7 +43,7 @@ header h2{
 
 div.main{
 	color:#252525;
-	background-color: #FFFFFF;
+	background-color: #FDFDFD;
 	font-family: 'Roboto',sans-serif;
 	padding: 1em;
 	padding-bottom: 0.5em;
@@ -87,6 +87,7 @@ input[type="email"] {
     font-weight: lighter;
     font-style: normal;
     font-size: 1em;
+    outline: none;
 }
 
 .button:hover{
@@ -112,7 +113,7 @@ input[type="email"] {
     border-radius: 2px;
     opacity: 1;
     background-color: #252525;
-    color: #FFFFFF;
+    color: #FDFDFD;
     height: 3em;
     width: 11.1em;
     font-family: 'Roboto', sans-serif;
