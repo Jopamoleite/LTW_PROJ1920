@@ -33,7 +33,11 @@
           <span><img href="" src="/images/user.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
               <br>
+<<<<<<< HEAD
+              <div><a href="user_profile.php?user=" . <? $_SESSION["username"] ?> >My Profile</a></div>
+=======
               <div><a href="user_profile.php?user=" . <? $_SESSION["userID"] ?> >My Profile</a></div>
+>>>>>>> 89c53c4acf37a2b78c3589f6e07d825ddd87a216
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>
