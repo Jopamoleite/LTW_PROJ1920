@@ -5,6 +5,14 @@
   include_once 'templates/common/header.php';
 ?>
 
+<?
+  $user = getUser($_SESSION['username']);
+
+  $location = $user['location_'];       
+  $phone    = $user['phone_num'];       
+  $email    = $user['email'];          
+  $bio      = $user['bio'];           
+?>
 
 <!-- PROFILE -->
 <div class="profile flex-container">
@@ -15,13 +23,13 @@
     <h3>Update Profile Information</h3>
       <form method="post" action="action_edit-profile.php">
           <label>Location:</label><br>
-          <input type="text" name="location" value="<?php echo "Location" ?>" placeholder="Location"/><br>
+          <input type="text" name="location" value="<? if(!empty($location)){ echo $location; }?>" placeholder="Location"/><br>
           <label>Phone Number:</label><br>
-          <input type="number" name="phone" placeholder="Phone Number" /><br> <!--TODO adicionar value-->
+          <input type="number" name="phone" value="<? if(!empty($phone)){ echo $phone; }?>" placeholder="Phone Number" /><br> <!--TODO adicionar value-->
           <label>Email Address:</label><br>
-          <input type="email" name="email" value="<? $email = getIdMail($_SESSION['userID']); echo $email; ?>" required/><br><br>
+          <input type="email" name="email" value="<? if(!empty($email)){ echo $email; }?>" required/><br><br>
           <label>Bio:</label><br>
-          <textarea name="bio" rows="3" cols="50" maxlength="100" placeholder="Write something about yourself"><? $bio = getIdBio($_SESSION['userID']); echo $bio; ?> </textarea><br><br>
+          <textarea name="bio" rows="3" cols="50" maxlength="100" placeholder="Write something about yourself"><?if(!empty($bio)){ echo $bio; } ?> </textarea><br><br>
           <input id="edit-profile-button" class="button" type="submit" value="Update Profile">
       </form>
       <a id="backtoprofile_link" href="user_profile.php">Back to Profile</a>

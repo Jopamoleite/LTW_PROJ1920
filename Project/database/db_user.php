@@ -37,32 +37,6 @@
         }
     }
 
-    function getIdBio($myid){
-        global $dbh;
-        try{
-            $stmt = $dbh->prepare('SELECT bio FROM User_ WHERE id = ?;');
-            $stmt->execute(array($myid));
-            $row = $stmt->fetch();
-            $bio = $row['bio'];
-            return $bio;
-        }catch(PDOException $e){
-            error_log('Error: ' . $e->getMessage());
-        }
-    }
-
-    function getIdMail($myid){
-        global $dbh;
-        try{
-            $stmt = $dbh->prepare('SELECT email FROM User_ WHERE id = ?;');
-            $stmt->execute(array($myid));
-            $row = $stmt->fetch();
-            $email = $row['email'];
-            return $email;
-        }catch(PDOException $e){
-            error_log('Error: ' . $e->getMessage());
-        }
-    }
-
     function editBio($myid, $bio){
         global $dbh;
         try {
@@ -78,6 +52,26 @@
         try {
             $stmt = $dbh->prepare('UPDATE User_ SET email = ? WHERE id = ?;');
             $stmt->execute(array($email, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function editPhone($myid, $phone){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET phone_num = ? WHERE id = ?;');
+            $stmt->execute(array($phone, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function editLocation($myid, $location){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET location_ = ? WHERE id = ?;');
+            $stmt->execute(array($location, $myid));
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
         }
