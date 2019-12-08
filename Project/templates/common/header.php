@@ -13,7 +13,7 @@
   <body>
     <?
       if(!isset($_SESSION['userID']) || empty($_SESSION['userID'])){
-        header("Location: /invalid_back.php");
+        header("Location: invalid_back.php");
       }
     ?>
     <div class="page_header">

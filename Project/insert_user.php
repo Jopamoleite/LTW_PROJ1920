@@ -3,9 +3,9 @@
     include_once 'database/db_user.php';
 
    $myusername = $_POST['username'];
-   $mypassword = $_POST['password_'];
+   $mypassword = $_POST['password'];
    $repeatPass = $_POST['repeat'];
-   $myemail = $_POST['email'];
+   $myemail    = $_POST['email'];
 
    if (!empty($myusername) && !empty($mypassword) && !empty($repeatPass) && !empty($myemail)) {
 
@@ -31,4 +31,5 @@
       }
    }
 
+   header('Location: index.php');
 ?>
