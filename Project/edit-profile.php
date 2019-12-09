@@ -16,7 +16,7 @@
 
 <!-- PROFILE -->
 <div class="profile flex-container">
-  <img src="images/default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
+  <img src="images/profile.jpg" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
         <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
     <h1>  <? echo $_SESSION['username']; ?> </h1>
@@ -25,7 +25,7 @@
           <label>Location:</label><br>
           <input type="text" name="location" value="<? if(!empty($location)){ echo $location; }?>" placeholder="Location"/><br>
           <label>Phone Number:</label><br>
-          <input type="number" name="phone" value="<? if(!empty($phone)){ echo $phone; }?>" placeholder="Phone Number" /><br> <!--TODO adicionar value-->
+          <input type="number" name="phone" value="<? if(!empty($phone)){ echo $phone; }?>" placeholder="Phone Number" /><br> 
           <label>Email Address:</label><br>
           <input type="email" name="email" value="<? if(!empty($email)){ echo $email; }?>" required/><br><br>
           <label>Bio:</label><br>
