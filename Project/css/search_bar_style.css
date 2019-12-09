@@ -98,33 +98,3 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
-section#housinhas{
-    margin: 100px 13%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: row;
-}
-
-a.house{
-    background-color: #FDFDFD;
-    margin: 1.5% 1.8%;
-    padding: 0px 0px 10px 0px;
-}
-
-a.house h1{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    color: #000000;
-    margin: 3px 1px 3px 10px;
-}
-
-a.house h2{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    color: #303030;
-    margin: 3px 1px 3px 10px;
-}
