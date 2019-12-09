@@ -21,7 +21,7 @@
 
 <!-- PROFILE -->
 <div class="profile flex-container">
-  <img src="images/profile.jpg" id="profile_pic" alt="Profile Pic" width="300" height="300">
+  <img src="images/default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
     <h1>  <? echo $username; ?> </h1>
     <p>
