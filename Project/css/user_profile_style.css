@@ -18,7 +18,9 @@
 }
 
 p#description{
+    position: fixed;
     margin: 50px 0px;
+    overflow-wrap: normal;
 }
 
 #edit_profile_link{
@@ -83,7 +85,7 @@ p#description{
 
     position: relative;
     left: 110px;
-    top: -31.1px;
+    top: -31.3px;
 }
 
 #edit-profile-button{
@@ -96,6 +98,44 @@ p#description{
     height: 2.5em;
     width: fit-content;
     padding: 5px;
+}
+
+#create_houses_button{
+    position: relative;
+    left: 20%;
+    margin: 10px;
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    align-self: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: initial;
+
+    border: none;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: #252525;
+    color: #FDFDFD;
+    height: 3em;
+    width: 11.1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+
+    cursor: pointer;
+}
+
+#create_houses_button:hover{
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+
+    text-shadow: 0px 0px 5px #BBBBBB;
 }
 
 
