@@ -121,6 +121,15 @@ input[type="email"] {
     cursor: pointer;
 }
 
+footer{
+    height: 0%;
+    width: 0%;
+}
+
 #create_button{
     margin-top: 2em;
+}
+
+input:invalid {
+    border: 1px solid red;
 }
