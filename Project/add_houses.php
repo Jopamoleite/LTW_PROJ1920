@@ -10,6 +10,8 @@
       <form method="post" action="action_add_house.php">
           <label>Title:</label><br>
           <input type="text" name="title" placeholder="Title" required/><br>
+          <label>Location:</label><br>
+          <input type="text" name="location" placeholder="Location" required/><br>
           <label>Address:</label><br>
           <input type="text" name="address" placeholder="Address" required/><br>
           <label>Price per night (€):</label><br>

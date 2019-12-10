@@ -1,10 +1,10 @@
 <?php
 
-    function addHouse($title, $address, $price_day, $capacity, $description, $ownerID){
+    function addHouse($title, $location, $address, $price_day, $capacity, $description, $ownerID){
         global $dbh;
         try {
-            $stmt = $dbh->prepare('INSERT INTO Place(title, address_, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?);');
-            $stmt->execute(array($title, $address, $price_day, $capacity, $description, $ownerID));
+            $stmt = $dbh->prepare('INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?, ?);');
+            $stmt->execute(array($title, $location, $address, $price_day, $capacity, $description, $ownerID));
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
         }
