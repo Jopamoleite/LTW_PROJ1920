@@ -22,6 +22,7 @@ CREATE TABLE User_(
 CREATE TABLE Place(
     id          INTEGER PRIMARY KEY,
     title       TEXT NOT NULL,
+    location    TEXT NOT NULL,
     address_    TEXT NOT NULL UNIQUE,
     price_day   REAL CHECK (price_day > 0),
     capacity    INTEGER NOT NULL CHECK (capacity > 0),
