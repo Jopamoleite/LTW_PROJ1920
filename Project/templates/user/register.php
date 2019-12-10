@@ -27,5 +27,5 @@ include_once 'database/db_user.php';
 </body>
 
 <?
-  include_once 'templates/common/initial-footer.php';
+  include_once 'templates/common/initial_footer.php';
 ?>
