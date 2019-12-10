@@ -8,12 +8,12 @@
 <?
   $username = $_GET['user'];
   if($username == null) header('Location: main_page.php');
-  if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $username)) header('Location: ' . 'index.php');
+  if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $username)) header('Location: main_page.php');
   if(!checkUser($username)) header('Location: main_page.php');
 
   $user = getUser($username);
 
-  $name = $user['name'];            if($name == null) $name = "";
+  $name     = $user['name'];            if($name == null) $name = "";
   $location = $user['location_'];       if($location == null) $location = "No location available";
   $phone    = $user['phone_num'];       if($phone == null) $phone = "No contact number provided";
   $email    = $user['email'];           if($email == null) $email = "No e-mail provided";
