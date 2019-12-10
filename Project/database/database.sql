@@ -10,6 +10,7 @@ CREATE TABLE User_(
     id          INTEGER PRIMARY KEY,
     username    TEXT NOT NULL UNIQUE,
     password_   TEXT NOT NULL,
+    name        TEXT,
     bio         TEXT,
     location_   TEXT,
     phone_num   TEXT,

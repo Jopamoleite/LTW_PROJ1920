@@ -20,7 +20,7 @@
           <textarea name="description" rows="3" cols="50" maxlength="100" placeholder="Write something about the house"></textarea><br><br>
           <input id="add_house_button" class="button" type="submit" value="Create House">
       </form>
-      <a id="backtoprofile_link" href="user_profile.php">Back to Profile</a>
+      <a id="backtoprofile_link" href="user_profile.php?user=<? echo $_SESSION["username"] ?>">Back to Profile</a>
   </div>
 </div>
 
