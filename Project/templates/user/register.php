@@ -11,9 +11,9 @@ include_once 'database/db_user.php';
     <h2><a>Create a new profile</a></h2>
     <form action="insert_user.php" method="post" id="register">
       <div>
-        <label><input type="text" name="username" onblur="validate('username',this.value)" id="username" placeholder="  Username" required minlength="4" pattern="[\w]+"> </label>
+        <label><input type="text" name="username" onblur="validate_user()" id="username" placeholder="  Username" required minlength="4" pattern="[\w]+"> </label>
           <div id="error_username"></div><br>
-        <label><input type="email" name="email" onblur="validate('email',this.value)"  id="email" placeholder="  Email" required> </label><br>
+        <label><input type="email" name="email" onblur="validate_email()"  id="email" placeholder="  Email" required> </label><br>
           <div id="error_email"></div><br>
         <label><input type="password" name="password" onblur="validate_password()" id="password" placeholder="  Password" required minlength="8"> </label><br>
           <div id="error_password"></div><br>
@@ -21,10 +21,11 @@ include_once 'database/db_user.php';
           <div id="error_repeat"></div><br>
       </div>
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
-      <div class='alert_msg'>
-        <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
-      </div> 
     </form>
     <div id="error_all"></div>
   </div>
 </body>
+
+<?
+  include_once 'templates/common/initial-footer.php';
+?>
