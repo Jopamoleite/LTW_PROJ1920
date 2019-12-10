@@ -8,7 +8,7 @@
 <?
   $user = getUser($_SESSION['username']);
 
-  $name = $user['name'];   
+  $name     = $user['name'];   
   $location = $user['location_'];       
   $phone    = $user['phone_num'];       
   $email    = $user['email'];          
