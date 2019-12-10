@@ -6,7 +6,7 @@ function handleSearchBarScroll() {
   else if (previousScrollPos > currentScrollPos) {
     document.getElementById("search_bar").style.top = "20px";
   } else {
-    document.getElementById("search_bar").style.top = "-210px";
+    document.getElementById("search_bar").style.top = "-214px";
   }
   previousScrollPos = currentScrollPos;
 }
