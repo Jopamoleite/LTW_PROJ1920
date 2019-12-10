@@ -10,12 +10,23 @@
         }
     }
 
-    function getAllHouses(){
+    function getHousesAtLocation($location, $guests){
         global $dbh;
         try {
-            $qry = 'SELECT * FROM Place;';
+            $qry = 'SELECT * FROM Place WHERE location = ? COLLATE NOCASE AND capacity >= ? ORDER BY price_day ASC ;';
             $stmt = $dbh->prepare($qry);
-            $stmt->execute();
+            $stmt->execute(array($location, $guests));
+            return $stmt;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    function getHousesWithGuests($guests){
+        global $dbh;
+        try {
+            $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
+            $stmt = $dbh->prepare($qry);
+            $stmt->execute(array($guests));
             return $stmt;
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
