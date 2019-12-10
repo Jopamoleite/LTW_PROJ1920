@@ -1,7 +1,8 @@
 .profile{
-    border-radius: 20px;
-    margin: 100px 20% 0% 20%;
-    padding: 10px 50px;
+    border-radius: 1.4em;
+    margin: 7em auto 0px;
+    width: 60%;
+    padding: 0.6em 3.4em;
     justify-content: flex-start;
     background-color: #FDFDFD;
     color:#252525;
@@ -11,15 +12,31 @@
 }
 
 #profile_pic{
-    margin: 20px 40px 20px 0px;
-    border-radius: 20px;
+    margin: 1.4em 2.8em 1.4em 0em;
+    border-radius: 1.4em;
     width: 35%;
     height: 35%;
 }
 
-p#description{
-    margin: 50px 0px;
+.profile_info p{
+    position: relative;
+    width:35%;
+    word-break: break-word;
 }
+
+/*#description{
+    position: fixed;
+    width:35%;
+    word-break: break-word;
+}*/
+
+/*p#description{
+    position: fixed;
+    margin: 50px 0px;
+    overflow-wrap: normal;
+    width: 30%;
+    word-break: break-word;
+}*/
 
 #edit_profile_link{
     color: #41B3A3;
@@ -31,10 +48,10 @@ p#description{
     border-radius: 3px;
     border: 1px solid #DDDDDD;
 
-    margin: 3px;
-    margin-left: 0px;
-    padding: 3px;
-    padding-left: 7px;
+    margin: 0.3em;
+    margin-left: 0em;
+    padding: 0.3em;
+    padding-left: 0.5em;
     width: 90%;
     height: 100%;
 
@@ -60,7 +77,7 @@ p#description{
     border-style: solid;
     border-width: 1.5px;
     border-color: #41B3A3;
-    border-radius: 20px;
+    border-radius: 1.4em;
     background-color: #FDFDFD; 
 
     text-align: center;
@@ -74,16 +91,16 @@ p#description{
 }
 
 #backtoprofile_link{
-    padding: 7.8px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0.535em;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
     width: fit-content;
 
-    margin-top: 20px;
+    margin-top: 1.4em;
 
     position: relative;
-    left: 110px;
-    top: -31.1px;
+    left: 7.6em;
+    top: -2.3em;
 }
 
 #edit-profile-button{
@@ -95,7 +112,43 @@ p#description{
 
     height: 2.5em;
     width: fit-content;
-    padding: 5px;
+    padding: 0.37em;
+}
+
+#create_houses_button{
+    margin: 0.7em;
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    align-self: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: initial;
+
+    border: none;
+    border-radius: 0.7em;
+    opacity: 1;
+    background-color: #252525;
+    color: #FDFDFD;
+    height: 3em;
+    width: 11.1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+
+    cursor: pointer;
+}
+
+#create_houses_button:hover{
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+
+    text-shadow: 0px 0px 5px #BBBBBB;
 }
 
 

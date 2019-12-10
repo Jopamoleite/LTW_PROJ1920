@@ -3,15 +3,15 @@
     justify-content: center;
     align-content: center;
     position: fixed;
-    top: 70px;
+    top: 4.4em;
 
     transition: 1s ease;
 
     background-color: #FDFDFD;
-    border-radius: 20px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-radius: 1.2em;
+    padding: 0.8em;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
     margin: 0 13%;
     width: fit-content;
     box-shadow: 0px 2px 5px rgba(0.7, 0.7, 0.7, 0.4);
@@ -23,7 +23,7 @@
     color: #909090;
     text-transform: uppercase;
     display: block;
-    margin-left: 25px;
+    margin-left: 1.6em;
 }
 
 .search_form{
@@ -33,13 +33,13 @@
 }
 
 .search_input{
-    border-radius: 10px;
+    border-radius: 0.7em;
     box-sizing: border-box;
     border: 1px solid #DDDDDD;
-    padding: 10px;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0.7em;
+    height: 2.2em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
     outline: none;
 }
 
@@ -65,13 +65,13 @@
     color: initial;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 0.7em;
     opacity: 1;
     background-color: #252525;
     color: #FDFDFD;
     height: 3em;
     width: 11.1em;
-    margin-left: 10px;
+    margin-left: 0.7em;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
 
@@ -79,52 +79,22 @@
 }
 
 .search_input_field_small .search_input{
-    width: 70px;
-    margin: 0px 25px;
+    width: 4.9em;
+    margin: 0em 2em;
 }
 
 .search_input_field_medium .search_input{
-    width: 150px;
-    margin: 0px 25px;
+    width: 11em;
+    margin: 0em 2em;
 }
 
 .search_input_field_large .search_input{
-    width: 300px;
-    margin: 0px 25px;
+    width: 22em;
+    margin: 0em 2em;
 }
 
 .flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-section#housinhas{
-    margin: 100px 13%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: row;
-}
-
-a.house{
-    background-color: #FDFDFD;
-    margin: 1.5% 1.8%;
-    padding: 0px 0px 10px 0px;
-}
-
-a.house h1{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    color: #000000;
-    margin: 3px 1px 3px 10px;
-}
-
-a.house h2{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    color: #303030;
-    margin: 3px 1px 3px 10px;
 }

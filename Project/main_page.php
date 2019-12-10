@@ -12,7 +12,8 @@
 ?>
 
 <!-- CASINHAS -->
-<section id="housinhas" class="flex_row">
+<section id="houses_list" class="flex_row">
+  <script src="scripts/positionhouses.js"></script> 
   <?
     $table = getAllHouses();
 

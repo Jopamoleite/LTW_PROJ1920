@@ -1,5 +1,4 @@
-let previousScrollPos = window.pageYOffset;
-window.onscroll = function() {
+function handleSearchBarScroll() {
   let currentScrollPos = window.pageYOffset;
   if (currentScrollPos < 20){
     document.getElementById("search_bar").style.top = "70px";
@@ -10,4 +9,6 @@ window.onscroll = function() {
     document.getElementById("search_bar").style.top = "-210px";
   }
   previousScrollPos = currentScrollPos;
-} 
+}
+
+window.addEventListener("scroll", handleSearchBarScroll);

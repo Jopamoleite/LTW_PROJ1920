@@ -9,6 +9,7 @@
     <link href="css/page_style.css" rel="stylesheet">
     <link href="css/search_bar_style.css" rel="stylesheet">
     <link href="css/user_profile_style.css" rel="stylesheet">
+    <link href="css/house_results_style.css" rel="stylesheet">
   </head>
   <body>
     <?
@@ -25,7 +26,7 @@
       </div>
       <div id="user_profile_info">
         <div id="username_link">
-          <a href="user_profile.php?user=" . <?$_SESSION["username"]?> >
+          <a href="user_profile.php?user=<? echo $_SESSION["username"]?>" >
           <? echo $_SESSION["username"]; ?>
           </a>
         </div>
@@ -33,7 +34,7 @@
           <span><img href="" src="images/user.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
               <br>
-              <div><a href="user_profile.php?user=" . <? $_SESSION["username"] ?> >My Profile</a></div>
+              <div><a href="user_profile.php?user=<? echo $_SESSION["username"] ?>" >My Profile</a></div>
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>

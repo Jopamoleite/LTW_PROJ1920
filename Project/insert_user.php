@@ -7,6 +7,13 @@
    $repeatPass = $_POST['repeat'];
    $myemail    = $_POST['email'];
 
+   if (!filter_var($myemail, FILTER_VALIDATE_EMAIL)) {
+      $error = "Invalid email format";
+      $_SESSION['errormsg'] = $error;
+      header('Location: edit-profile.php');
+      die();
+   }
+
    if (!empty($myusername) && !empty($mypassword) && !empty($repeatPass) && !empty($myemail)) {
 
       $myusername = trim(htmlspecialchars($myusername));
@@ -15,19 +22,23 @@
       $myemail = trim(htmlspecialchars($myemail));
 
    }
+   
 
    if($mypassword != $repeatPass){
       $error = 'Your passwords must match';
       $_SESSION["errormsg"] = $error;
       header('Location: register_page.php');
+      die();
    }else{
       $error = insertUser($myusername, $mypassword, $myemail);
 
       if($error){
          $_SESSION["errormsg"] = $error;
          header('Location: register_page.php');
+         die();
       }else{
          header('Location: index.php');
+         die();
       }
    }
 

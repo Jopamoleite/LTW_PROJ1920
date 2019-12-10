@@ -1,0 +1,29 @@
+#houses_list{
+    margin: 6em 13%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+a.house{
+    background-color: #FDFDFD;
+    margin: 1.5% 1.8%;
+    padding-bottom: 0.5em;
+}
+
+a.house h1{
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: #000000;
+    margin: 0.2em 0.1em 0.2em 0.5em;
+}
+
+a.house h2{
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: #303030;
+    margin: 0.2em 0.1em 0.2em 0.5em;
+}

@@ -10,6 +10,7 @@ CREATE TABLE User_(
     id          INTEGER PRIMARY KEY,
     username    TEXT NOT NULL UNIQUE,
     password_   TEXT NOT NULL,
+    name        TEXT,
     bio         TEXT,
     location_   TEXT,
     phone_num   TEXT,
@@ -21,6 +22,7 @@ CREATE TABLE User_(
 CREATE TABLE Place(
     id          INTEGER PRIMARY KEY,
     title       TEXT NOT NULL,
+    location    TEXT NOT NULL,
     address_    TEXT NOT NULL UNIQUE,
     price_day   REAL CHECK (price_day > 0),
     capacity    INTEGER NOT NULL CHECK (capacity > 0),
