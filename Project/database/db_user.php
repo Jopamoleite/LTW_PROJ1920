@@ -76,6 +76,26 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
+    
+    function editName($myid, $name){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET name = ? WHERE id = ?;');
+            $stmt->execute(array($name, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function updateUser($myid, $name, $location, $phone, $mail, $bio){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET name = ?, location_ = ?, phone_num = ?, email = ?, bio = ? WHERE id = ?;');
+            $stmt->execute(array($name, $location, $phone, $mail, $bio, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
 
     function checkUser($username){
         global $dbh;

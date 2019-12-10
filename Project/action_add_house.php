@@ -10,6 +10,6 @@
 
     addHouse($title, $address, $price, $capacity, $description, $_SESSION['userID']);
 
-    header('Location: user_profile.php');
+    header('Location: user_profile.php?user='.$_SESSION['username']);
 
 ?>
