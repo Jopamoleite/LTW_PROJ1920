@@ -1,9 +1,12 @@
 .profile{
     border-radius: 1.4em;
-    margin: 7em auto 0px;
+    margin: 7em auto 0em auto;
     width: 60%;
     padding: 0.6em 3.4em;
-    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
     background-color: #FDFDFD;
     color:#252525;
     font-family: 'Roboto', sans-serif;
@@ -11,32 +14,23 @@
     box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
+.profile_info{
+    display: flex;
+    flex-direction: column;
+}
+
 #profile_pic{
     margin: 1.4em 2.8em 1.4em 0em;
     border-radius: 1.4em;
-    width: 35%;
-    height: 35%;
-}
-
-.profile_info p{
-    position: relative;
-    width:35%;
-    word-break: break-word;
-}
-
-/*#description{
-    position: fixed;
-    width:35%;
-    word-break: break-word;
-}*/
-
-/*p#description{
-    position: fixed;
-    margin: 50px 0px;
-    overflow-wrap: normal;
     width: 30%;
+    height: 30%;
+}
+
+#description{
     word-break: break-word;
-}*/
+    margin-right: 10%;
+    position: relative;
+}
 
 #edit_profile_link{
     color: #41B3A3;
@@ -117,7 +111,8 @@
 
 #create_houses_button{
     margin: 0.7em;
-
+    margin-left: 20%;
+    margin-right: auto;
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
