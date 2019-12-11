@@ -3,14 +3,20 @@
     max-width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
 }
 
 a.house{
     background-color: #FDFDFD;
-    margin: 1.5% 1.8%;
+    margin: 1% 1%;
     padding-bottom: 0.5em;
+    border-radius: 1.4em;
+}
+
+a.house img{
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
 }
 
 a.house h1{
