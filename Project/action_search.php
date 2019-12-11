@@ -1,4 +1,4 @@
-<?
+<?php
     include_once 'includes/start.php';
 
 	$destination = $_GET['destination'];

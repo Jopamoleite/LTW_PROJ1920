@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'includes/start.php';
 include_once 'database/db_user.php';
 ?>
@@ -24,6 +24,6 @@ include_once 'database/db_user.php';
   </div>
 </body>
 
-<?
+<?php
   include_once 'templates/common/initial_footer.php';
 ?>

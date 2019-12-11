@@ -1,5 +1,5 @@
-<?include_once 'includes/start.php' ?>
-<?include_once 'database/db_user.php' ?>
+<?php include_once 'includes/start.php' ?>
+<?php include_once 'database/db_user.php' ?>
 <body>
   <?php
       if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])){
