@@ -30,10 +30,8 @@ function validate_user() {
 
   if (!user.checkValidity()) {
     error_user.innerHTML = "Not valid user";
-    user.setCustomValidity("Invalid field.");
   } else {
     error_user.innerHTML = "Valid";
-    user.setCustomValidity("");
   }
 }
 

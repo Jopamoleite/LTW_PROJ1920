@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'includes/start.php';
 include_once 'database/db_user.php';
 ?>
@@ -19,13 +19,12 @@ include_once 'database/db_user.php';
           <div id="error_password"></div><br>
         <label><input type="password" name="repeat" oninput="validate_repeat()" id="repeat" placeholder="  Confirm password" required minlength="8"> </label>
           <div id="error_repeat"></div><br>
-      </div>
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
     </form>
     <div id="error_all"></div>
   </div>
 </body>
 
-<?
-  include_once 'templates/common/initial-footer.php';
+<?php
+  include_once 'templates/common/initial_footer.php';
 ?>
