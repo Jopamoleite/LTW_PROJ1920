@@ -1,11 +1,11 @@
 <!-- HEADER -->
-<?
+<?php
   include_once 'includes/start.php';
   include_once 'database/db_user.php';
   include_once 'templates/common/header.php';
 ?>
 
-<?
+<?php
   $username = $_GET['user'];
   if(empty($username)) header('Location: main_page.php');
   if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $username)) header('Location: ' . 'index.php');
@@ -24,26 +24,26 @@
 <div class="profile flex-container">
   <img src="images/default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
-    <h1>  <? echo $username; ?> </h1>
+    <h1>  <?php echo $username; ?> </h1>
     <p>
-      <? echo $name; ?>
+      <?php echo $name; ?>
     </p>
     <p>
       <img src="images/location.png" class="icon" alt="loca" width="15" height="15">
-      <? echo $location; ?>
+      <?php echo $location; ?>
     </p>
     <p>
       <img src="images/telephone.png" class="icon" alt="phone" width="15" height="15">
-      <? echo $phone; ?>
+      <?php echo $phone; ?>
     </p>
     <p>
       <img src="images/mail.png" class="icon" alt="mail" width="15" height="15">
-      <? echo $email; ?>
+      <?php echo $email; ?>
     </p>
     <p id="description">
-      <? echo $bio; ?>
+      <?php echo $bio; ?>
     </p>
-    <? if($username == $_SESSION['username'])
+    <?php if($username == $_SESSION['username'])
       echo "<a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>"
     ?>
   </div>

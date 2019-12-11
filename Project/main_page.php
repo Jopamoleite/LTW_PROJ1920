@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<?
+<?php
   include_once 'includes/start.php';
   include_once 'database/db_user.php';
   include_once 'database/houses.php';
@@ -7,14 +7,16 @@
 ?>
 
 <!-- SEARCH -->
-<?
+<?php
   include_once 'templates/user/searchbar.php';
 ?>
 
 <!-- CASINHAS -->
-<?
+<?php
   include_once 'templates/houses/display_houses.php';
 ?>
 
 <!-- FOOTER -->
-<?include_once 'templates/common/initial_footer.php' ?>
+<?php
+  include_once 'templates/common/initial_footer.php' 
+?>

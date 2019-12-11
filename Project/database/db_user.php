@@ -1,4 +1,4 @@
-<?
+<?php
     function isLoginCorrect($username, $password) {
         global $dbh;
         try{
