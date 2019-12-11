@@ -92,9 +92,3 @@
     width: 22em;
     margin: 0em 2em;
 }
-
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
