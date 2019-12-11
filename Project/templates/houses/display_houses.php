@@ -4,7 +4,7 @@
 ?>
 
 <section id="houses_list" class="flex_row">
-  <script src="scripts/positionhouses.js"></script> 
+  <script src="../scripts/positionhouses.js"></script> 
   <?php
     $destination;
     $checkin;

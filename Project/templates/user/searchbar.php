@@ -1,4 +1,4 @@
-<script src="scripts/searchbar_scroll.js"></script> 
+<script src="scripts/searchbar_scroll.js"></script>
 
 <?php
     $destination;
@@ -23,11 +23,11 @@
         </div>
         <div class="search_input_field_medium">
             <label class="search_label">Check-In</label>
-            <input class="search_input" name="checkin" type="date" value="<?php if(isset($_GET['checkin'])){ echo $_GET['checkin']; }?>" placeholder="dd/mm/yyyy">
+            <input class="search_input" name="checkin" id="checkin" type="date" value="<?php if(isset($_GET['checkin'])){ echo $_GET['checkin']; }?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
         </div>
         <div class="search_input_field_medium">
             <label class="search_label">Check-Out</label>
-            <input class="search_input" name="checkout" type="date" value="<?php if(isset($_GET['checkout'])){ echo $_GET['checkout']; }?>" placeholder="dd/mm/yyyy">
+            <input class="search_input" name="checkout" id="checkout" type="date" value="<?php if(isset($_GET['checkout'])){ echo $_GET['checkout']; }?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
         </div>
         <div class="search_input_field_small">
             <label class="search_label">Guests</label>
