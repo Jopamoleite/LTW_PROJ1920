@@ -3,6 +3,12 @@ a{
 	color: inherit;
 }
 
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 body{
     background-color: #E8A87C;
     margin: 0em;
