@@ -47,3 +47,4 @@ CREATE TABLE Reservations(
     FOREIGN KEY (touristID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
+

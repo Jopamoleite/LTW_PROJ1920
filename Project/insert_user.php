@@ -7,34 +7,69 @@
    $repeatPass = $_POST['repeat'];
    $myemail    = $_POST['email'];
 
-   if (!filter_var($myemail, FILTER_VALIDATE_EMAIL)) {
-      $error = "Invalid email format";
+   if (!empty($myusername) && !empty($mypassword) && !empty($repeatPass) && !empty($myemail)) {
+      $myusername = trim(htmlspecialchars($myusername));
+      $mypassword = trim(htmlspecialchars($mypassword));
+      $repeatPass = trim(htmlspecialchars($repeatPass));
+      $myemail    = trim(htmlspecialchars($myemail));
+   }
+
+   $_SESSION['errormsg'] = "";
+
+   /* Validate username */
+   if (strlen($myusername) < 4) {
+      $error = "Username too short.";
       $_SESSION['errormsg'] = $error;
-      header('Location: edit-profile.php');
+      header('Location: register_page.php');
+      die();
+   }
+   if (!preg_match('/[\w]+/', $myusername)) {
+      $error = "Invalid username.";
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
+      die();
+   }
+   if (checkUser($myusername)) {
+      $error = "User already exists.";
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
       die();
    }
 
-   $myusername = trim(htmlspecialchars($myusername));
-   $mypassword = trim(htmlspecialchars($mypassword));
-   $repeatPass = trim(htmlspecialchars($repeatPass));
-   $myemail = trim(htmlspecialchars($myemail));   
+   /* Validate email */
+   if (!filter_var($myemail, FILTER_VALIDATE_EMAIL)) {
+      $error = "Invalid email format";
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
+      die();
+   }
+   if (checkEmail($myemail)) {
+      $error = "Email already used.";
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
+      die();
+   }
 
-   if($mypassword != $repeatPass){
+   /* Validate password and repeat */
+   if (strlen($mypassword) < 8) {
+      $error = "Password too short.";
+      $_SESSION['errormsg'] = $error;
+      header('Location: register_page.php');
+      die();
+   }
+   if($mypassword != $repeatPass) {
       $error = 'Your passwords must match';
       $_SESSION["errormsg"] = $error;
       header('Location: register_page.php');
       die();
-   }else{
-      $error = insertUser($myusername, $mypassword, $myemail);
+   }
 
-      if($error){
-         $_SESSION["errormsg"] = $error;
-         header('Location: register_page.php');
-         die();
-      }else{
-         header('Location: index.php');
-         die();
-      }
+   /* Insert user */
+   $error = insertUser($myusername, $mypassword, $myemail);
+   if($error) {
+      $_SESSION["errormsg"] = $error;
+      header('Location: register_page.php');
+      die();
    }
 
    header('Location: index.php');
