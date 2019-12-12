@@ -50,6 +50,7 @@
     <p id="description">
       <?php echo $bio; ?>
     </p>
+<<<<<<< HEAD
     <?php if($username == $_SESSION['username']){ ?>
       <a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>
     <?php }?>
@@ -57,6 +58,14 @@
     <?php if($username == $_SESSION['username']){ ?>
       <a id='change_password_link' href='change_password.php'>Change Password</a>
     <?php }?>
+=======
+    <?php if($username == $_SESSION['username'])
+      echo "<a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>"
+    ?>
+    <?php if($username == $_SESSION['username'])
+      echo "<a id='change_password_link' href='change_password.php'>Change Password</a>"
+    ?>
+>>>>>>> c7556d13cf232ddaa08363614f50033236e89d64
   </div>
 </div>
 
