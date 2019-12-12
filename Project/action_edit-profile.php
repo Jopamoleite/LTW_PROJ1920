@@ -2,6 +2,7 @@
     include_once 'includes/start.php';
     include_once 'database/db_user.php';
 
+	$username = $_POST['username'];
 	$name = $_POST['name'];
 	$location = $_POST['location'];
 	$phone = $_POST['phone'];
@@ -15,6 +16,7 @@
         die();
     }
 
+    $myusername = trim(htmlspecialchars($username));
     $myname = trim(htmlspecialchars($name));
     $mylocation = trim(htmlspecialchars($location));
     $myphone = trim(htmlspecialchars($phone));
@@ -22,11 +24,13 @@
     $mybio = trim(htmlspecialchars($bio));
 
 
-    $error = updateUser($_SESSION['userID'], $myname, $mylocation, $myphone, $myemail, $mybio);
+    $error = updateUser($_SESSION['userID'], $myusername, $myname, $mylocation, $myphone, $myemail, $mybio);
     if(!empty($error)){
         header('Location: edit-profile.php');
         die();
     }
+ 
+    setUser($myusername);
 
     header('Location: user_profile.php?user='.$_SESSION['username']);
 

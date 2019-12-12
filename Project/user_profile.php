@@ -13,9 +13,9 @@
 
   $user = getUser($username);
 
-  $name     = $user['name'];            if(empty($name)) $name = "";
+  $name     = $user['name'];            if(empty($name)) $name = "No name provided";
   $location = $user['location_'];       if(empty($location)) $location = "No location available";
-  $phone    = $user['phone_num'];       if(!isset($phone)) $phone = "No contact number provided";
+  $phone    = $user['phone_num'];       if(empty($phone)) $phone = "No contact number provided";
   $email    = $user['email'];           if(empty($email)) $email = "No e-mail provided";
   $bio      = $user['bio'];             if(empty($bio)) $bio = "Biography";
 ?>
@@ -45,6 +45,10 @@
     </p>
     <?php if($username == $_SESSION['username'])
       echo "<a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>"
+    ?>
+    </p>
+    <?php if($username == $_SESSION['username'])
+      echo "<a id='change_password_link' href='change_password.php'>Change Password</a>"
     ?>
   </div>
 </div>

@@ -61,15 +61,16 @@
 .profile_info textarea{
     resize: none;
     width: 90%;
+    min-height: 4em;
 }
 
-.profile_info input[type=number]::-webkit-inner-spin-button, 
-.profile_info input[type=number]::-webkit-outer-spin-button { 
+.profile_info input[name="phone"]::-webkit-inner-spin-button, 
+.profile_info input[name="phone"]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
 
-#backtoprofile_link, #edit-profile-button{
+#backtoprofile_link, #edit-profile-button, #add_house_button{
     border-style: solid;
     border-width: 1.5px;
     border-color: #41B3A3;
