@@ -24,13 +24,12 @@
           </a>
           <h1><a href="main_page.php">HouseHunt</a></h1>
       </div>
-      <div id="user_profile_info">
+      <div class="profile_dropdown">
         <div id="username_link">
           <a href="user_profile.php?user=<? echo $_SESSION['username']?>" >
           <?php echo $_SESSION['username']; ?>
           </a>
         </div>
-        <div class="profile_dropdown">
           <span><img href="" src="images/user.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
               <br>
@@ -39,6 +38,5 @@
                 <button class="logout_button" type="submit">Logout</button>
               </form>
             </div>
-        </div>
       </div>
     </div>
