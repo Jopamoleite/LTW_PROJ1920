@@ -10,19 +10,17 @@
    if (!filter_var($myemail, FILTER_VALIDATE_EMAIL)) {
       $error = "Invalid email format";
       $_SESSION['errormsg'] = $error;
-      header('Location: edit-profile.php');
+      header('Location: register_page.php');
       die();
    }
 
    if (!empty($myusername) && !empty($mypassword) && !empty($repeatPass) && !empty($myemail)) {
-
       $myusername = trim(htmlspecialchars($myusername));
       $mypassword = trim(htmlspecialchars($mypassword));
       $repeatPass = trim(htmlspecialchars($repeatPass));
-      $myemail = trim(htmlspecialchars($myemail));
-
+      $myemail    = trim(htmlspecialchars($myemail));
    }
-   
+
 
    if($mypassword != $repeatPass){
       $error = 'Your passwords must match';
