@@ -87,11 +87,22 @@
         }
     }
     
-    function updateUser($myid, $name, $location, $phone, $mail, $bio){
+    function updateUser($myid, $username, $name, $location, $phone, $mail, $bio){
         global $dbh;
         try {
-            $stmt = $dbh->prepare('UPDATE User_ SET name = ?, location_ = ?, phone_num = ?, email = ?, bio = ? WHERE id = ?;');
-            $stmt->execute(array($name, $location, $phone, $mail, $bio, $myid));
+            $stmt = $dbh->prepare('UPDATE User_ SET username = ?, name = ?, location_ = ?, phone_num = ?, email = ?, bio = ? WHERE id = ?;');
+            $stmt->execute(array($username, $name, $location, $phone, $mail, $bio, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function changePassword($myid, $password){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET password_ = ? WHERE id = ?;');
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $stmt->execute(array($hash, $myid));
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
         }
