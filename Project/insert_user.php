@@ -21,16 +21,19 @@
       $error = "Username too short.";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
    if (!preg_match('/[\w]+/', $myusername)) {
       $error = "Invalid username.";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
    if (checkUser($myusername)) {
       $error = "User already exists.";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
 
    /* Validate email */
@@ -38,11 +41,13 @@
       $error = "Invalid email format";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
    if (checkEmail($myemail)) {
       $error = "Email already used.";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
 
    /* Validate password and repeat */
@@ -50,11 +55,13 @@
       $error = "Password too short.";
       $_SESSION['errormsg'] = $error;
       header('Location: register_page.php');
+      die();
    }
    if($mypassword != $repeatPass) {
       $error = 'Your passwords must match';
       $_SESSION["errormsg"] = $error;
       header('Location: register_page.php');
+      die();
    }
 
    /* Insert user */
@@ -62,6 +69,7 @@
    if($error) {
       $_SESSION["errormsg"] = $error;
       header('Location: register_page.php');
+      die();
    }
 
    header('Location: index.php');

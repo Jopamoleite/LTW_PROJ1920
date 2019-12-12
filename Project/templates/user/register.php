@@ -22,8 +22,8 @@ include_once 'database/db_user.php';
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
     </form>
     <div id="error_all"><?php
-                          if($_SESSION['errormsg']){
-                            echo $_SESSION['errormsg'];
+                          if($_SESSION["errormsg"]) {
+                            echo $_SESSION["errormsg"];
                           }
                         ?></div>
   </div>
