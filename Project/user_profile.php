@@ -45,9 +45,8 @@
       <?php echo $bio; ?>
     </p>
     <?php if($username == $_SESSION['username'])
-      echo "<a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>"
+      echo "<a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>"
     ?>
-    </p>
     <?php if($username == $_SESSION['username'])
       echo "<a id='change_password_link' href='change_password.php'>Change Password</a>"
     ?>
