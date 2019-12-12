@@ -34,7 +34,7 @@ function check_form() {
           document.getElementById("email").setCustomValidity("");
       }
     };
-    xmlhttp1.open("GET", "database/register_check.php?type=email&value=" + email.value , true);
+    xmlhttp1.open("GET", "register_check.php?type=email&value=" + email.value , true);
     xmlhttp1.send();
 
     if (error_username.innerHTML != "Valid" || error_email.innerHTML != "Valid" || error_password.innerHTML != "Valid" || error_repeat.innerHTML != "Valid") {

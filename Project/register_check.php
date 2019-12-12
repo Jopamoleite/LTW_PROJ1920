@@ -1,4 +1,7 @@
 <?php
+include_once 'includes/start.php';
+include_once 'database/db_user.php';
+
   $type = $_GET['type'];
   $value = $_GET['value'];
 
