@@ -18,7 +18,7 @@
 
 <!-- PROFILE -->
 <div class="profile flex-container">
-  <img src="images/default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
+  <img src="images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
         <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
     <h1>  <?php echo $_SESSION['username']; ?> </h1>

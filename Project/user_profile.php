@@ -14,16 +14,23 @@
 
   $user = getUser($username);
 
-  $name     = $user['name'];            if(empty($name)) $name = "No name provided";
-  $location = $user['location_'];       if(empty($location)) $location = "No location available";
-  $phone    = $user['phone_num'];       if(empty($phone)) $phone = "No contact number provided";
-  $email    = $user['email'];           if(empty($email)) $email = "No e-mail provided";
-  $bio      = $user['bio'];             if(empty($bio)) $bio = "Biography";
+  $name         = $user['name'];           if(empty($name)) $name = "No name provided";
+  $location     = $user['location_'];      if(empty($location)) $location = "No location available";
+  $phone        = $user['phone_num'];      if(empty($phone)) $phone = "No contact number provided";
+  $email        = $user['email'];          if(empty($email)) $email = "No e-mail provided";
+  $bio          = $user['bio'];            if(empty($bio)) $bio = "Biography";
+  $image_name   = $user['image_name'];     if(empty($image_name)) $image_name = "default_pic.bmp";
 ?>
 
 <!-- PROFILE -->
-<div class="profile flex-container">
-  <img src="images/default_pic.bmp" id="profile_pic" alt="Profile Pic" width="300" height="300">
+<div class="profile flex-container">  
+  <img src="images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
+  <form id = "edit_profile_pic_form" action="edit_picture.php" method="post" enctype="multipart/form-data">
+    <?php if($username == $_SESSION['username']){?>
+      <input type="file" name="picture" id="profile_pic">
+      <input type="submit" name="submit" value="Edit Picture" >    
+    <?php } ?>
+  </form>
   <div class="profile_info">
     <h1>  <?php echo $username; ?> </h1>
     <p>
@@ -44,21 +51,21 @@
     <p id="description">
       <?php echo $bio; ?>
     </p>
-    <?php if($username == $_SESSION['username'])
-      echo "<a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>"
-    ?>
-    <?php if($username == $_SESSION['username'])
-      echo "<a id='change_password_link' href='change_password.php'>Change Password</a>"
-    ?>
+    <?php if($username == $_SESSION['username']){ ?>
+      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
+    <?php }?>
+    </p>
+    <?php if($username == $_SESSION['username']){ ?>
+      <a id='change_password_link' href='change_password.php'>Change Password</a>
+    <?php }?>
   </div>
 </div>
 
 <!-- TABS -->
 <form action="add_houses.php" method="post">
-<?php 
-  if($username == $_SESSION['username'])
-    echo '<input id="create_houses_button" class="button" type="submit" value="Add House">';
-?>
+<?php if($username == $_SESSION['username']){ ?>
+    <input id="create_houses_button" class="button" type="submit" value="Add House">
+<?php } ?>
 </form>
 
 <section id="profile_houses" class="flex_row">

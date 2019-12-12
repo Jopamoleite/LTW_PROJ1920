@@ -16,9 +16,9 @@
     function insertUser($username, $password, $email){
         global $dbh;
         try {
-            $stmt = $dbh->prepare('INSERT INTO User_(username, password_, email) VALUES (?, ?, ?);');
+            $stmt = $dbh->prepare('INSERT INTO User_(username, password_, email, image_name) VALUES (?, ?, ?, ?);');
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $success = $stmt->execute(array($username, $hash, $email));
+            $success = $stmt->execute(array($username, $hash, $email, 'default_pic.bmp'));
             if($success) return "";
             return "Failed to register.";
         } catch (PDOException $e) {
@@ -35,6 +35,19 @@
             $row = $stmt->fetch();
             $id = $row['id'];
             return $id;
+        }catch(PDOException $e){
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
+    function getUserPhoto($myusername){
+        global $dbh;
+        try{
+            $stmt = $dbh->prepare('SELECT image_name FROM User_ WHERE username = ?;');
+            $stmt->execute(array($myusername));
+            $row = $stmt->fetch();
+            $image = $row['image_name'];
+            return $image;
         }catch(PDOException $e){
             error_log('Error: ' . $e->getMessage());
         }
