@@ -21,11 +21,7 @@ include_once 'database/db_user.php';
           <div id="error_repeat"></div><br>
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
     </form>
-    <div id="error_all"><?php
-                          if($_SESSION["errormsg"]) {
-                            echo $_SESSION["errormsg"];
-                          }
-                        ?></div>
+    <div id="error_all"><?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?></div>
   </div>
 </body>
 
