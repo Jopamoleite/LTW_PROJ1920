@@ -2,6 +2,7 @@
 <?php
   include_once 'includes/start.php';
   include_once 'database/db_user.php';
+  include_once 'database/houses.php';
   include_once 'templates/common/header.php';
 ?>
 
@@ -54,10 +55,27 @@
 </div>
 
 <!-- TABS -->
-
 <form action="add_houses.php" method="post">
-  <input id="create_houses_button" class="button" type="submit" value="Add House">
+<?php 
+  if($username == $_SESSION['username'])
+    echo '<input id="create_houses_button" class="button" type="submit" value="Add House">';
+?>
 </form>
+
+<section id="profile_houses" class="flex_row">
+  <?php
+    $id = getUserId($username);
+    $houses = getHouseWithOwnerID($id);
+    foreach ($houses as $entry) {
+      echo '<a class="house" href="main_page.php">';
+        echo '<img src="images/house.jpg" id="house pic" alt="House pic" width="300" height="300">';
+        echo '<h1>' . $entry['location'] . '</h1>';
+        echo '<h2>' . $entry['title'] . '</h2>';
+        echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
+      echo '</a>';
+    }
+  ?>
+</section>
 
 <!-- FOOTER -->
 <?

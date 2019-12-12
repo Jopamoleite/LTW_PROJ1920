@@ -21,12 +21,25 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
+
     function getHousesWithGuests($guests){
         global $dbh;
         try {
             $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
             $stmt = $dbh->prepare($qry);
             $stmt->execute(array($guests));
+            return $stmt;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
+    function getHouseWithOwnerID($id){
+        global $dbh;
+        try {
+            $qry = 'SELECT * FROM Place WHERE ownerID = ? ORDER BY price_day ASC;';
+            $stmt = $dbh->prepare($qry);
+            $stmt->execute(array($id));
             return $stmt;
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
