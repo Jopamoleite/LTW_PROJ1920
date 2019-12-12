@@ -1,13 +1,13 @@
 "use strict";
 
 function check_form() {
-  let name = document.getElementById("username").value;
+  let user = document.getElementById("username").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let repeat = document.getElementById("repeat").value;
   let error_all = document.getElementById("error_all");
 
-  if (name == "" || password == "" || email == "" || repeat == "") {
+  if (user == "" || password == "" || email == "" || repeat == "") {
     error_all.innerHTML = "Fill all fields";
   } else {
     let error_username = document.getElementById("error_username");
@@ -15,8 +15,29 @@ function check_form() {
     let error_password = document.getElementById("error_password");
     let error_repeat = document.getElementById("error_repeat");
 
-    if (error_username.innerHTML != "Valid" || error_email.innerHTML != "Valid" || error_password.innerHTML != "Valid" || error_repeat.innerHTML != "Valid"
-    ) {
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("error_username").innerHTML = this.responseText;
+        if(this.responseText == "Valid")
+          document.getElementById("username").setCustomValidity("");
+      }
+    };
+    xmlhttp.open("GET", "register_check.php?type=user&value=" + user , true);
+    xmlhttp.send();
+
+    let xmlhttp1 = new XMLHttpRequest();
+    xmlhttp1.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("error_email").innerHTML = this.responseText;
+        if(this.responseText == "Valid")
+          document.getElementById("email").setCustomValidity("");
+      }
+    };
+    xmlhttp1.open("GET", "database/register_check.php?type=email&value=" + email.value , true);
+    xmlhttp1.send();
+
+    if (error_username.innerHTML != "Valid" || error_email.innerHTML != "Valid" || error_password.innerHTML != "Valid" || error_repeat.innerHTML != "Valid") {
       error_all.innerHTML = "Fill with valid information";
     } else {
       document.getElementById("register").submit();
@@ -27,11 +48,17 @@ function check_form() {
 function validate_user() {
   let user = document.getElementById("username");
   let error_user = document.getElementById("error_username");
+  let regex = /[\w]+/;
 
-  if (!user.checkValidity()) {
-    error_user.innerHTML = "Not valid user";
+  if (user.value.length < 4) {
+    error_user.innerHTML = "Must be 4+ characters long";
+    user.setCustomValidity("Invalid field.");
+  } else if (!regex.test(user.value)) {
+    error_user.innerHTML = "Must not contain special characters";
+    user.setCustomValidity("Invalid field.");
   } else {
     error_user.innerHTML = "Valid";
+    user.setCustomValidity("");
   }
 }
 

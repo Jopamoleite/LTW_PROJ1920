@@ -56,7 +56,7 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
-    
+
     function editPhone($myid, $phone){
         global $dbh;
         try {
@@ -66,7 +66,7 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
-    
+
     function editLocation($myid, $location){
         global $dbh;
         try {
@@ -76,7 +76,7 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
-    
+
     function editName($myid, $name){
         global $dbh;
         try {
@@ -86,7 +86,7 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
-    
+
     function updateUser($myid, $name, $location, $phone, $mail, $bio){
         global $dbh;
         try {
@@ -102,6 +102,19 @@
         try {
             $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ?;');
             $stmt->execute(array($username));
+            $table = $stmt->fetchAll();
+            if(sizeof($table) != 1) return false;
+            return true;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
+    function checkEmail($email){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('SELECT * FROM User_ WHERE email = ?;');
+            $stmt->execute(array($email));
             $table = $stmt->fetchAll();
             if(sizeof($table) != 1) return false;
             return true;
