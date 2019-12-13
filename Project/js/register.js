@@ -15,28 +15,6 @@ function check_form() {
     let error_password = document.getElementById("error_password");
     let error_repeat = document.getElementById("error_repeat");
 
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("error_username").innerHTML = this.responseText;
-        if(this.responseText == "Valid")
-          document.getElementById("username").setCustomValidity("");
-      }
-    };
-    xmlhttp.open("GET", "templates/user/register_check.php?type=user&value=" + user , true);
-    xmlhttp.send();
-
-    let xmlhttp1 = new XMLHttpRequest();
-    xmlhttp1.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("error_email").innerHTML = this.responseText;
-        if(this.responseText == "Valid")
-          document.getElementById("email").setCustomValidity("");
-      }
-    };
-    xmlhttp1.open("GET", "templates/user/register_check.php?type=email&value=" + email.value , true);
-    xmlhttp1.send();
-
     if (error_username.innerHTML != "Valid" || error_email.innerHTML != "Valid" || error_password.innerHTML != "Valid" || error_repeat.innerHTML != "Valid") {
       error_all.innerHTML = "Fill with valid information";
     } else {
