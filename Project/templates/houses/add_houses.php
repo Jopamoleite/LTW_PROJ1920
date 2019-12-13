@@ -7,7 +7,7 @@
 <div class="profile flex-container">
   <div class="profile_info">
     <h3>Add new house</h3>
-      <form method="post" action="action_add_house.php">
+      <form method="post" action="templates/houses/action_add_house.php">
           <label>Title:</label><br>
           <input type="text" name="title" placeholder="Title" required/><br>
           <label>Location:</label><br>
@@ -22,7 +22,7 @@
           <textarea name="description" rows="3" cols="50" maxlength="200" placeholder="Write something about the house"></textarea><br><br>
           <input id="add_house_button" class="button" type="submit" value="Create House">
       </form>
-      <a id="backtoprofile_link" href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>
 

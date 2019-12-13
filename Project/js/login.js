@@ -2,9 +2,7 @@
 
 function check_form() {
   let user = document.getElementById("username").value;
-  let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  let repeat = document.getElementById("repeat").value;
   let error_all = document.getElementById("error_all");
 
   if (user == "" || password == "" || email == "" || repeat == "") {

@@ -44,18 +44,18 @@
       <?php echo $bio; ?>
     </p>
     <?php if($username == $_SESSION['username'])
-      echo "<a id='edit_profile_link' href='edit-profile.php'>Edit Profile</a>"
+      echo "<a id='edit_profile_link' href='edit_profile_page.php'>Edit Profile</a>"
     ?>
     </p>
     <?php if($username == $_SESSION['username'])
-      echo "<a id='change_password_link' href='change_password.php'>Change Password</a>"
+      echo "<a id='change_password_link' href='change_password_page.php'>Change Password</a>"
     ?>
   </div>
 </div>
 
 <!-- TABS -->
 
-<form action="add_houses.php" method="post">
+<form action="templates/houses/add_houses.php" method="post">
   <input id="create_houses_button" class="button" type="submit" value="Add House">
 </form>
 

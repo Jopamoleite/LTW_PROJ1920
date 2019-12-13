@@ -1,11 +1,11 @@
-<script src="scripts/searchbar_scroll.js"></script>
+<script src="js/searchbar_scroll.js"></script>
 
 <?php
     $destination;
     $checkin;
     $checkout;
     $guests;
-    
+
     if(isset($_GET['destination'])) $destination = $_GET['destination']; else $destination = "";
 
     if(isset($_GET['checkin'])) $checkin = $_GET['checkin']; else $checkin = "";
@@ -13,10 +13,10 @@
     if(isset($_GET['checkout'])) $checkout = $_GET['checkout']; else $checkout = "";
 
     if(isset($_GET['guests'])) $guests = $_GET['guests']; else $guests = 1;
-?>    
+?>
 
 <div id="search_bar">
-    <form class="search_form flex-container" method="get" action="action_search.php">
+    <form class="search_form flex-container" method="get" action="templates/houses/action_search.php">
         <div class="search_input_field_large">
             <label class="search_label">Going to</label>
             <input class="search_input" name="destination" type="text" value="<?php if(isset($_GET['destination'])){ echo $_GET['destination']; }?>" placeholder="Destination">

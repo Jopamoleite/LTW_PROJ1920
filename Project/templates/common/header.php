@@ -12,9 +12,9 @@
     <link href="css/house_results_style.css" rel="stylesheet">
   </head>
   <body>
-    <?php 
+    <?php
       if(!isset($_SESSION['userID']) || empty($_SESSION['userID'])){
-        header("Location: invalid_back.php");
+        header("Location: invalid_back_page.php");
       }
     ?>
     <div class="page_header">
@@ -26,7 +26,7 @@
       </div>
       <div id="user_profile_info">
         <div id="username_link">
-          <a href="user_profile.php?user=<? echo $_SESSION['username']?>" >
+          <a href="user_profile_page.php?user=<?php echo $_SESSION['username']?>" >
           <?php echo $_SESSION['username']; ?>
           </a>
         </div>
@@ -34,7 +34,7 @@
           <span><img href="" src="images/user.png" alt="User icon" width="20" height="20"></span>
             <div class="dropdown_content">
               <br>
-              <div><a href="user_profile.php?user=<? echo $_SESSION['username'] ?>" >My Profile</a></div>
+              <div><a href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>" >My Profile</a></div>
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>
