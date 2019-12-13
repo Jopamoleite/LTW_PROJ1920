@@ -52,6 +52,16 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
+    
+    function editPhoto($myid, $photo){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('UPDATE User_ SET image_name = ? WHERE id = ?;');
+            $stmt->execute(array($photo, $myid));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
 
     function editBio($myid, $bio){
         global $dbh;

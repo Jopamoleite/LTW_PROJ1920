@@ -30,6 +30,8 @@ CREATE TABLE Place(
     capacity    INTEGER NOT NULL CHECK (capacity > 0),
     description TEXT NOT NULL,
     ownerID     INTEGER NOT NULL,
+    rating      REAL,
+    num_rents   INTEGER,
 
     FOREIGN KEY (ownerID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE
@@ -52,6 +54,8 @@ CREATE TABLE Reservations(
     touristID   INTEGER NOT NULL,
     begin_date  DATE NOT NULL,
     end_date    DATE NOT NULL,
+    
+    CHECK(date(begin_date) < date(end_date)),
 
     FOREIGN KEY (placeID) REFERENCES Place(id)
     ON DELETE CASCADE ON UPDATE CASCADE,
