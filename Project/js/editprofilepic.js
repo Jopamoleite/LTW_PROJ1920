@@ -7,3 +7,4 @@ function uploadProfilePic() {
 }
 
 upload.addEventListener("change", uploadProfilePic);
+

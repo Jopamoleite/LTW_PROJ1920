@@ -30,6 +30,7 @@
   <form id ="edit_profile_pic_form" action="action_edit_picture.php" method="post" enctype="multipart/form-data">
     <?php if($username == $_SESSION['username']){?>
       <input id="profile_pic_upload" type="file" name="picture">
+      <label for="profile_pic_upload">Select file</label>
     <?php } ?>
   </form>
   <div class="profile_info">
