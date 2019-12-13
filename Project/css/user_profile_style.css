@@ -24,8 +24,9 @@
 #profile_pic{
     margin: 1.4em 2.8em 1.4em 0em;
     border-radius: 1.4em;
-    width: 30%;
-    height: 30%;
+    max-width: 30em;
+    max-height: 30em;
+    object-fit: cover;
 }
 
 #description{

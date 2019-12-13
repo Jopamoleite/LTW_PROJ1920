@@ -23,13 +23,13 @@
 ?>
 
 <!-- PROFILE -->
+<script src="js/editprofilepic.js" defer></script>
 <div class="profile flex-container">
         <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
   <img src="images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
-  <form id = "edit_profile_pic_form" action="action_edit_picture.php" method="post" enctype="multipart/form-data">
+  <form id ="edit_profile_pic_form" action="action_edit_picture.php" method="post" enctype="multipart/form-data">
     <?php if($username == $_SESSION['username']){?>
-      <input type="file" name="picture" id="profile_pic">
-      <input type="submit" name="submit" value="Edit Picture" >
+      <input id="profile_pic_upload" type="file" name="picture">
     <?php } ?>
   </form>
   <div class="profile_info">
