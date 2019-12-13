@@ -6,9 +6,9 @@
     header("Location: /main_page.php");
   }
 
-  if(!isset($_POST['username_input']) || !isset($_POST['password_input'])){
+  if(!isset($_POST['username']) || !isset($_POST['password'])){
     print_body();
-  } else if(isset($_POST['username_input']) && isset($_POST['password_input'])) {
+  } else if(isset($_POST['username']) && isset($_POST['password'])) {
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
 
