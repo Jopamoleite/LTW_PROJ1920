@@ -66,6 +66,7 @@ body{
     margin-right: 1em;
     margin-left: 1em;
     display: inline-flex;
+    border-radius: 0.7em;
 }
 
 .profile_dropdown{
