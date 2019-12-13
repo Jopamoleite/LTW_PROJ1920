@@ -5,6 +5,7 @@
 	$guests = $_GET['guests'];
 	
 	$destination = trim(htmlspecialchars($destination));
+	$guests = trim(htmlspecialchars($guests));
 
 	$checkoutDate;
 	$checkinDate;

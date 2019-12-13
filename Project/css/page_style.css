@@ -54,21 +54,22 @@ body{
     justify-content: flex-end;
 }
 
-#user_profile_info a{
+#username_link, .profile_dropdown a{
     font-family: 'Open Sans', sans-serif;
-    margin-right: 1em;
     font-size: 0.9em;
     font-weight: lighter;
     color: #888888;
+    display: inline;
 }
 
-#user_profile_info img{
+.profile_dropdown img{
     margin-right: 1em;
+    margin-left: 1em;
+    display: inline-flex;
 }
 
 .profile_dropdown{
     position: relative;
-    display: inline-block;
 }
 
 .dropdown_content{

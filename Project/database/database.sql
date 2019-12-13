@@ -14,10 +14,12 @@ CREATE TABLE User_(
     bio         TEXT,
     location_   TEXT,
     phone_num   TEXT,
-    email       TEXT
+    email       TEXT,
+    image_name  TEXT NOT NULL
 );
 
 -- Places have a title, address, price/day, capacity and description
+-- Places have a set of images
 -- Places belong to a owner (user)
 CREATE TABLE Place(
     id          INTEGER PRIMARY KEY,
@@ -33,13 +35,23 @@ CREATE TABLE Place(
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- Images related to places
+CREATE TABLE PlaceImages(
+    id          INTEGER PRIMARY KEY,
+    image_name  TEXT NOT NULL,
+    placeID     INTEGER NOT NULL,
+
+    FOREIGN KEY (placeID) REFERENCES Place(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 -- Reservation have a starting date and a duration
 CREATE TABLE Reservations(
     id          INTEGER PRIMARY KEY,
     placeID     INTEGER NOT NULL,
     touristID   INTEGER NOT NULL,
     begin_date  DATE NOT NULL,
-    duration    INTEGER NOT NULL,
+    end_date    DATE NOT NULL,
 
     FOREIGN KEY (placeID) REFERENCES Place(id)
     ON DELETE CASCADE ON UPDATE CASCADE,

@@ -34,8 +34,9 @@
     position: relative;
 }
 
-#edit_profile_link{
+#edit_profile_link, #change_password_link{
     color: #41B3A3;
+    float: left;
 }
 
 .profile_info input, .profile_info textarea{
@@ -70,7 +71,7 @@
   margin: 0; 
 }
 
-#backtoprofile_link, #edit-profile-button, #add_house_button{
+#backtoprofile_link, #edit_profile_button, #add_house_button, #change_password_button{
     border-style: solid;
     border-width: 1.5px;
     border-color: #41B3A3;
@@ -87,6 +88,11 @@
     cursor: pointer;
 }
 
+#add_house_button{
+    width: fit-content;
+    height: 2.5em;
+}
+
 #backtoprofile_link{
     padding: 0.535em;
     padding-left: 0.35em;
@@ -100,7 +106,7 @@
     top: -4.2em;
 }
 
-#edit-profile-button{
+#edit_profile_button, #change_password_button{
     text-decoration: none;
 
     -webkit-appearance: button;
@@ -111,6 +117,11 @@
     width: fit-content;
     padding: 0.37em;
 }
+
+#change_password_button{
+    margin-top: 2em;
+}    
+
 
 #create_houses_button{
     margin: 0.7em;
