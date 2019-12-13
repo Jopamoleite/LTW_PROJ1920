@@ -36,7 +36,7 @@
           <input type="email" name="email" value="<?php if(!empty($email)){ echo $email; }?>" maxlength="35" required/><br><br>
           <label>Bio:</label><br>
           <textarea name="bio" rows="3" cols="50" maxlength="100" placeholder="Write something about yourself"><?php if(!empty($bio)){ echo $bio; } ?> </textarea><br><br>
-          <input id="edit-profile-button" class="button" type="submit" value="Update Profile">
+          <input id="edit_profile_button" class="button" type="submit" value="Update Profile">
       </form>
       <a id="backtoprofile_link" href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
