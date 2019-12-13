@@ -1,3 +1,4 @@
+<?php  include_once "database/db_user.php"; ?>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -26,14 +27,16 @@
       </div>
       <div class="profile_dropdown">
         <div id="username_link">
-          <a href="user_profile_page.php?user=<?php echo $_SESSION['username']?>" >
+          <a href="user_profile_page.php?user=<?php echo $_SESSION['username']; ?>" >
           <?php echo $_SESSION['username']; ?>
           </a>
         </div>
-          <span><img href="user_profile.php?user=<? echo $_SESSION['username']?>" src="images/<?php echo getUserPhoto($_SESSION['username']); ?>" alt="User icon" width="20" height="20"></span>
+          <span>
+            <img href="user_profile_page.php?user=<? echo $_SESSION['username']; ?>" src="images/<?php echo getUserPhoto($_SESSION['username']); ?>" alt="User icon" width="20" height="20">
+          </span>
             <div class="dropdown_content">
               <br>
-              <div><a href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>" >My Profile</a></div>
+              <div><a href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">My Profile</a></div>
               <form action="logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>

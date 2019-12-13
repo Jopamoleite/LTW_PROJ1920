@@ -12,7 +12,7 @@
         <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
     <h1>  <?php echo $_SESSION['username']; ?> </h1>
     <h3>Change Password</h3>
-      <form method="post" action="templates/user/action_change_password.php">
+      <form method="post" action="action_change_password.php">
           <label>Old Password:</label><br>
           <input type="password" name="password" placeholder="Old Password" required/><br>
           <label>New Password:</label><br>

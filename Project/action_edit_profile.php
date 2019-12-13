@@ -12,7 +12,7 @@
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Invalid email format";
         $_SESSION['errormsg'] = $error;
-        header('Location: edit_profile.php');
+        header('Location: edit_profile_page.php');
         die();
     }
 
@@ -26,12 +26,12 @@
 
     $error = updateUser($_SESSION['userID'], $myusername, $myname, $mylocation, $myphone, $myemail, $mybio);
     if(!empty($error)){
-        header('Location: edit_profile.php');
+        header('Location: edit_profile_page.php');
         die();
     }
- 
+
     setUser($myusername);
 
-    header('Location: user_profile.php?user='.$_SESSION['username']);
+    header('Location: user_profile_page.php?user='.$_SESSION['username']);
 
 ?>

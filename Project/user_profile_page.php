@@ -52,11 +52,11 @@
       <?php echo $bio; ?>
     </p>
     <?php if($username == $_SESSION['username']){ ?>
-      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
+      <a id='edit_profile_link' href='edit_profile_page.php'>Edit Profile</a>
     <?php }?>
     </p>
     <?php if($username == $_SESSION['username']){ ?>
-      <a id='change_password_link' href='change_password.php'>Change Password</a>
+      <a id='change_password_link' href='change_password_page.php'>Change Password</a>
     <?php }?>
   </div>
 </div>

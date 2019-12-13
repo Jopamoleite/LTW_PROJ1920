@@ -7,7 +7,7 @@
 <div class="profile flex-container">
   <div class="profile_info">
     <h3>Add new house</h3>
-      <form method="post" action="templates/houses/action_add_house.php">
+      <form method="post" action="action_add_house.php">
           <label>Title:</label><br>
           <input type="text" name="title" placeholder="Title" required/><br>
           <label>Location:</label><br>
