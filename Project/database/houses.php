@@ -5,6 +5,12 @@
         try {
             $stmt = $dbh->prepare('INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?, ?);');
             $stmt->execute(array($title, $location, $address, $price_day, $capacity, $description, $ownerID));
+            $qry = 'SELECT * FROM Place WHERE address_ = ?;';
+            $stmt = $dbh->prepare($qry);
+            $stmt->execute(array($address));
+            $row = $stmt->fetch();
+            $placeID = $row['id'];
+            return $placeID;
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
         }
@@ -54,6 +60,28 @@
             $table = $stmt->fetchAll();
             if(sizeof($table) != 1) return false;
             return true;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function getHousePhotos($house_id){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('SELECT * FROM PlaceImages WHERE placeID = ?;');
+            $stmt->execute(array($house_id));
+            $photos = $stmt->fetch();
+            return $photos;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
+    function addPhotoToHouse($image, $house_id){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('INSERT INTO PlaceImages(image_name, placeID) VALUES (?, ?);');
+            $stmt->execute(array($image, $house_id));
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());
         }
