@@ -23,7 +23,12 @@
 
 <!-- BODY -->
 <div id="house_info" class="flex-container">
-  <img src="images/default_house.jpg">
+  <?php
+    $photos = getHousePhotos($house_id);
+    if($photos == false) $photo = "default_house.jpg";
+    else $photo = $photos['image_name'];
+  ?>
+  <img src="images/<?php echo $photo ?>">
 </div>
 <div class="house">
   <div id="house_info">
