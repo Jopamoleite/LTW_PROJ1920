@@ -55,8 +55,8 @@ function print_body(){
         <h1><a href="index.php">HouseHunt</a></h1>
         <h2>The hunt is on!</h2>
         <form id="login_form" action="" method="post">
-          <p><label><input id="username_input" type="text" name="username" id="username" placeholder="   Username" required></label></p>
-          <p><label><input id="password_input" type="password" name="password" id="password" placeholder="   Password" required></label></p>
+          <p><label><input id="username_input" type="text" name="username" id="username" maxlength="20" placeholder="   Username" required></label></p>
+          <p><label><input id="password_input" type="password" name="password" id="password" maxlength="20" placeholder="   Password" required></label></p>
           <input id="login_button" class="button" type="submit" value="Login">
         </form>
         <form id="register_button_form" action="register_page.php" method="post">

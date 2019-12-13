@@ -13,9 +13,9 @@
     function getHousesAtLocation($location, $guests){
         global $dbh;
         try {
-            $qry = 'SELECT * FROM Place WHERE location = ? COLLATE NOCASE AND capacity >= ? ORDER BY price_day ASC ;';
+            $qry = 'SELECT * FROM Place WHERE location LIKE ? COLLATE NOCASE AND capacity >= ? ORDER BY price_day ASC ;';
             $stmt = $dbh->prepare($qry);
-            $stmt->execute(array($location, $guests));
+            $stmt->execute(array("%".$location."%", $guests));
             return $stmt;
         } catch (PDOException $e) {
             error_log('Error: ' . $e->getMessage());

@@ -9,13 +9,13 @@
     <h3>Add new house</h3>
       <form method="post" action="action_add_house.php">
           <label>Title:</label><br>
-          <input type="text" name="title" placeholder="Title" required/><br>
+          <input type="text" name="title" placeholder="Title" maxlength="30" required/><br>
           <label>Location:</label><br>
-          <input type="text" name="location" placeholder="Location" required/><br>
+          <input type="text" name="location" placeholder="Location" maxlength="35" required/><br>
           <label>Address:</label><br>
-          <input type="text" name="address" placeholder="Address" required/><br>
+          <input type="text" name="address" placeholder="Address" maxlength="50" required/><br>
           <label>Price per night (€):</label><br>
-          <input type="number" name="price" placeholder="Price" min="1" required/><br>
+          <input type="number" name="price" placeholder="Price" min="1" max="25000" required/><br>
           <label>House capacity:</label><br>
           <input type="number" name="capacity" placeholder="Capacity" min="1" max="100" required/><br><br>
           <label>Description:</label><br>
