@@ -23,7 +23,7 @@
       setID($myID);
       header('Location: main_page.php');
    }else{
-      $error = 'Invalid credentials\n';
+      $error = 'Invalid credentials';
       $_SESSION["errormsg"] = $error;
       header('Location: index.php');
    }
@@ -41,7 +41,7 @@ function validate_login($myusername, $mypassword){
     setID($myID);
     header('Location: main_page.php');
   }else{
-    $error = 'Invalid credentials\n';
+    $error = 'Invalid credentials';
     $_SESSION["errormsg"] = $error;
     header('Location: index.php');
   }
