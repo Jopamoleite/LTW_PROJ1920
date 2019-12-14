@@ -31,6 +31,7 @@
     <?php if($username == $_SESSION['username']){?>
       <input id="profile_pic_upload" type="file" name="picture">
       <label for="profile_pic_upload">Select file</label>
+      <input type="submit" name="submit" value="Edit Picture" >
     <?php } ?>
   </form>
   <div class="profile_info">
