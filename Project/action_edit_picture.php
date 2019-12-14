@@ -35,7 +35,9 @@
         if (!$uploadSuccess) {
             $_SESSION['errormsg'] = "Error uploading file! ";
         }else{
+            $oldPhoto = getUserPhoto($_SESSION['username']);
             editPhoto($_SESSION['userID'], $newName);
+            unlink("images/".$oldPhoto);
         }
         
     }
