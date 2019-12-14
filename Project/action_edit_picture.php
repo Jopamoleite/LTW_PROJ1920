@@ -37,7 +37,7 @@
         }else{
             $oldPhoto = getUserPhoto($_SESSION['username']);
             editPhoto($_SESSION['userID'], $newName);
-            unlink("images/".$oldPhoto);
+            if($oldPhoto != "default_pic.bmp") unlink("images/".$oldPhoto);
         }
         
     }
