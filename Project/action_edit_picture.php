@@ -33,7 +33,7 @@
         $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
         if (!$uploadSuccess) {
-            $_SESSION['errormsg'] = "Error uploading file!";
+            $_SESSION['errormsg'] = "Error uploading file! ";
         }else{
             editPhoto($_SESSION['userID'], $newName);
         }
