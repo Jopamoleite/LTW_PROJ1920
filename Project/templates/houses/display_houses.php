@@ -37,8 +37,11 @@
     if(!empty($destination) && !empty($checkin) && !empty($checkout)) $houses = getHousesAtLocation($destination, $guests); /*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT AND LOCATION = DESTINATION;*/
 
     foreach ($houses as $entry) {
-      echo '<a class="house" href="main_page.php">';
-        echo '<img src="images/house.jpg" id="house pic" alt="House pic" width="300" height="300">';
+      $photos = getHousePhotos($entry['id']);
+      if($photos == false) $photo = "default_house.jpg";
+      else $photo = $photos['image_name'];
+      echo '<a class="house" href="house_page.php?house='.$entry['id'].'">';
+        echo '<img src="images/'.$photo.'" id="house pic" alt="House pic" width="300" height="300">';
         echo '<h1>' . $entry['location'] . '</h1>';
         echo '<h2>' . $entry['title'] . '</h2>';
         echo '<h2>' . $entry['price_day'] . '€ / night</h2>';

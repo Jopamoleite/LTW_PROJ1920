@@ -7,6 +7,8 @@
 	$destination = trim(htmlspecialchars($destination));
 	$guests = trim(htmlspecialchars($guests));
 
+	if(empty($guests)) $guests = 1;
+
 	$checkoutDate;
 	$checkinDate;
 	$checkin;

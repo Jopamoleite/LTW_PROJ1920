@@ -23,11 +23,14 @@
 ?>
 
 <!-- PROFILE -->
+<script src="js/editprofilepic.js" defer></script>
 <div class="profile flex-container">
+        <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
   <img src="images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
-  <form id = "edit_profile_pic_form" action="edit_picture.php" method="post" enctype="multipart/form-data">
+  <form id ="edit_profile_pic_form" action="action_edit_picture.php" method="post" enctype="multipart/form-data">
     <?php if($username == $_SESSION['username']){?>
-      <input type="file" name="picture" id="profile_pic">
+      <input id="profile_pic_upload" type="file" name="picture">
+      <label for="profile_pic_upload">Select file</label>
       <input type="submit" name="submit" value="Edit Picture" >
     <?php } ?>
   </form>
@@ -52,11 +55,11 @@
       <?php echo $bio; ?>
     </p>
     <?php if($username == $_SESSION['username']){ ?>
-      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
+      <a id='edit_profile_link' href='edit_profile_page.php'>Edit Profile</a>
     <?php }?>
     </p>
     <?php if($username == $_SESSION['username']){ ?>
-      <a id='change_password_link' href='change_password.php'>Change Password</a>
+      <a id='change_password_link' href='change_password_page.php'>Change Password</a>
     <?php }?>
   </div>
 </div>
@@ -73,8 +76,11 @@
     $id = getUserId($username);
     $houses = getHouseWithOwnerID($id);
     foreach ($houses as $entry) {
-      echo '<a class="house" href="main_page.php">';
-        echo '<img src="images/house.jpg" id="house pic" alt="House pic" width="300" height="300">';
+      $photos = getHousePhotos($entry['id']);
+      if($photos == false) $photo = "default_house.jpg";
+      else $photo = $photos['image_name'];
+      echo '<a class="house" href="house_page.php?house='.$entry['id'].'">';
+        echo '<img src="images/'.$photo.'" id="house pic" alt="House pic" width="300" height="300">';
         echo '<h1>' . $entry['location'] . '</h1>';
         echo '<h2>' . $entry['title'] . '</h2>';
         echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
