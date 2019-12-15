@@ -32,7 +32,7 @@ function validate_login($myusername, $mypassword)
  } else {
   $error = 'Invalid credentials';
   $_SESSION["errormsg"] = $error;
-  header('Location: index.php');
+  header('Location: ../index.php');
  }
 }
 ?>
@@ -44,7 +44,7 @@ function print_body()
     <body>
       <script src="../js/login.js" ></script>
       <div class="main">
-        <h1><a href="index.php">HouseHunt</a></h1>
+        <h1><a href="../index.php">HouseHunt</a></h1>
         <h2>The hunt is on!</h2>
         <form id="login_form" action="" method="post">
           <p><label><input id="username_input" type="text" name="username" id="username" maxlength="20" placeholder="   Username" required></label></p>
@@ -54,6 +54,7 @@ function print_body()
         <form id="register_button_form" action="register_page.php" method="post">
           <input id="register_button" name="submit" class="button" type="submit" value="Register">
         </form>
+        <div id="error_all"></div>
         <div class="alert_msg">
   <?php
 if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {

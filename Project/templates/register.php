@@ -6,7 +6,7 @@ include_once 'database/user.php';
 <body>
   <script src="../js/register.js"></script>
   <div class="main" id="register_page">
-    <h1><a href="index.php">HouseHunt</a></h1>
+    <h1><a href="../index.php">HouseHunt</a></h1>
     <h2><a>Create a new profile</a></h2>
     <form action="../templates/insert_user.php" method="post" id="register">
       <div>

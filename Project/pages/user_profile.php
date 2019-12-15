@@ -15,7 +15,7 @@ if (empty($username)) {
 }
 
 if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $username)) {
- header('Location: ' . 'index.php');
+ header('Location: ../index.php');
 }
 
 if (!checkUser($username)) {
