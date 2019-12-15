@@ -3,7 +3,7 @@
     include_once 'database/houses.php';
     include_once 'database/db_user.php';
 
-    $extensions = ['jpeg','jpg','png', 'jfif']; 
+    $extensions = ['jpeg','jpg','png', 'jfif'];
 
     $fileName = $_FILES['picture']['name'];
     $fileSize = $_FILES['picture']['size'];
@@ -25,7 +25,7 @@
             header('Location: add_houses.php');
             die();
         }
-        
+
         $currentDate = date("Y-m-d");
         $randomNumber = rand();
 
@@ -42,7 +42,7 @@
         }else{
             $addPhoto = true;
         }
-        
+
     }
 
 	$title = $_POST['title'];

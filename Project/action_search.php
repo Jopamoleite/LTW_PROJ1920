@@ -3,7 +3,7 @@
 
 	$destination = $_GET['destination'];
 	$guests = $_GET['guests'];
-	
+
 	$destination = trim(htmlspecialchars($destination));
 	$guests = trim(htmlspecialchars($guests));
 
@@ -15,14 +15,14 @@
 	$checkout;
 
 	if(validateDate( $_GET['checkout'],'Y-m-d')) $checkoutDate = new DateTime($_GET['checkout']);
-	
+
 	if(validateDate( $_GET['checkin'],'Y-m-d'))	$checkinDate = new DateTime($_GET['checkin']);
-	
+
 	if(isset($checkinDate) && isset($checkoutDate)){
 		if($checkinDate > $checkoutDate){
 			$checkin = $_GET['checkout'];
 			$checkout = $_GET['checkin'];
-		}else{		
+		}else{
 			$checkin = $_GET['checkin'];
 			$checkout = $_GET['checkout'];
 		}
