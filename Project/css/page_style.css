@@ -17,7 +17,8 @@ body{
 .page_header{
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    justify-self: center;
+    margin: auto;
     top: 0;
     width: 100%;
 

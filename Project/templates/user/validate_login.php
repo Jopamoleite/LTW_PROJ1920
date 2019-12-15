@@ -18,7 +18,7 @@
       setID($myID);
       header('Location: main_page.php');
    }else{
-      $error = 'Invalid credentials\n';
+      $error = 'Invalid credentials';
       $_SESSION["errormsg"] = $error;
       header('Location: index.php');
    }
