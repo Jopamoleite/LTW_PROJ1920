@@ -20,10 +20,10 @@ include_once 'database/db_user.php';
           <div id="error_repeat"></div><br>
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
     </form>
-    <div id="error_all"><?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?></div>
+    <div id="error_all"><?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?></div>
   </div>
 </body>
 
 <?php
-  include_once 'templates/common/initial_footer.php';
+include_once 'templates/common/initial_footer.php';
 ?>

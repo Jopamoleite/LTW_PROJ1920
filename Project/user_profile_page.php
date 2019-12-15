@@ -107,20 +107,24 @@ $image_name = $user['image_name'];if (empty($image_name)) {
   <a id="users_houses_title"> <?php echo $username; ?>'s Houses</a>
   <div class="user_house_list">
   <?php
-    $id = getUserId($username);
-    $houses = getHouseWithOwnerID($id);
-    foreach ($houses as $entry) {
-      $photos = getHousePhotos($entry['id']);
-      if($photos == false) $photo = "default_house.jpg";
-      else $photo = $photos['image_name'];
-      echo '<a class="user_house" href="house_page.php?house='.$entry['id'].'">';
-        echo '<img src="images/'.$photo.'" id="house_pic" alt="House pic" width="300" height="300">';
-        echo '<h2>' . $entry['location'] . '</h2>';
-        echo '<h1>' . $entry['title'] . '</h1>';
-        echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
-      echo '</a>';
-    }
-  ?>
+$id = getUserId($username);
+$houses = getHouseWithOwnerID($id);
+foreach ($houses as $entry) {
+ $photos = getHousePhotos($entry['id']);
+ if ($photos == false) {
+  $photo = "default_house.jpg";
+ } else {
+  $photo = $photos['image_name'];
+ }
+
+ echo '<a class="user_house" href="house_page.php?house=' . $entry['id'] . '">';
+ echo '<img src="images/' . $photo . '" id="house_pic" alt="House pic" width="300" height="300">';
+ echo '<h2>' . $entry['location'] . '</h2>';
+ echo '<h1>' . $entry['title'] . '</h1>';
+ echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
+ echo '</a>';
+}
+?>
   </div>
 </section>
 

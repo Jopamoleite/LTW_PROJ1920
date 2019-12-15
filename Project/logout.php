@@ -1,10 +1,9 @@
 <?php
-  include_once 'includes/start.php';
+include_once 'includes/start.php';
 
-  unsetUser();
-  unsetID();
+unsetUser();
+unsetID();
 
-  session_destroy();
+session_destroy();
 
-  header('Location: index.php');
-?>
+header('Location: index.php');

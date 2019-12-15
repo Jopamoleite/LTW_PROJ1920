@@ -1,44 +1,46 @@
 <?php
-  include_once 'includes/start.php';
-  include_once 'database/db_user.php';
+include_once 'includes/start.php';
+include_once 'database/db_user.php';
 
-  if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])){
-    header("Location: /main_page.php");
-  }
+if (isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
+ header("Location: /main_page.php");
+}
 
-  if(empty($_POST)){
-    print_body();
-  } else {
-    $myusername = $_POST['username'];
-    $mypassword = $_POST['password'];
+if (empty($_POST)) {
+ print_body();
+} else {
+ $myusername = $_POST['username'];
+ $mypassword = $_POST['password'];
 
-   validate_login($myusername, $mypassword);
-  }
+ validate_login($myusername, $mypassword);
+}
 ?>
 
 <?php
-function validate_login($myusername, $mypassword){
-  if (!empty($myusername) && !empty($mypassword)) {
-    $myusername = trim(htmlspecialchars($myusername));
-    $mypassword = trim(htmlspecialchars($mypassword));
+function validate_login($myusername, $mypassword)
+{
+ if (!empty($myusername) && !empty($mypassword)) {
+  $myusername = trim(htmlspecialchars($myusername));
+  $mypassword = trim(htmlspecialchars($mypassword));
  }
 
- if(isLoginCorrect($myusername, $mypassword)){
-    setUser($myusername);
-    $myID = getUserId($myusername);
-    setID($myID);
-    header('Location: main_page.php');
- }else{
-    $error = 'Invalid credentials';
-    $_SESSION["errormsg"] = $error;
-    header('Location: index.php');
+ if (isLoginCorrect($myusername, $mypassword)) {
+  setUser($myusername);
+  $myID = getUserId($myusername);
+  setID($myID);
+  header('Location: main_page.php');
+ } else {
+  $error = 'Invalid credentials';
+  $_SESSION["errormsg"] = $error;
+  header('Location: index.php');
  }
 }
 ?>
 
 <?php
-function print_body(){
-?>
+function print_body()
+{
+ ?>
     <body>
       <script src="js/login.js" ></script>
       <div class="main">
@@ -54,11 +56,11 @@ function print_body(){
         </form>
         <div class="alert_msg">
   <?php
-    if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {
-      echo $_SESSION["errormsg"];
-      unset($_SESSION["errormsg"]);
-    }
-  ?>
+if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {
+  echo $_SESSION["errormsg"];
+  unset($_SESSION["errormsg"]);
+ }
+ ?>
         </div>
       </div>
     </body>

@@ -1,7 +1,7 @@
 <!-- HEADER -->
 <?php
-  include_once 'includes/start.php';
-  include_once 'templates/common/header.php';
+include_once 'includes/start.php';
+include_once 'templates/common/header.php';
 ?>
 
 <div class="profile flex-container">
@@ -31,5 +31,5 @@
 
 <!-- FOOTER -->
 <?
-  include_once 'templates/common/footer.php'
+include_once 'templates/common/footer.php'
 ?>
