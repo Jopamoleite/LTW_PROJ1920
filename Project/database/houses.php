@@ -16,6 +16,28 @@
         }
     }
 
+    function getHouseReservations($id){
+        global $dbh;
+        try {
+            $qry = 'SELECT * FROM Reservations WHERE placeID = ?';
+            $stmt = $dbh->prepare($qry);
+            $stmt->execute(array($id));
+            return $stmt;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+    
+    function addReservation($houseID, $touristID, $checkin, $checkout){
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('INSERT INTO Reservations(placeID, touristID, begin_date, end_date) VALUES (?, ?, ?, ?);');
+            $stmt->execute(array($houseID, $touristID, $checkin, $checkout));
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
     function getHousesAtLocation($location, $guests){
         global $dbh;
         try {
