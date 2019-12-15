@@ -11,6 +11,7 @@
     <link href="css/search_bar_style.css" rel="stylesheet">
     <link href="css/user_profile_style.css" rel="stylesheet">
     <link href="css/house_results_style.css" rel="stylesheet">
+    <link href="css/house_page_style.css" rel="stylesheet">
   </head>
   <body>
     <?php

@@ -8,7 +8,7 @@
   $house_url = $_GET['house'];
   if($house_url == null) header('Location: main_page.php');                                       // Check if not null
   if(!ctype_digit($house_url)) header('Location: main_page.php');                                 // Check if is number
-  $house_id = (int)$house_url;
+  $house_id = ltrim($house_url, '0');
   if($house_url[0] == '0') header('Location: house_page.php?house=' . $house_id);                 // Check if url correct
   if(!checkHouse($house_id)) header('Location: main_page.php');                                   // Check house exists
   $house = getHouse($house_id);
@@ -22,7 +22,8 @@
 ?>
 
 <!-- BODY -->
-<div id="house_info" class="flex-container">
+<div id="house_page">
+<div id="house_photos">
   <?php
     $photos = getHousePhotos($house_id);
     if($photos == false) $photo = "default_house.jpg";
@@ -40,21 +41,27 @@
   </div>
   <div id="booking" class="flex-container">
     <h1>BOOKING</h1>
-    <form action="booking.php" method="post" id="booking_form">
+    <form action="action_booking.php" method="post" id="booking_form">
       <!-- check in -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-In</label>
-        <input class="search_input" name="checkin" type="date" placeholder="dd/mm/yyyy">
+        <input class="search_input" name="checkin" type="date" value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
       </div>
       <!-- check out -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-Out</label>
-        <input class="search_input" name="checkout" type="date" placeholder="dd/mm/yyyy">
+        <input class="search_input" name="checkout" type="date" value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
       </div>
+      <!-- guests -->
+        <div class="search_input_field_small">
+            <label class="search_label">Guests</label>
+            <input class="search_input" name="guests" type="number" value="1" min="1" max="<?php echo $capacity ?>" maxlength="3" step="1">
+        </div>
       <!-- submit -->
       <input onclick="" class="button" id="booking_button" type="button" value="BOOK">
     </form>
   </div>
+</div>
 </div>
 
 <!-- FOOTER -->

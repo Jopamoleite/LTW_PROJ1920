@@ -12,17 +12,21 @@ a{
 body{
     background-color: #E8A87C;
     margin: 0em;
+    overflow-x: hidden;
 }
 
 .page_header{
     display: flex;
     justify-content: space-between;
+    top: 0;
+    width: 100%;
 
     background-color: #FDFDFD;
     color:#252525;
     padding: 0em;
     padding-left: 1em;
     padding-right: 1em;
+    margin: 0em;
     box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
     align-items: center;
 }
@@ -63,7 +67,7 @@ body{
 }
 
 .profile_dropdown img{
-    margin-right: 1em;
+    margin-right: 2em;
     margin-left: 1em;
     display: inline-flex;
     border-radius: 0.7em;
@@ -83,7 +87,7 @@ body{
     z-index: 1;
     display: none;
     top: 1.3em;
-    right: 0;
+    right: 0em;
 }
 
 .dropdown_content div {

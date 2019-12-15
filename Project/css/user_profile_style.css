@@ -25,8 +25,8 @@
 #profile_pic{
     margin: 1.4em 2.8em 1.4em 0em;
     border-radius: 1.4em;
-    max-width: 30em;
-    max-height: 30em;
+    width: 20em;
+    height: 20em;
     object-fit: cover;
 }
 
@@ -185,3 +185,84 @@
 }
 
 
+.user_house_list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 70%;
+    height: 30%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-width: 2em;
+    border-top-width: 0.6em;
+    border-bottom-width: 0.6em;
+    border-style: solid;
+    border-color: #FDFDFD;
+    border-radius: 1.4em;
+    border-top-left-radius: 0em;
+    background-color: #FDFDFD;
+    color:#252525;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+}
+
+  
+.user_house_list .user_house {
+    flex: 0 0 auto;
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+
+.user_house_list .user_house img{
+    border-radius: 1.4em;
+
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+}
+
+.user_house_list .user_house h1{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.7em;
+}
+
+.user_house_list .user_house h2{
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.7em;
+}
+
+.user_house_list::-webkit-scrollbar {
+    width: 1em;
+}
+   
+.user_house_list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+   
+.user_house_list::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 1em;
+}
+
+#users_houses_title{
+    background-color: #FDFDFD;
+    color:#252525;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    margin: 15%;
+    padding: 0.7em;
+    padding-bottom: 3%;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    position: relative;
+    top: 1.4em;
+}
