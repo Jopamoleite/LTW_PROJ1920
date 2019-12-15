@@ -22,7 +22,8 @@
 ?>
 
 <!-- BODY -->
-<div id="house_info" class="flex-container">
+<div id="house_page">
+<div id="house_photos">
   <?php
     $photos = getHousePhotos($house_id);
     if($photos == false) $photo = "default_house.jpg";
@@ -55,6 +56,7 @@
       <input onclick="" class="button" id="booking_button" type="button" value="BOOK">
     </form>
   </div>
+</div>
 </div>
 
 <!-- FOOTER -->

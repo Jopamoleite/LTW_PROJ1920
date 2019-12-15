@@ -17,6 +17,9 @@ body{
 .page_header{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     background-color: #FDFDFD;
     color:#252525;
@@ -80,7 +83,6 @@ body{
     background-color: #FDFDFD;
     min-width: 6em;
     padding: 0.5em;
-    z-index: 1;
     display: none;
     top: 1.3em;
     right: 0;
