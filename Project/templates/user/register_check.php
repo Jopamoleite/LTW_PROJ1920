@@ -1,6 +1,9 @@
 <?php
-include_once 'includes/start.php';
-include_once 'database/db_user.php';
+  $path = getcwd();
+  chdir('../..');
+  include_once 'includes/start.php';
+  include_once 'database/db_user.php';
+  chdir($path);
 
   $type = $_GET['type'];
   $value = $_GET['value'];

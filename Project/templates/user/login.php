@@ -44,7 +44,7 @@ function print_body(){
       <div class="main">
         <h1><a href="index.php">HouseHunt</a></h1>
         <h2>The hunt is on!</h2>
-        <form id="login_form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <form id="login_form" action="" method="post">
           <p><label><input id="username_input" type="text" name="username" id="username" maxlength="20" placeholder="   Username" required></label></p>
           <p><label><input id="password_input" type="password" name="password" id="password" maxlength="20" placeholder="   Password" required></label></p>
           <input id="login_button" class="button" type="button" onclick="login()" value="Login">

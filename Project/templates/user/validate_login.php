@@ -1,6 +1,9 @@
 <?php
-   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/start.php';
-   include_once $_SERVER['DOCUMENT_ROOT'].'/database/db_user.php';
+   $path = getcwd();
+   chdir('../..');
+   include_once 'includes/start.php';
+   include_once 'database/db_user.php';
+   chdir($path);
 
    $myusername = $_GET['username'];
    $mypassword = $_GET['password'];

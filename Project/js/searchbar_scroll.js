@@ -1,3 +1,5 @@
+let previousScrollPos;
+
 function handleSearchBarScroll() {
   let currentScrollPos = window.pageYOffset;
   if (currentScrollPos < 20){
