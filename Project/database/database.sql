@@ -54,8 +54,8 @@ CREATE TABLE Reservations(
     touristID   INTEGER NOT NULL,
     begin_date  DATE NOT NULL,
     end_date    DATE NOT NULL,
-    
-    CHECK(date(begin_date) < date(end_date)),
+
+    CHECK(date(begin_date) <= date(end_date)),
 
     FOREIGN KEY (placeID) REFERENCES Place(id)
     ON DELETE CASCADE ON UPDATE CASCADE,

@@ -1,129 +1,131 @@
-a{
-	text-decoration: none;
-	color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-body{
-    background-color: #E8A87C;
-    margin: 0em;
-    overflow-x: hidden;
+body {
+  background-color: #e8a87c;
+  margin: 0em;
+  overflow-x: hidden;
 }
 
-.page_header{
-    display: flex;
-    justify-content: space-between;
-    top: 0;
-    width: 100%;
+.page_header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
 
-    background-color: #FDFDFD;
-    color:#252525;
-    padding: 0em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0em;
-    box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
-    align-items: center;
+  background-color: #fdfdfd;
+  color: #252525;
+  padding: 0em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0em;
+  box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  align-items: center;
 }
 
-.page_header h1{
-    font-family: 'Cambria';
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 1.2em;
-    margin-left: 1em;
+.page_header h1 {
+  font-family: "Cambria";
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 1.2em;
+  margin-left: 1em;
 }
 
-#logo_name{
-    display: flex;
-    justify-content: flex-start;
+#logo_name {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.page_header img{
-    float: right;
-    align-self: center;
+.page_header img {
+  float: right;
+  align-self: center;
 }
 
-#logo_name a{
-    align-self: center;
+#logo_name a {
+  align-self: center;
 }
 
-#user_profile_info{
-    display: flex;
-    justify-content: flex-end;
+#user_profile_info {
+  display: flex;
+  justify-content: flex-end;
 }
 
-#username_link, .profile_dropdown a{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    font-weight: lighter;
-    color: #888888;
-    display: inline;
+#username_link,
+.profile_dropdown a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: #888888;
+  display: inline;
 }
 
-.profile_dropdown img{
-    margin-right: 2em;
-    margin-left: 1em;
-    display: inline-flex;
-    border-radius: 0.7em;
+.profile_dropdown img {
+  margin-right: 2em;
+  margin-left: 1em;
+  display: inline-flex;
+  border-radius: 0.7em;
 }
 
-.profile_dropdown{
-    position: relative;
+.profile_dropdown {
+  position: relative;
 }
 
-.dropdown_content{
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    background-color: #FDFDFD;
-    min-width: 6em;
-    padding: 0.5em;
-    z-index: 1;
-    display: none;
-    top: 1.3em;
-    right: 0em;
+.dropdown_content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #fdfdfd;
+  min-width: 6em;
+  padding: 0.5em;
+  z-index: 1;
+  display: none;
+  top: 1.3em;
+  right: 0em;
 }
 
 .dropdown_content div {
-    padding-bottom: 0.7em;
-    border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid #cccccc;
 }
 
 .profile_dropdown:hover .dropdown_content {
-    visibility: visible;
-    opacity: 1;
-    display: block;
+  visibility: visible;
+  opacity: 1;
+  display: block;
 }
 
-.dropdown_content:hover{
-    visibility: visible;
-    opacity: 1;
-    display: block;
+.dropdown_content:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
 }
 
-.dropdown_content a, .logout_button{
-    cursor: pointer;
-    margin: 0.5em;
+.dropdown_content a,
+.logout_button {
+  cursor: pointer;
+  margin: 0.5em;
 }
 
-.logout_button{
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+.logout_button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    border: none;
-    text-decoration: none;
-    background-color: #FDFDFD;
+  border: none;
+  text-decoration: none;
+  background-color: #fdfdfd;
 
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    font-weight: lighter;
-    color: #888888;
-    padding-left: 0em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: #888888;
+  padding-left: 0em;
 }

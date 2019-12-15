@@ -1,268 +1,269 @@
-.profile{
-    border-radius: 1.4em;
-    margin: auto;
-    margin-top: 5%;
-    width: 60%;
-    padding: 0.6em 3.4em;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    background-color: #FDFDFD;
-    color:#252525;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+.profile {
+  border-radius: 1.4em;
+  margin: auto;
+  margin-top: 5%;
+  width: 60%;
+  padding: 0.6em 3.4em;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: #fdfdfd;
+  color: #252525;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
-.profile_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width:80%;
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
 }
 
-#profile_pic{
-    margin: 1.4em 2.8em 1.4em 0em;
-    border-radius: 1.4em;
-    width: 20em;
-    height: 20em;
-    object-fit: cover;
+#profile_pic {
+  margin: 1.4em 2.8em 1.4em 0em;
+  border-radius: 1.4em;
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
 }
 
-#description{
-    word-break: break-word;
-    margin-right: 10%;
-    position: relative;
+#description {
+  word-break: break-word;
+  margin-right: 10%;
+  position: relative;
 }
 
-#edit_profile_link, #change_password_link{
-    color: #41B3A3;
-    float: left;
+#edit_profile_link,
+#change_password_link {
+  color: #41b3a3;
+  float: left;
 }
 
-.profile_info input, .profile_info textarea{
-    outline: none;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 1px solid #DDDDDD;
+.profile_info input,
+.profile_info textarea {
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #dddddd;
 
-    margin: 0.3em;
-    margin-left: 0em;
-    padding: 0.3em;
-    padding-left: 0.5em;
-    width: 90%;
-    height: 2em;
+  margin: 0.3em;
+  margin-left: 0em;
+  padding: 0.3em;
+  padding-left: 0.5em;
+  width: 90%;
+  height: 2em;
 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-style: normal;
-    font-size: 1em;
-    
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 1em;
 }
 
-.profile_info textarea{
-    resize: none;
-    width: 90%;
-    min-height: 4em;
+.profile_info textarea {
+  resize: none;
+  width: 90%;
+  min-height: 4em;
 }
 
-.profile_info input[name="phone"]::-webkit-inner-spin-button, 
-.profile_info input[name="phone"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+.profile_info input[name="phone"]::-webkit-inner-spin-button,
+.profile_info input[name="phone"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-#backtoprofile_link, #edit_profile_button, #add_house_button, #change_password_button{
-    border-style: solid;
-    border-width: 1.5px;
-    border-color: #41B3A3;
-    border-radius: 1.4em;
-    background-color: #FDFDFD; 
+#backtoprofile_link,
+#edit_profile_button,
+#add_house_button,
+#change_password_button {
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #41b3a3;
+  border-radius: 1.4em;
+  background-color: #fdfdfd;
 
-    text-align: center;
+  text-align: center;
 
-    color: #41B3A3;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    font-size: 0.9em;
+  color: #41b3a3;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 0.9em;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-#add_house_button{
-    width: fit-content;
-    height: 2.5em;
+#add_house_button {
+  width: fit-content;
+  height: 2.5em;
 }
 
-#backtoprofile_link{
-    padding: 0.535em;
-    padding-left: 0.35em;
-    padding-right: 0.35em;
-    width: fit-content;
+#backtoprofile_link {
+  padding: 0.535em;
+  padding-left: 0.35em;
+  padding-right: 0.35em;
+  width: fit-content;
 
-    margin-top: 1.4em;
+  margin-top: 1.4em;
 
-    position: relative;
-    left: 7.6em;
-    top: -4.2em;
+  position: relative;
+  left: 7.6em;
+  top: -4.2em;
 }
 
-#edit_profile_button, #change_password_button{
-    text-decoration: none;
+#edit_profile_button,
+#change_password_button {
+  text-decoration: none;
 
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    height: 2.5em;
-    width: fit-content;
-    padding: 0.37em;
+  height: 2.5em;
+  width: fit-content;
+  padding: 0.37em;
 }
 
-#change_password_button{
-    margin-top: 2em;
-}    
-
-
-#create_houses_button{
-    margin: 0.7em;
-    margin-left: 20%;
-    margin-right: auto;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    align-self: center;
-
-    text-decoration: none;
-    text-transform: uppercase;
-    color: initial;
-
-    border: none;
-    border-radius: 0.7em;
-    opacity: 1;
-    background-color: #252525;
-    color: #FDFDFD;
-    height: 3em;
-    width: 11.1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-
-    cursor: pointer;
+#change_password_button {
+  margin-top: 2em;
 }
 
-#create_houses_button:hover{
-    -webkit-transition: all .4s ease-in-out;
-       -moz-transition: all .4s ease-in-out;
-        -ms-transition: all .4s ease-in-out;
-         -o-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
+#create_houses_button {
+  margin: 0.7em;
+  margin-left: 20%;
+  margin-right: auto;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    text-shadow: 0px 0px 5px #BBBBBB;
+  align-self: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: initial;
+
+  border: none;
+  border-radius: 0.7em;
+  opacity: 1;
+  background-color: #252525;
+  color: #fdfdfd;
+  height: 3em;
+  width: 11.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+
+  cursor: pointer;
+}
+
+#create_houses_button:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  text-shadow: 0px 0px 5px #bbbbbb;
 }
 
 #profile_pic_upload {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-    z-index: -1;    
-
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
-#profile_pic_upload + label{
-    cursor: pointer;
-    content:url(/images/edit.png);
-    background-color: #252525;
-    width: 3em;
-    height: 3em;
-    border-radius: 2em;
+#profile_pic_upload + label {
+  cursor: pointer;
+  content: url(/images/edit.png);
+  background-color: #252525;
+  width: 3em;
+  height: 3em;
+  border-radius: 2em;
 
-    position: absolute;
-    left: 21%;
-    top: 52%;
+  position: absolute;
+  left: 21%;
+  top: 52%;
 }
-
 
 .user_house_list {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    width: 70%;
-    height: 30%;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-width: 2em;
-    border-top-width: 0.6em;
-    border-bottom-width: 0.6em;
-    border-style: solid;
-    border-color: #FDFDFD;
-    border-radius: 1.4em;
-    border-top-left-radius: 0em;
-    background-color: #FDFDFD;
-    color:#252525;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 70%;
+  height: 30%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 2em;
+  border-top-width: 0.6em;
+  border-bottom-width: 0.6em;
+  border-style: solid;
+  border-color: #fdfdfd;
+  border-radius: 1.4em;
+  border-top-left-radius: 0em;
+  background-color: #fdfdfd;
+  color: #252525;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
 }
 
-  
 .user_house_list .user_house {
-    flex: 0 0 auto;
-    margin: 1em;
-    margin-bottom: 0.5em;
+  flex: 0 0 auto;
+  margin: 1em;
+  margin-bottom: 0.5em;
 }
 
-.user_house_list .user_house img{
-    border-radius: 1.4em;
+.user_house_list .user_house img {
+  border-radius: 1.4em;
 
-    width: 15em;
-    height: 15em;
-    object-fit: cover;
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
 }
 
-.user_house_list .user_house h1{
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 0.7em;
+.user_house_list .user_house h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 0.7em;
 }
 
-.user_house_list .user_house h2{
-    font-size: 1em;
-    font-weight: lighter;
-    margin-bottom: 0.7em;
+.user_house_list .user_house h2 {
+  font-size: 1em;
+  font-weight: lighter;
+  margin-bottom: 0.7em;
 }
 
 .user_house_list::-webkit-scrollbar {
-    width: 1em;
-}
-   
-.user_house_list::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 1em;
-}
-   
-.user_house_list::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-    border-radius: 1em;
+  width: 1em;
 }
 
-#users_houses_title{
-    background-color: #FDFDFD;
-    color:#252525;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    margin: 15%;
-    padding: 0.7em;
-    padding-bottom: 3%;
-    border-top-left-radius: 1.4em;
-    border-top-right-radius: 1.4em;
-    position: relative;
-    top: 1.4em;
+.user_house_list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
+
+.user_house_list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 1em;
+}
+
+#users_houses_title {
+  background-color: #fdfdfd;
+  color: #252525;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  margin: 15%;
+  padding: 0.7em;
+  padding-bottom: 3%;
+  border-top-left-radius: 1.4em;
+  border-top-right-radius: 1.4em;
+  position: relative;
+  top: 1.4em;
 }

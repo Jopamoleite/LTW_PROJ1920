@@ -1,5 +1,8 @@
 "use strict";
 
+let current_user_request = null;
+let current_mail_request = null;
+
 function check_form() {
   let user = document.getElementById("username").value;
   let email = document.getElementById("email").value;
@@ -15,7 +18,12 @@ function check_form() {
     let error_password = document.getElementById("error_password");
     let error_repeat = document.getElementById("error_repeat");
 
-    if (error_username.innerHTML != "Valid" || error_email.innerHTML != "Valid" || error_password.innerHTML != "Valid" || error_repeat.innerHTML != "Valid") {
+    if (
+      error_username.innerHTML != "Valid" ||
+      error_email.innerHTML != "Valid" ||
+      error_password.innerHTML != "Valid" ||
+      error_repeat.innerHTML != "Valid"
+    ) {
       error_all.innerHTML = "Fill with valid information";
     } else {
       document.getElementById("register").submit();
@@ -35,8 +43,29 @@ function validate_user() {
     error_user.innerHTML = "Must not contain special characters";
     user.setCustomValidity("Invalid field.");
   } else {
-    error_user.innerHTML = "Valid";
-    user.setCustomValidity("");
+    if (current_user_request != null) {
+      current_user_request.abort();
+    }
+
+    current_user_request = new XMLHttpRequest();
+    current_user_request.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        let user = document.getElementById("username");
+        let error_user = document.getElementById("error_username");
+        error_user.innerHTML = this.responseText;
+        if (this.responseText == "Valid") {
+          user.setCustomValidity("");
+        } else {
+          user.setCustomValidity("Invalid field.");
+        }
+      }
+    };
+    current_user_request.open(
+      "GET",
+      "../templates/register_check.php?type=user&value=" + user.value,
+      true
+    );
+    current_user_request.send();
   }
 }
 
@@ -49,8 +78,29 @@ function validate_email() {
     error_email.innerHTML = "Not valid e-mail";
     email.setCustomValidity("Invalid field.");
   } else {
-    error_email.innerHTML = "Valid";
-    email.setCustomValidity("");
+    if (current_mail_request != null) {
+      current_mail_request.abort();
+    }
+
+    current_mail_request = new XMLHttpRequest();
+    current_mail_request.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        let email = document.getElementById("email");
+        let error_email = document.getElementById("error_email");
+        error_email.innerHTML = this.responseText;
+        if (this.responseText == "Valid") {
+          email.setCustomValidity("");
+        } else {
+          email.setCustomValidity("Invalid field.");
+        }
+      }
+    };
+    current_mail_request.open(
+      "GET",
+      "../templates/register_check.php?type=email&value=" + email.value,
+      true
+    );
+    current_mail_request.send();
   }
 }
 

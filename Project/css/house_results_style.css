@@ -1,36 +1,36 @@
-#houses_list{
-    margin: 6em auto;
-    max-width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+#houses_list {
+  margin: 6em auto;
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
 
-a.house{
-    background-color: #FDFDFD;
-    margin: 1% 1%;
-    padding-bottom: 0.5em;
-    border-radius: 1.4em;
+a.house {
+  background-color: #fdfdfd;
+  margin: 1% 1%;
+  padding-bottom: 0.5em;
+  border-radius: 1.4em;
 }
 
-a.house img{
-    border-top-left-radius: 1.4em;
-    border-top-right-radius: 1.4em;
+a.house img {
+  border-top-left-radius: 1.4em;
+  border-top-right-radius: 1.4em;
 }
 
-a.house h1{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    color: #000000;
-    margin: 0.2em 0.1em 0.2em 0.5em;
+a.house h1 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  color: #000000;
+  margin: 0.2em 0.1em 0.2em 0.5em;
 }
 
-a.house h2{
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    color: #303030;
-    margin: 0.2em 0.1em 0.2em 0.5em;
+a.house h2 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  color: #303030;
+  margin: 0.2em 0.1em 0.2em 0.5em;
 }
