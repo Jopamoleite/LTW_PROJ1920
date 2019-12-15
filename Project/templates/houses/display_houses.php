@@ -11,13 +11,27 @@
     $checkout;
     $guests;
 
-    if(isset($_GET['destination'])) $destination = $_GET['destination']; else $destination = "";
+    if(isset($_GET['destination'])) $destination = trim(htmlspecialchars($_GET['destination'])); else $destination = "";
+    if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $destination)){
+        header('Location: ' . 'main_page.php');
+        die();
+    }
 
-    if(isset($_GET['checkin'])) $checkin = $_GET['checkin']; else $checkin = "";
+    if(isset($_GET['checkin'])) $checkin = trim(htmlspecialchars($_GET['checkin'])); else $checkin = "";
+    if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkin)){
+        header('Location: ' . 'main_page.php');
+        die();
+    }
 
-    if(isset($_GET['checkout'])) $checkout = $_GET['checkout']; else $checkout = "";
+    if(isset($_GET['checkout'])) $checkout = trim(htmlspecialchars($_GET['checkout'])); else $checkout = "";
+    if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkout)){
+        header('Location: ' . 'main_page.php');
+        die();
+    }
 
-    if(isset($_GET['guests'])) $guests = $_GET['guests']; else $guests = 1;
+    if(isset($_GET['guests'])) $guests = ltrim(trim(htmlspecialchars($_GET['guests'])), '0'); else $guests = 1;
+    if (!ctype_digit ($guests)) $guests = 1;
+    if($guests > 100) $guests = 100;
 
     $houses;
     if(empty($destination) && empty($checkin) && empty($checkout)) $houses = getHousesWithGuests($guests); else

@@ -24,11 +24,9 @@
         die();
     }
 
-    if(isset($_GET['guests'])) $guests = trim(htmlspecialchars($_GET['guests'])); else $guests = 1;
-    if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $guests)){
-        header('Location: ' . 'main_page.php');
-        die();
-    }
+    if(isset($_GET['guests'])) $guests = ltrim(trim(htmlspecialchars($_GET['guests'])), '0'); else $guests = 1;
+    if (!ctype_digit ($guests)) $guests = 1;
+    if($guests > 100) $guests = 100;
 ?>
 
 <div id="search_bar">
