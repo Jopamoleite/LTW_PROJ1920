@@ -4,7 +4,9 @@
         try{
             $stmt = $dbh->prepare('SELECT * FROM User_ WHERE username = ?;');
             $stmt->execute(array($username));
-            $row = $stmt->fetch();
+            if(!($row = $stmt->fetch())){
+                return false;
+            }
             $storedPassword = $row['password_'];
             $valid = password_verify($password, $storedPassword);
             return $valid;
@@ -52,7 +54,7 @@
             error_log('Error: ' . $e->getMessage());
         }
     }
-    
+
     function editPhoto($myid, $photo){
         global $dbh;
         try {

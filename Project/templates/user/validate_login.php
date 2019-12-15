@@ -1,26 +1,16 @@
 <?php
-   include_once 'includes/start.php';
-   include_once 'database/db_user.php';
+   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/start.php';
+   include_once $_SERVER['DOCUMENT_ROOT'].'/database/db_user.php';
 
-   $myusername = $_POST['username'];
-   $mypassword = $_POST['password'];
+   $myusername = $_GET['username'];
+   $mypassword = $_GET['password'];
 
    if (!empty($myusername) && !empty($mypassword)) {
-
       $myusername = trim(htmlspecialchars($myusername));
       $mypassword = trim(htmlspecialchars($mypassword));
-
    }
 
    if(isLoginCorrect($myusername, $mypassword)){
-      setUser($myusername);
-      $myID = getUserId($myusername);
-      setID($myID);
-      header('Location: main_page.php');
-   }else{
-      $error = 'Invalid credentials';
-      $_SESSION["errormsg"] = $error;
-      header('Location: index.php');
+      echo "Valid";
    }
-
 ?>

@@ -2,7 +2,7 @@
     include_once 'includes/start.php';
     include_once 'database/db_user.php';
 
-    $extensions = ['jpeg','jpg','png', 'jfif']; 
+    $extensions = ['jpeg','jpg','png', 'jfif'];
 
     $fileName = $_FILES['picture']['name'];
     $fileSize = $_FILES['picture']['size'];
@@ -20,7 +20,7 @@
         header('Location: user_profile_page.php?user='.$_SESSION['username']);
         die();
     }
-    
+
     $currentDate = date("Y-m-d");
     $randomNumber = rand();
 
@@ -36,7 +36,7 @@
         $oldPhoto = getUserPhoto($_SESSION['username']);
         editPhoto($_SESSION['userID'], $newName);
         if($oldPhoto != "default_pic.bmp") unlink("images/".$oldPhoto);
-    }    
+    }
 
     header('Location: user_profile_page.php?user='.$_SESSION['username']);
 

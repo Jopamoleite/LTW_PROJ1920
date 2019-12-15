@@ -35,19 +35,12 @@
 
     $houses;
     if(empty($destination) && empty($checkin) && empty($checkout)) $houses = getHousesWithGuests($guests); else
-
     if(!empty($destination) && empty($checkin) && empty($checkout)) $houses = getHousesAtLocation($destination, $guests); else
-
     if(!empty($destination) && !empty($checkin) && empty($checkout)) $houses = getHousesAtLocation($destination, $guests); /*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKIN AND LOCATION = DESTINATION;*/ else
-
     if(!empty($destination) && empty($checkin) && !empty($checkout)) $houses = getHousesAtLocation($destination, $guests); /*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKOUT AND LOCATION = DESTINATION;*/ else
-
     if(empty($destination) && !empty($checkin) && empty($checkout)) $houses = getHousesWithGuests($guests); /*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKIN*/ else
-
     if(empty($destination) && empty($checkin) && !empty($checkout)) $houses = getHousesWithGuests($guests); /*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKOUT ;*/ else
-
     if(empty($destination) && !empty($checkin) && !empty($checkout)) $houses = getHousesWithGuests($guests); /*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT;*/ else
-
     if(!empty($destination) && !empty($checkin) && !empty($checkout)) $houses = getHousesAtLocation($destination, $guests); /*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT AND LOCATION = DESTINATION;*/
 
     foreach ($houses as $entry) {

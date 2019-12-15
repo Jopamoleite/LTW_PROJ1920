@@ -4,7 +4,6 @@ include_once 'database/db_user.php';
 ?>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/register.js"></script>
   <div class="main" id="register_page">
     <h1><a href="index.php">HouseHunt</a></h1>
