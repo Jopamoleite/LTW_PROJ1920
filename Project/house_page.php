@@ -40,6 +40,7 @@
     <h4><? echo $description ?></h4>
   </div>
   <div id="booking" class="flex-container">
+        <?php if(isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])){ echo $_SESSION["errormsg"]; unset($_SESSION["errormsg"]);}?>
     <h1>BOOKING</h1>
     <form action="action_booking.php" method="post" id="booking_form">
       <!-- check in -->
