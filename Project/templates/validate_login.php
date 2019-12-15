@@ -1,9 +1,8 @@
 <?php
-$path = getcwd();
-chdir('../..');
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
-chdir($path);
+include_once 'database/user.php';
 
 $myusername = $_GET['username'];
 $mypassword = $_GET['password'];

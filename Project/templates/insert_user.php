@@ -1,6 +1,8 @@
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 
 $myusername = $_POST['username'];
 $mypassword = $_POST['password'];
@@ -20,19 +22,19 @@ $_SESSION['errormsg'] = "";
 if (strlen($myusername) < 4) {
  $error = "Username too short.";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 if (!preg_match('/[\w]+/', $myusername)) {
  $error = "Invalid username.";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 if (checkUser($myusername)) {
  $error = "User already exists.";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 
@@ -40,13 +42,13 @@ if (checkUser($myusername)) {
 if (!filter_var($myemail, FILTER_VALIDATE_EMAIL)) {
  $error = "Invalid email format";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 if (checkEmail($myemail)) {
  $error = "Email already used.";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 
@@ -54,13 +56,13 @@ if (checkEmail($myemail)) {
 if (strlen($mypassword) < 8) {
  $error = "Password too short.";
  $_SESSION['errormsg'] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 if ($mypassword != $repeatPass) {
  $error = 'Your passwords must match';
  $_SESSION["errormsg"] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 
@@ -68,8 +70,8 @@ if ($mypassword != $repeatPass) {
 $error = insertUser($myusername, $mypassword, $myemail);
 if ($error) {
  $_SESSION["errormsg"] = $error;
- header('Location: register_page.php');
+ header('Location: ../pages/register_page.php');
  die();
 }
 
-header('Location: index.php');
+header('Location: ../index.php');

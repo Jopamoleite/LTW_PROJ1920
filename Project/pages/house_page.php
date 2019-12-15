@@ -1,9 +1,11 @@
 <!-- HEADER -->
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 include_once 'database/houses.php';
-include_once 'templates/common/header.php';
+include_once 'templates/header.php';
 
 $house_url = $_GET['house'];
 if ($house_url == null) {
@@ -45,7 +47,7 @@ if ($photos == false) {
 }
 
 ?>
-  <img src="images/<?php echo $photo ?>">
+  <img src="../images/<?php echo $photo ?>">
 </div>
 <div class="house">
   <div id="house_info">
@@ -85,5 +87,5 @@ if ($photos == false) {
 
 <!-- FOOTER -->
 <?
-include_once 'templates/common/footer.php';
+include_once 'templates/footer.php';
 ?>

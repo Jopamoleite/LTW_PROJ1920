@@ -1,14 +1,17 @@
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
 include_once 'database/houses.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 
 $extensions = ['jpeg', 'jpg', 'png', 'jfif'];
 
 $fileName = $_FILES['picture']['name'];
 $fileSize = $_FILES['picture']['size'];
 $fileTmpName = $_FILES['picture']['tmp_name'];
-$fileExtension = strtolower(end(explode('.', $fileName)));
+$tmp = explode('.', $fileName);
+$fileExtension = strtolower(end($tmp));
 
 $addPhoto = false;
 
@@ -16,13 +19,13 @@ if (isset($_POST['submit']) && !empty($fileName)) {
 
     if (!in_array($fileExtension, $extensions)) {
         $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
-        header('Location: add_houses.php');
+        header('Location: ../pages/add_houses.php');
         die();
     }
 
     if ($fileSize > 3000000) {
         $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
-        header('Location: add_houses.php');
+        header('Location: ../pages/add_houses.php');
         die();
     }
 
@@ -37,7 +40,7 @@ if (isset($_POST['submit']) && !empty($fileName)) {
 
     if (!$uploadSuccess) {
         $_SESSION['errormsg'] = "Error uploading file!";
-        header('Location: add_houses.php');
+        header('Location: ../pages/add_houses.php');
         die();
     } else {
         $addPhoto = true;
@@ -65,4 +68,4 @@ if ($addPhoto) {
     addPhotoToHouse($newName, $placeID);
 }
 
-header('Location: user_profile_page.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);

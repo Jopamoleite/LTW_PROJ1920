@@ -1,9 +1,11 @@
 <!-- HEADER -->
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 include_once 'database/houses.php';
-include_once 'templates/common/header.php';
+include_once 'templates/header.php';
 ?>
 
 <?php
@@ -49,16 +51,16 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 ?>
 
 <!-- PROFILE -->
-<script src="js/editprofilepic.js"></script>
+<script src="../js/editprofilepic.js"></script>
 <div class="profile flex-container">
         <?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?>
 
 
 
-  <img src="images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
+  <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
 
   <?php if ($username == $_SESSION['username']) { ?>
-  <form id ="edit_profile_pic_form" action="action_edit_picture.php" method="post" enctype="multipart/form-data">
+  <form id ="edit_profile_pic_form" action="../templates/action_edit_picture.php" method="post" enctype="multipart/form-data">
       <input oninput="upload()" id="profile_pic_upload" type="file" name="picture">
       <label for="profile_pic_upload">Select file</label>
   </form>
@@ -72,26 +74,26 @@ $image_name = $user['image_name'];if (empty($image_name)) {
       <?php echo $name; ?>
     </p>
     <p>
-      <img src="images/location.png" class="icon" alt="loca" width="15" height="15">
+      <img src="../images/location.png" class="icon" alt="loca" width="15" height="15">
       <?php echo $location; ?>
     </p>
     <p>
-      <img src="images/telephone.png" class="icon" alt="phone" width="15" height="15">
+      <img src="../images/telephone.png" class="icon" alt="phone" width="15" height="15">
       <?php echo $phone; ?>
     </p>
     <p>
-      <img src="images/mail.png" class="icon" alt="mail" width="15" height="15">
+      <img src="../images/mail.png" class="icon" alt="mail" width="15" height="15">
       <?php echo $email; ?>
     </p>
     <p id="description">
       <?php echo $bio; ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='edit_profile_link' href='edit_profile_page.php'>Edit Profile</a>
+      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
     <?php } ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='change_password_link' href='change_password_page.php'>Change Password</a>
+      <a id='change_password_link' href='change_password.php'>Change Password</a>
     <?php } ?>
   </div>
 </div>
@@ -118,7 +120,7 @@ foreach ($houses as $entry) {
  }
 
  echo '<a class="user_house" href="house_page.php?house=' . $entry['id'] . '">';
- echo '<img src="images/' . $photo . '" id="house_pic" alt="House pic" width="300" height="300">';
+ echo '<img src="../images/' . $photo . '" id="house_pic" alt="House pic" width="300" height="300">';
  echo '<h2>' . $entry['location'] . '</h2>';
  echo '<h1>' . $entry['title'] . '</h1>';
  echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
@@ -130,5 +132,5 @@ foreach ($houses as $entry) {
 
 <!-- FOOTER -->
 <?
-include_once 'templates/common/footer.php';
+include_once 'templates/footer.php';
 ?>

@@ -4,7 +4,7 @@ include_once 'includes/start.php';
 ?>
 
 <section id="houses_list" class="flex_row">
-  <script src="js/positionhouses.js"></script>
+  <script src="../js/positionhouses.js"></script>
   <?php
 $destination;
 $checkin;
@@ -18,7 +18,7 @@ if (isset($_GET['destination'])) {
 }
 
 if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $destination)) {
- header('Location: ' . 'main_page.php');
+ header('Location: main_page.php');
  die();
 }
 
@@ -29,7 +29,7 @@ if (isset($_GET['checkin'])) {
 }
 
 if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkin)) {
- header('Location: ' . 'main_page.php');
+ header('Location: main_page.php');
  die();
 }
 
@@ -40,7 +40,7 @@ if (isset($_GET['checkout'])) {
 }
 
 if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkout)) {
- header('Location: ' . 'main_page.php');
+ header('Location: main_page.php');
  die();
 }
 
@@ -92,7 +92,7 @@ foreach ($houses as $entry) {
  }
 
  echo '<a class="house" href="house_page.php?house=' . $entry['id'] . '">';
- echo '<img src="images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
+ echo '<img src="../images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
  echo '<h1>' . $entry['location'] . '</h1>';
  echo '<h2>' . $entry['title'] . '</h2>';
  echo '<h2>' . $entry['price_day'] . '€ / night</h2>';

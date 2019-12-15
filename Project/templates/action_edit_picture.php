@@ -1,23 +1,26 @@
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 
 $extensions = ['jpeg', 'jpg', 'png', 'jfif'];
 
 $fileName = $_FILES['picture']['name'];
 $fileSize = $_FILES['picture']['size'];
 $fileTmpName = $_FILES['picture']['tmp_name'];
-$fileExtension = strtolower(end(explode('.', $fileName)));
+$tmp = explode('.', $fileName);
+$fileExtension = strtolower(end($tmp));
 
 if (!in_array($fileExtension, $extensions)) {
  $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
- header('Location: user_profile_page.php?user=' . $_SESSION['username']);
+ header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
  die();
 }
 
 if ($fileSize > 3000000) {
  $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
- header('Location: user_profile_page.php?user=' . $_SESSION['username']);
+ header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
  die();
 }
 
@@ -41,4 +44,4 @@ if (!$uploadSuccess) {
 
 }
 
-header('Location: user_profile_page.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);

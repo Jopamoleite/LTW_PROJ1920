@@ -1,13 +1,15 @@
 <!-- HEADER -->
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'templates/common/header.php';
+include_once 'templates/header.php';
 ?>
 
 <div class="profile flex-container">
   <div class="profile_info">
     <h3>Add new house</h3>
-      <form method="post" action="action_add_house.php"  enctype="multipart/form-data">
+      <form method="post" action="../templates/action_add_house.php"  enctype="multipart/form-data">
           <label>Title:</label><br>
           <input type="text" name="title" placeholder="Title" maxlength="30" required/><br>
           <label>Location:</label><br>
@@ -23,7 +25,7 @@ include_once 'templates/common/header.php';
           <input type="file" name="picture" id="house_pic">
           <input id="add_house_button" class="button" type="submit" name="submit" value="Create House">
       </form>
-      <a id="backtoprofile_link" href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>
 
@@ -31,5 +33,5 @@ include_once 'templates/common/header.php';
 
 <!-- FOOTER -->
 <?
-include_once 'templates/common/footer.php'
+include_once 'templates/footer.php'
 ?>

@@ -17,7 +17,7 @@ function login() {
   };
   request1.open(
     "GET",
-    "templates/user/validate_login.php?username=" +
+    "../templates/validate_login.php?username=" +
       user.value +
       "&password=" +
       pass.value,

@@ -62,7 +62,7 @@ function validate_user() {
     };
     current_user_request.open(
       "GET",
-      "templates/user/register_check.php?type=user&value=" + user.value,
+      "../templates/register_check.php?type=user&value=" + user.value,
       true
     );
     current_user_request.send();
@@ -97,7 +97,7 @@ function validate_email() {
     };
     current_mail_request.open(
       "GET",
-      "templates/user/register_check.php?type=email&value=" + email.value,
+      "../templates/register_check.php?type=email&value=" + email.value,
       true
     );
     current_mail_request.send();

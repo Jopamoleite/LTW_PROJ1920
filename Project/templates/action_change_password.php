@@ -1,6 +1,8 @@
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 
 $password = $_POST['password'];
 $newPassword = $_POST['newPassword'];
@@ -13,14 +15,14 @@ $confirmPassword = trim(htmlspecialchars($confirmPassword));
 if (!isLoginCorrect($_SESSION['username'], $password)) {
  $error = 'Your old password is incorrect';
  $_SESSION["errormsg"] = $error;
- header('Location: change_password_page.php');
+ header('Location: ../pages/change_password.php');
  die();
 }
 
 if ($newPassword != $confirmPassword) {
  $error = 'Your passwords must match';
  $_SESSION["errormsg"] = $error;
- header('Location: change_password_page.php');
+ header('Location: ../pages/change_password.php');
  die();
 }
 
@@ -28,8 +30,8 @@ $error = changePassword($_SESSION['userID'], $newPassword);
 
 if ($error) {
  $_SESSION["errormsg"] = $error;
- header('Location: change_password_page.php');
+ header('Location: ../pages/change_password.php');
  die();
 }
 
-header('Location: user_profile_page.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);

@@ -1,9 +1,9 @@
 <?php
 include_once 'includes/start.php';
-include_once 'database/db_user.php';
+include_once 'database/user.php';
 
 if (isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
- header("Location: /main_page.php");
+ header("Location: main_page.php");
 }
 
 if (empty($_POST)) {
@@ -42,7 +42,7 @@ function print_body()
 {
  ?>
     <body>
-      <script src="js/login.js" ></script>
+      <script src="../js/login.js" ></script>
       <div class="main">
         <h1><a href="index.php">HouseHunt</a></h1>
         <h2>The hunt is on!</h2>
