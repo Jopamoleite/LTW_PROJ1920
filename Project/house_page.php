@@ -41,7 +41,7 @@
   </div>
   <div id="booking" class="flex-container">
     <h1>BOOKING</h1>
-    <form action="booking.php" method="post" id="booking_form">
+    <form action="action_booking.php" method="post" id="booking_form">
       <!-- check in -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-In</label>
@@ -52,6 +52,11 @@
         <label class="search_label">Check-Out</label>
         <input class="search_input" name="checkout" type="date" placeholder="dd/mm/yyyy">
       </div>
+      <!-- guests -->
+        <div class="search_input_field_small">
+            <label class="search_label">Guests</label>
+            <input class="search_input" name="guests" type="number" value="1" min="1" max="<?php echo $capacity ?>" maxlength="3" step="1">
+        </div>
       <!-- submit -->
       <input onclick="" class="button" id="booking_button" type="button" value="BOOK">
     </form>
