@@ -45,12 +45,12 @@
       <!-- check in -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-In</label>
-        <input class="search_input" name="checkin" type="date" placeholder="dd/mm/yyyy">
+        <input class="search_input" name="checkin" type="date" value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
       </div>
       <!-- check out -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-Out</label>
-        <input class="search_input" name="checkout" type="date" placeholder="dd/mm/yyyy">
+        <input class="search_input" name="checkout" type="date" value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
       </div>
       <!-- guests -->
         <div class="search_input_field_small">
