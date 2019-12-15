@@ -58,7 +58,7 @@
             <input class="search_input" name="guests" type="number" value="1" min="1" max="<?php echo $capacity ?>" maxlength="3" step="1">
         </div>
       <!-- submit -->
-      <input onclick="" class="button" id="booking_button" type="button" value="BOOK">
+      <input onclick="" class="button" id="booking_button" type="submit" value="BOOK">
     </form>
   </div>
 </div>
