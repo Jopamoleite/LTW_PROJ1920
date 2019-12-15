@@ -57,6 +57,8 @@
             <label class="search_label">Guests</label>
             <input class="search_input" name="guests" type="number" value="1" min="1" max="<?php echo $capacity ?>" maxlength="3" step="1">
         </div>
+      <!-- houseID --> 
+      <input type="hidden" id="houseID" name="houseID" value="<?php echo $house_id ?>">
       <!-- submit -->
       <input onclick="" class="button" id="booking_button" type="submit" value="BOOK">
     </form>

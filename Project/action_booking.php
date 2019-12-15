@@ -5,11 +5,17 @@
     $checkin  = $_POST['checkin'];
     $checkout = $_POST['checkout'];
     $guests   = $_POST['guests'];
+    $houseID  = $_POST['houseID'];
 
     $checkin = trim(htmlspecialchars($checkin));
     $checkout = trim(htmlspecialchars($checkout));
     $guests = ltrim(trim(htmlspecialchars($guests)),'0');
 
+    $reservations = getHouseReservations($houseID);
+    
+    foreach ($reservations as $entry) {
+    }
 
-    header('Location: main_page.php');
+    header('Location: house_page.php?house='.$houseID);
+
 ?>

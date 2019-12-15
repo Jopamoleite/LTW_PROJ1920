@@ -16,6 +16,18 @@
         }
     }
 
+    function getHouseReservations($id){
+        global $dbh;
+        try {
+            $qry = 'SELECT * FROM Reservations WHERE placeID = ?';
+            $stmt = $dbh->prepare($qry);
+            $stmt->execute(array($id));
+            return $stmt;
+        } catch (PDOException $e) {
+            error_log('Error: ' . $e->getMessage());
+        }
+    }
+
     function getHousesAtLocation($location, $guests){
         global $dbh;
         try {
