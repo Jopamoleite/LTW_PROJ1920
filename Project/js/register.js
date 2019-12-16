@@ -11,7 +11,7 @@ function check_form() {
   let error_all = document.getElementById("error_all");
 
   if (user == "" || password == "" || email == "" || repeat == "") {
-    error_all.innerHTML = "Fill all fields";
+    error_all.innerHTML = "<div class='error_message'> Fill all fields </div>";
   } else {
     let error_username = document.getElementById("error_username");
     let error_email = document.getElementById("error_email");
@@ -24,7 +24,7 @@ function check_form() {
       error_password.innerHTML != "Valid" ||
       error_repeat.innerHTML != "Valid"
     ) {
-      error_all.innerHTML = "Fill with valid information";
+      error_all.innerHTML = "<div class='error_message'> Fill with valid information </div>";
     } else {
       document.getElementById("register").submit();
     }
