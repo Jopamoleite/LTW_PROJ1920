@@ -6,7 +6,7 @@
 </form>
 
 <section id="profile_houses" class="flex_row">
-  <a id="users_houses_title"> <?php echo $username; ?>'s Houses</a>
+  <a class="user_tab_title"> <?php echo $username; ?>'s Houses</a>
   <div class="user_house_list">
   <?php
 $id = getUserId($username);

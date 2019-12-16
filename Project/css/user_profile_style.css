@@ -259,7 +259,7 @@
   width: 100%;
 }
 
-#users_houses_title {
+.user_tab_title {
   background-color: #fdfdfd;
   color: #252525;
   font-family: "Roboto", sans-serif;

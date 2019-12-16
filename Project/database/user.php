@@ -197,4 +197,18 @@ function getUser($username)
   error_log('Error: ' . $e->getMessage());
  }
 }
+
+function getUserReservations($id)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Reservations WHERE touristID = ?';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($id));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
 ?>
