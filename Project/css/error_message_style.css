@@ -1,0 +1,32 @@
+.error_message {
+    background-color: #fce4e4;
+    border: 1px solid #fcc2c3;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    color: #cc0033;
+    float: left;
+    font-weight: bold;
+    line-height: 1.5em;
+    max-height: 3em;
+    min-width: 5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  } 
+  
+  .error_message:after, .error_message:before {
+    content: '';
+    border: 7px solid transparent;
+    position: absolute;
+    top: 11px;
+  }
+  .error_message:after {
+    border-right: 7px solid #fce4e4;
+    left: -14px;
+  }
+  .error_message:before {
+    border-right: 7px solid #fcc2c3;
+    left: -15px;
+  }

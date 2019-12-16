@@ -1,7 +1,7 @@
 
 <div id="booking" class="flex-container">
-    <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
-<h1>BOOKING</h1>
+<?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo "<div class='error_message'>" . $_SESSION['infomsg'] . "</div>";unset($_SESSION['infomsg']);} ?>
+    <h1>BOOKING</h1>
     <form action="../actions/action_booking.php" method="post" id="booking_form">
         <!-- check in -->
         <div class="search_input_field_medium">

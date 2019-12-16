@@ -55,14 +55,7 @@ function print_body()
           <input id="register_button" name="submit" class="button" type="submit" value="Register">
         </form>
         <div id="error_all"></div>
-        <div class="alert_msg">
-  <?php
-if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {
-  echo $_SESSION['infomsg'];
-  unset($_SESSION['infomsg']);
- }
- ?>
-        </div>
+        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo "<div class='error_message'>" . $_SESSION['infomsg'] . "</div>";unset($_SESSION['infomsg']);} ?>
       </div>
     </body>
 <?php

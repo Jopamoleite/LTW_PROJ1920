@@ -12,6 +12,7 @@
     <link href="../css/user_profile_style.css" rel="stylesheet">
     <link href="../css/house_results_style.css" rel="stylesheet">
     <link href="../css/house_page_style.css" rel="stylesheet">
+    <link href="../css/error_message_style.css" rel="stylesheet">
   </head>
   <body>
     <?php
