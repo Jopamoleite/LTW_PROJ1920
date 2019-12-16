@@ -53,6 +53,7 @@ if ($photos == false) {
     <h3><?echo $capacity ?></h3>
     <h4><?echo $description ?></h4>
   </div>
+  <?php if($owner_id != $_SESSION['userID']){ ?>
   <div id="booking" class="flex-container">
         <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
     <h1>BOOKING</h1>
@@ -78,6 +79,7 @@ if ($photos == false) {
       <input onclick="" class="button" id="booking_button" type="submit" value="BOOK">
     </form>
   </div>
+  <?php } ?>
 </div>
 </div>
 

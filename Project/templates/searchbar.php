@@ -59,21 +59,15 @@ if ($guests > 100) {
     <form class="search_form flex-container" method="get" action="../actions/action_search.php">
         <div class="search_input_field_large">
             <label class="search_label">Going to</label>
-            <input class="search_input" name="destination" type="text" value="<?php if (isset($_GET['destination'])) {echo $destination;} ?>" maxlength="35" placeholder="Destination">
+            <input class="search_input" name="destination" type="text" value="<?php if (isset($_GET['destination'])) echo $destination; ?>" maxlength="35" placeholder="Destination">
         </div>
         <div class="search_input_field_medium">
             <label class="search_label">Check-In</label>
-            <input class="search_input" name="checkin" id="checkin" type="date" value="<?php if (isset($_GET['checkin'])) {
- echo $checkin;
-}
-?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
+            <input class="search_input" name="checkin" id="checkin" type="date" value="<?php if (isset($_GET['checkin'])) echo $checkin; ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
         </div>
         <div class="search_input_field_medium">
             <label class="search_label">Check-Out</label>
-            <input class="search_input" name="checkout" id="checkout" type="date" value="<?php if (isset($_GET['checkout'])) {
- echo $checkout;
-}
-?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
+            <input class="search_input" name="checkout" id="checkout" type="date" value="<?php if (isset($_GET['checkout'])) echo $checkout; ?>" min="<?php echo date("Y-m-d"); ?>" placeholder="dd/mm/yyyy">
         </div>
         <div class="search_input_field_small">
             <label class="search_label">Guests</label>

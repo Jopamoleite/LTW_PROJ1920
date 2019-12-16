@@ -53,10 +53,9 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 <!-- PROFILE -->
 <script src="../js/editprofilepic.js"></script>
 <div class="profile flex-container">
+      <div id="profile_error_msg">
         <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
-
-
-
+      </div>
   <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
 
   <?php if ($username == $_SESSION['username']) { ?>
@@ -113,7 +112,7 @@ $id = getUserId($username);
 $houses = getHouseWithOwnerID($id);
 
 if(empty($houses)){
-  echo '<a>This user has not added houses yet.</a>';
+  echo '<a id="no_house_msg">This user has not added houses yet.</a>';
 }else{
   foreach ($houses as $entry) {
     $photos = getHousePhotos($entry['id']);
