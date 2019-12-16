@@ -43,3 +43,4 @@ if (isset($_POST['submit'])) {
 }
 
 header('Location: user_profile.php?user=' . $_SESSION['username']);
+?>

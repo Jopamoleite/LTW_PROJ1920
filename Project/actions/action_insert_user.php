@@ -75,3 +75,4 @@ if ($error) {
 }
 
 header('Location: ../index.php');
+?>

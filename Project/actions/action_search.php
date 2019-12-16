@@ -50,3 +50,4 @@ if (isset($checkinDate) && isset($checkoutDate)) {
 }
 
 header('Location: ../pages/main_page.php?destination=' . $destination . '&checkin=' . $checkin . '&checkout=' . $checkout . '&guests=' . $guests);
+?>

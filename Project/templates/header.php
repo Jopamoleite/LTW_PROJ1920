@@ -38,7 +38,7 @@ if (!isset($_SESSION['userID']) || empty($_SESSION['userID'])) {
             <div class="dropdown_content">
               <br>
               <div><a href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">My Profile</a></div>
-              <form action="../templates/logout.php" method="post">
+              <form action="../actions/action_logout.php" method="post">
                 <button class="logout_button" type="submit">Logout</button>
               </form>
             </div>

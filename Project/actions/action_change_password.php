@@ -35,3 +35,4 @@ if ($error) {
 }
 
 header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+?>

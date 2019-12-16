@@ -15,3 +15,4 @@ if (!empty($myusername) && !empty($mypassword)) {
 if (isLoginCorrect($myusername, $mypassword)) {
  echo "Valid";
 }
+?>

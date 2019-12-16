@@ -34,3 +34,4 @@ if (!empty($error)) {
 setUser($myusername);
 
 header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+?>

@@ -8,7 +8,7 @@ include_once 'database/user.php';
   <div class="main" id="register_page">
     <h1><a href="../index.php">HouseHunt</a></h1>
     <h2><a>Create a new profile</a></h2>
-    <form action="../templates/insert_user.php" method="post" id="register">
+    <form action="../actions/action_insert_user.php" method="post" id="register">
       <div>
         <label><input type="text" name="username" oninput="validate_user()" id="username" maxlength="20" placeholder="  Username" required minlength="4" pattern="[\w]+"> </label>
           <div id="error_username"></div><br>
