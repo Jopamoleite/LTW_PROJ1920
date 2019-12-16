@@ -197,3 +197,4 @@ function getUser($username)
   error_log('Error: ' . $e->getMessage());
  }
 }
+?>

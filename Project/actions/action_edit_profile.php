@@ -13,7 +13,7 @@ $bio = $_POST['bio'];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
  $error = "Invalid email format";
- $_SESSION['errormsg'] = $error;
+ $_SESSION['infomsg'] = $error;
  header('Location: ../pages/edit_profile.php');
  die();
 }

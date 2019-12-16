@@ -53,14 +53,14 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 <!-- PROFILE -->
 <script src="../js/editprofilepic.js"></script>
 <div class="profile flex-container">
-        <?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?>
+        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
 
 
 
   <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
 
   <?php if ($username == $_SESSION['username']) { ?>
-  <form id ="edit_profile_pic_form" action="../templates/action_edit_picture.php" method="post" enctype="multipart/form-data">
+  <form id ="edit_profile_pic_form" action="../actions/action_edit_picture.php" method="post" enctype="multipart/form-data">
       <input oninput="upload()" id="profile_pic_upload" type="file" name="picture">
       <label for="profile_pic_upload">Select file</label>
   </form>

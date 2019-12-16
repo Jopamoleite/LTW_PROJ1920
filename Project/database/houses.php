@@ -133,3 +133,4 @@ function getHouse($house_id)
   error_log('Error: ' . $e->getMessage());
  }
 }
+?>

@@ -1,4 +1,6 @@
 <?php
+chdir('..');
+
 include_once 'includes/start.php';
 
 $destination = $_GET['destination'];
@@ -47,4 +49,4 @@ if (isset($checkinDate) && isset($checkoutDate)) {
 
 }
 
-header('Location: main_page.php?destination=' . $destination . '&checkin=' . $checkin . '&checkout=' . $checkout . '&guests=' . $guests);
+header('Location: ../pages/main_page.php?destination=' . $destination . '&checkin=' . $checkin . '&checkout=' . $checkout . '&guests=' . $guests);

@@ -29,17 +29,19 @@ foreach ($reservations as $entry) {
  $reservationCheckin = new DateTime($entry['begin_date']);
  $reservationCheckout = new DateTime($entry['end_date']);
  if ($checkinDate >= $reservationCheckin && $checkinDate <= $reservationCheckout) {
-  $_SESSION['infomsg'] = "check-in date conflicts with existing reservation!";
-  header('Location: templates/house_page.php?house=' . $houseID);
+  $_SESSION['infomsg'] = "Check-in date conflicts with existing reservation!";
+  header('Location: ../pages/house_page.php?house=' . $houseID);
   die();
  }
  if ($checkoutDate >= $reservationCheckin && $checkoutDate <= $reservationCheckout) {
-  $_SESSION['infomsg'] = "check-out date conflicts with existing reservation!";
-  header('Location: templates/house_page.php?house=' . $houseID);
+  $_SESSION['infomsg'] = "Check-out date conflicts with existing reservation!";
+  header('Location: ../pages/house_page.php?house=' . $houseID);
   die();
  }
 }
 
 addReservation($houseID, $_SESSION['userID'], $checkin, $checkout);
 
-header('Location: templates/house_page.php?house=' . $houseID);
+$_SESSION['infomsg'] = "Reservations made!";
+
+header('Location: ../pages/house_page.php?house=' . $houseID);

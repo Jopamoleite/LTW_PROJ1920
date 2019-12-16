@@ -56,7 +56,7 @@ if ($guests > 100) {
 ?>
 
 <div id="search_bar">
-    <form class="search_form flex-container" method="get" action="action_search.php">
+    <form class="search_form flex-container" method="get" action="../actions/action_search.php">
         <div class="search_input_field_large">
             <label class="search_label">Going to</label>
             <input class="search_input" name="destination" type="text" value="<?php if (isset($_GET['destination'])) {echo $destination;} ?>" maxlength="35" placeholder="Destination">

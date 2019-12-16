@@ -31,7 +31,7 @@ function validate_login($myusername, $mypassword)
   header('Location: main_page.php');
  } else {
   $error = 'Invalid credentials';
-  $_SESSION["errormsg"] = $error;
+  $_SESSION['infomsg'] = $error;
   header('Location: ../index.php');
  }
 }
@@ -57,9 +57,9 @@ function print_body()
         <div id="error_all"></div>
         <div class="alert_msg">
   <?php
-if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {
-  echo $_SESSION["errormsg"];
-  unset($_SESSION["errormsg"]);
+if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {
+  echo $_SESSION['infomsg'];
+  unset($_SESSION['infomsg']);
  }
  ?>
         </div>

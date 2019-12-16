@@ -1,12 +1,10 @@
 <!-- HEADER -->
 <?php
 chdir('..');
-
 include_once 'includes/start.php';
 include_once 'database/user.php';
 include_once 'database/houses.php';
 include_once 'templates/header.php';
-
 $house_url = $_GET['house'];
 if ($house_url == null) {
  header('Location: main_page.php');
@@ -26,7 +24,6 @@ if (!checkHouse($house_id)) {
 }
 // Check house exists
 $house = getHouse($house_id);
-
 $title = $house['title'];
 $location = $house['location'];
 $address = $house['address_'];
@@ -45,7 +42,6 @@ if ($photos == false) {
 } else {
  $photo = $photos['image_name'];
 }
-
 ?>
   <img src="../images/<?php echo $photo ?>">
 </div>
@@ -58,9 +54,9 @@ if ($photos == false) {
     <h4><?echo $description ?></h4>
   </div>
   <div id="booking" class="flex-container">
-        <?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?>
+        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
     <h1>BOOKING</h1>
-    <form action="action_booking.php" method="post" id="booking_form">
+    <form action="../actions/action_booking.php" method="post" id="booking_form">
       <!-- check in -->
       <div class="search_input_field_medium">
         <label class="search_label">Check-In</label>

@@ -18,13 +18,13 @@ $addPhoto = false;
 if (isset($_POST['submit']) && !empty($fileName)) {
 
     if (!in_array($fileExtension, $extensions)) {
-        $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
+        $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
         header('Location: ../pages/add_houses.php');
         die();
     }
 
     if ($fileSize > 3000000) {
-        $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
+        $_SESSION['infomsg'] = "Please upload a file with less than 3MB";
         header('Location: ../pages/add_houses.php');
         die();
     }
@@ -39,7 +39,7 @@ if (isset($_POST['submit']) && !empty($fileName)) {
     $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
     if (!$uploadSuccess) {
-        $_SESSION['errormsg'] = "Error uploading file!";
+        $_SESSION['infomsg'] = "Error uploading file!";
         header('Location: ../pages/add_houses.php');
         die();
     } else {

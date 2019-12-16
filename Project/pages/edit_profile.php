@@ -22,10 +22,10 @@ $bio = $user['bio'];
 <div class="profile flex-container">
   <img src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
-        <?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?>
+        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
     <h1>  <?php echo $_SESSION['username']; ?> </h1>
     <h3>Update Profile Information</h3>
-      <form method="post" action="../templates/action_edit_profile.php">
+      <form method="post" action="../actions/action_edit_profile.php">
           <label>Username:</label><br>
           <input type="text" name="username" value="<?php if (!empty($username)) {echo $username;} ?>" placeholder="Username" maxlength="20" required/><br>
           <label>Name:</label><br>

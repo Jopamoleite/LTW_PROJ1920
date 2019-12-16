@@ -91,7 +91,7 @@ foreach ($houses as $entry) {
   $photo = $photos['image_name'];
  }
 
- echo '<a class="house" href="house_page.php?house=' . $entry['id'] . '">';
+ echo '<a class="house" href="../pages/house_page.php?house=' . $entry['id'] . '">';
  echo '<img src="../images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
  echo '<h1>' . $entry['location'] . '</h1>';
  echo '<h2>' . $entry['title'] . '</h2>';

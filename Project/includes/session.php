@@ -20,3 +20,4 @@ function unsetID()
 {
  $_SESSION['userID'] = "";
 }
+?>

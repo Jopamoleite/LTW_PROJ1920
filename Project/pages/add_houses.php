@@ -9,7 +9,7 @@ include_once 'templates/header.php';
 <div class="profile flex-container">
   <div class="profile_info">
     <h3>Add new house</h3>
-      <form method="post" action="../templates/action_add_house.php"  enctype="multipart/form-data">
+      <form method="post" action="../actions/action_add_house.php"  enctype="multipart/form-data">
           <label>Title:</label><br>
           <input type="text" name="title" placeholder="Title" maxlength="30" required/><br>
           <label>Location:</label><br>
