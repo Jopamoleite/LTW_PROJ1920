@@ -17,19 +17,6 @@ $addPhoto = false;
 
 if (isset($_POST['submit']) && !empty($fileName)) {
 
-<<<<<<< HEAD:Project/templates/action_add_house.php
- if (!in_array($fileExtension, $extensions)) {
-  $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
-  header('Location: ../pages/add_houses.php');
-  die();
- }
-
- if ($fileSize > 3000000) {
-  $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
-  header('Location: ../pages/add_houses.php');
-  die();
- }
-=======
     if (!in_array($fileExtension, $extensions)) {
         $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
         header('Location: ../pages/add_house_page.php');
@@ -41,7 +28,6 @@ if (isset($_POST['submit']) && !empty($fileName)) {
         header('Location: ../pages/add_house_page.php');
         die();
     }
->>>>>>> 1af96e287c318d86a49c07358482cede1e717997:Project/actions/action_add_house.php
 
  $currentDate = date("Y-m-d");
  $randomNumber = rand();
@@ -52,15 +38,6 @@ if (isset($_POST['submit']) && !empty($fileName)) {
 
  $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
-<<<<<<< HEAD:Project/templates/action_add_house.php
- if (!$uploadSuccess) {
-  $_SESSION['errormsg'] = "Error uploading file!";
-  header('Location: ../pages/add_houses.php');
-  die();
- } else {
-  $addPhoto = true;
- }
-=======
     if (!$uploadSuccess) {
         $_SESSION['infomsg'] = "Error uploading file!";
         header('Location: ../pages/add_house_page.php');
@@ -68,7 +45,6 @@ if (isset($_POST['submit']) && !empty($fileName)) {
     } else {
         $addPhoto = true;
     }
->>>>>>> 1af96e287c318d86a49c07358482cede1e717997:Project/actions/action_add_house.php
 
 }
 
