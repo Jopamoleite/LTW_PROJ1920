@@ -6,7 +6,6 @@ function login() {
   let form = document.getElementById("login_form");
   let error_all = document.getElementById("error_all");
 
-
   let request1 = new XMLHttpRequest();
   request1.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
@@ -19,6 +18,13 @@ function login() {
       return false;
     }
   };
-  request1.open("GET", "../templates/validate_login.php?username=" + user.value + "&password=" + pass.value, true);
+  request1.open(
+    "GET",
+    "../templates/validate_login.php?username=" +
+      user.value +
+      "&password=" +
+      pass.value,
+    true
+  );
   request1.send();
 }
