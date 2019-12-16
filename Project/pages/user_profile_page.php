@@ -4,12 +4,16 @@ chdir('..');
 // FUNCTION INCLUDES
 include_once 'includes/start.php';
 include_once 'database/user.php';
+include_once 'database/houses.php';
 
-//  HEADER
+// HEADER
 include_once 'templates/header.php';
 
-// EDIT PROFILE FORM
-include_once 'templates/edit_profile.php';
+// PROFILE
+include_once 'templates/profile_info.php';
+
+// HOUSES TAB
+include_once 'templates/user_houses.php';
 
 // FOOTER
 include_once 'templates/footer.php';

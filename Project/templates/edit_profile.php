@@ -10,7 +10,6 @@ $email = $user['email'];
 $bio = $user['bio'];
 ?>
 
-<!-- PROFILE -->
 <div class="profile flex-container">
   <img src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
@@ -32,6 +31,6 @@ $bio = $user['bio'];
           <textarea name="bio" rows="3" cols="50" maxlength="100" placeholder="Write something about yourself"><?php if (!empty($bio)) {echo $bio;} ?> </textarea><br><br>
           <input id="edit_profile_button" class="button" type="submit" value="Update Profile">
       </form>
-      <a id="backtoprofile_link" href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>

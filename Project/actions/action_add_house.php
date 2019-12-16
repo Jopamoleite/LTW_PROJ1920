@@ -29,14 +29,14 @@ if (isset($_POST['submit']) && !empty($fileName)) {
         die();
     }
 
-    $currentDate = date("Y-m-d");
-    $randomNumber = rand();
+ $currentDate = date("Y-m-d");
+ $randomNumber = rand();
 
-    $newName = sha1($_SESSION['userID'] . $currentDate . $randomNumber) . "." . $fileExtension;
+ $newName = sha1($_SESSION['userID'] . $currentDate . $randomNumber) . "." . $fileExtension;
 
-    $uploadPath = "images/" . $newName;
+ $uploadPath = "images/" . $newName;
 
-    $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
+ $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
     if (!$uploadSuccess) {
         $_SESSION['infomsg'] = "Error uploading file!";
@@ -65,8 +65,8 @@ $description = trim(htmlspecialchars($description));
 $placeID = addHouse($title, $location, $address, $price, $capacity, $description, $_SESSION['userID']);
 
 if ($addPhoto) {
-    addPhotoToHouse($newName, $placeID);
+ addPhotoToHouse($newName, $placeID);
 }
 
-header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile_page.php?user=' . $_SESSION['username']);
 ?>

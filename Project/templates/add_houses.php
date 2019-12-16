@@ -18,6 +18,6 @@
           <input type="file" name="picture" id="house_pic">
           <input id="add_house_button" class="button" type="submit" name="submit" value="Create House">
       </form>
-      <a id="backtoprofile_link" href="../pages/user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="../pages/user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>

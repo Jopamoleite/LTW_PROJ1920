@@ -15,13 +15,13 @@ if (isset($_POST['submit'])) {
 
  if (!in_array($fileExtension, $extensions)) {
   $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
-  header('Location: user_profile.php?user=' . $_SESSION['username']);
+  header('Location: user_profile_page.php?user=' . $_SESSION['username']);
   die();
  }
 
  if ($fileSize > 3000000) {
   $_SESSION['infomsg'] = "Please upload a file with less than 3MB";
-  header('Location: user_profile.php?user=' . $_SESSION['username']);
+  header('Location: user_profile_page.php?user=' . $_SESSION['username']);
   die();
  }
 
@@ -42,5 +42,5 @@ if (isset($_POST['submit'])) {
 
 }
 
-header('Location: user_profile.php?user=' . $_SESSION['username']);
+header('Location: user_profile_page.php?user=' . $_SESSION['username']);
 ?>

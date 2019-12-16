@@ -1,19 +1,20 @@
 <?php
 chdir('..');
 
-/* HEADER */
+// FUNCTION INCLUDES
 include_once 'includes/start.php';
 include_once 'database/user.php';
 include_once 'database/houses.php';
+
+// HEADER
 include_once 'templates/header.php';
 
-/* SEARCH */
+// SEARCHBAR
 include_once 'templates/searchbar.php';
 
-/* CASINHAS */
+// HOUSES
 include_once 'templates/display_houses.php';
 
-/* FOOTER */
+// FOOTER
 include_once 'templates/initial_footer.php'
-
 ?>

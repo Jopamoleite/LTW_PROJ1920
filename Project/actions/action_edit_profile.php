@@ -33,5 +33,5 @@ if (!empty($error)) {
 
 setUser($myusername);
 
-header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile_page.php?user=' . $_SESSION['username']);
 ?>

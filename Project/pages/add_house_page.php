@@ -1,6 +1,7 @@
 
 <?php
 chdir('..');
+// FUNCTION INCLUDES
 include_once 'includes/start.php';
 
 // HEADER
