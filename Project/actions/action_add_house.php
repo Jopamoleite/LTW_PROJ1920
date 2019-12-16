@@ -19,13 +19,13 @@ if (isset($_POST['submit']) && !empty($fileName)) {
 
     if (!in_array($fileExtension, $extensions)) {
         $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
-        header('Location: ../pages/add_houses.php');
+        header('Location: ../pages/add_house_page.php');
         die();
     }
 
     if ($fileSize > 3000000) {
         $_SESSION['infomsg'] = "Please upload a file with less than 3MB";
-        header('Location: ../pages/add_houses.php');
+        header('Location: ../pages/add_house_page.php');
         die();
     }
 
@@ -40,7 +40,7 @@ if (isset($_POST['submit']) && !empty($fileName)) {
 
     if (!$uploadSuccess) {
         $_SESSION['infomsg'] = "Error uploading file!";
-        header('Location: ../pages/add_houses.php');
+        header('Location: ../pages/add_house_page.php');
         die();
     } else {
         $addPhoto = true;
