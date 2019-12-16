@@ -60,7 +60,7 @@ function getHousesWithGuests($guests)
 {
  global $dbh;
  try {
-  $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
+  $qry = 'SELECT * FROM Place WHERE capacity >= ? ORDER BY price_day ASC;';
   $stmt = $dbh->prepare($qry);
   $stmt->execute(array($guests));
   $table = $stmt->fetchAll();
@@ -70,13 +70,55 @@ function getHousesWithGuests($guests)
  }
 }
 
-function getHousesWithCheckin($checkin) //TO DO ------------------------------------------------------------------
+function getHousesWithOneDate($date, $guests)
 {
  global $dbh;
  try {
-  $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
+  $qry = 'SELECT * FROM Place Pl WHERE Pl.id NOT IN( SELECT placeID FROM Place P JOIN Reservations ON P.id = placeID WHERE date(?) >= date(begin_date) AND date(?) <= date(end_date)) AND capacity >= ? ORDER BY price_day ASC;';
   $stmt = $dbh->prepare($qry);
-  $stmt->execute(array($guests));
+  $stmt->execute(array($date, $date, $guests));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
+
+function getHousesWithOneDateAndLocation($location, $date, $guests)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Place Pl WHERE Pl.id NOT IN( SELECT placeID FROM Place P JOIN Reservations ON P.id = placeID WHERE date(?) >= date(begin_date) AND date(?) <= date(end_date)) AND location LIKE ? COLLATE NOCASE  AND capacity >= ? ORDER BY price_day ASC;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($date, $date, $location, $guests));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
+
+function getHousesWithTwoDates($date1, $date2, $guests)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Place Pl WHERE Pl.id NOT IN( SELECT placeID FROM Place P JOIN Reservations ON P.id = placeID WHERE ((date(?) >= date(begin_date) AND date(?) <= date(end_date)) OR (date(?) >= date(begin_date) AND date(?) <= date(end_date)))) AND capacity >= ? ORDER BY price_day ASC;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($date1, $date1, $date2, $date2, $guests));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
+
+function getHousesWithTwoDatesAndLocation($location, $date1, $date2, $guests)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Place Pl WHERE Pl.id NOT IN( SELECT placeID FROM Place P JOIN Reservations ON P.id = placeID WHERE ((date(?) >= date(begin_date) AND date(?) <= date(end_date)) OR (date(?) >= date(begin_date) AND date(?) <= date(end_date)))) AND location LIKE ? COLLATE NOCASE AND capacity >= ? ORDER BY price_day ASC;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($date1, $date1, $date2, $date2, $location, $guests));
   $table = $stmt->fetchAll();
   return $table;
  } catch (PDOException $e) {

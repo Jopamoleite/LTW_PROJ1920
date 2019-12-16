@@ -11,7 +11,7 @@ $checkin;
 $checkout;
 $guests;
 
-if (isset($_GET['destination'])) {
+if (!empty($_GET['destination'])) {
  $destination = trim(htmlspecialchars($_GET['destination']));
 } else {
  $destination = "";
@@ -22,7 +22,7 @@ if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬-]', $destination)) {
  die();
 }
 
-if (isset($_GET['checkin'])) {
+if (!empty($_GET['checkin'])) {
  $checkin = trim(htmlspecialchars($_GET['checkin']));
 } else {
  $checkin = "";
@@ -33,7 +33,7 @@ if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkin)) {
  die();
 }
 
-if (isset($_GET['checkout'])) {
+if (!empty($_GET['checkout'])) {
  $checkout = trim(htmlspecialchars($_GET['checkout']));
 } else {
  $checkout = "";
@@ -44,7 +44,7 @@ if (preg_match('[\'^£$%&*()}{@#~?><>,|=_+¬]', $checkout)) {
  die();
 }
 
-if (isset($_GET['guests'])) {
+if (!empty($_GET['guests'])) {
  $guests = ltrim(trim(htmlspecialchars($_GET['guests'])), '0');
 } else {
  $guests = 1;
@@ -64,24 +64,18 @@ if (empty($destination) && empty($checkin) && empty($checkout)) {
 } elseif (!empty($destination) && empty($checkin) && empty($checkout)) {
  $houses = getHousesAtLocation($destination, $guests);
 } elseif (!empty($destination) && !empty($checkin) && empty($checkout)) {
- $houses = getHousesAtLocation($destination, $guests);
+ $houses = getHousesWithOneDateAndLocation($destination, $checkin, $guests);
+}elseif (!empty($destination) && empty($checkin) && !empty($checkout)) {
+ $houses = getHousesWithOneDateAndLocation($destination, $checkout, $guests);
+}elseif (empty($destination) && !empty($checkin) && empty($checkout)) {
+ $houses = getHousesWithOneDate($checkin, $guests);
+}elseif (empty($destination) && empty($checkin) && !empty($checkout)) {
+ $houses = getHousesWithOneDate($checkout, $guests);
+}elseif (empty($destination) && !empty($checkin) && !empty($checkout)) {
+ $houses = getHousesWithTwoDates($checkin, $checkout, $guests);
+}elseif (!empty($destination) && !empty($checkin) && !empty($checkout)) {
+ $houses = getHousesWithTwoDatesAndLocation($destination, $checkin, $checkout, $guests);
 }
-/*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKIN AND LOCATION = DESTINATION;*/elseif (!empty($destination) && empty($checkin) && !empty($checkout)) {
- $houses = getHousesAtLocation($destination, $guests);
-}
-/*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKOUT AND LOCATION = DESTINATION;*/elseif (empty($destination) && !empty($checkin) && empty($checkout)) {
- $houses = getHousesWithGuests($guests);
-}
-/*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKIN*/elseif (empty($destination) && empty($checkin) && !empty($checkout)) {
- $houses = getHousesWithGuests($guests);
-}
-/*TO DO: GET HOUSES AVAILABLE FOR DAY = CHECKOUT ;*/elseif (empty($destination) && !empty($checkin) && !empty($checkout)) {
- $houses = getHousesWithGuests($guests);
-}
-/*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT;*/elseif (!empty($destination) && !empty($checkin) && !empty($checkout)) {
- $houses = getHousesAtLocation($destination, $guests);
-}
-/*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT AND LOCATION = DESTINATION;*/
 
 if(empty($houses)){
   echo '<a class="no_match" href="../pages/main_page.php">';
