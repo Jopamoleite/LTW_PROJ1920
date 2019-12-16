@@ -17,34 +17,34 @@ $addPhoto = false;
 
 if (isset($_POST['submit']) && !empty($fileName)) {
 
-    if (!in_array($fileExtension, $extensions)) {
-        $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
-        header('Location: ../pages/add_houses.php');
-        die();
-    }
+ if (!in_array($fileExtension, $extensions)) {
+  $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
+  header('Location: ../pages/add_houses.php');
+  die();
+ }
 
-    if ($fileSize > 3000000) {
-        $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
-        header('Location: ../pages/add_houses.php');
-        die();
-    }
+ if ($fileSize > 3000000) {
+  $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
+  header('Location: ../pages/add_houses.php');
+  die();
+ }
 
-    $currentDate = date("Y-m-d");
-    $randomNumber = rand();
+ $currentDate = date("Y-m-d");
+ $randomNumber = rand();
 
-    $newName = sha1($_SESSION['userID'] . $currentDate . $randomNumber) . "." . $fileExtension;
+ $newName = sha1($_SESSION['userID'] . $currentDate . $randomNumber) . "." . $fileExtension;
 
-    $uploadPath = "images/" . $newName;
+ $uploadPath = "images/" . $newName;
 
-    $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
+ $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
-    if (!$uploadSuccess) {
-        $_SESSION['errormsg'] = "Error uploading file!";
-        header('Location: ../pages/add_houses.php');
-        die();
-    } else {
-        $addPhoto = true;
-    }
+ if (!$uploadSuccess) {
+  $_SESSION['errormsg'] = "Error uploading file!";
+  header('Location: ../pages/add_houses.php');
+  die();
+ } else {
+  $addPhoto = true;
+ }
 
 }
 
@@ -65,7 +65,7 @@ $description = trim(htmlspecialchars($description));
 $placeID = addHouse($title, $location, $address, $price, $capacity, $description, $_SESSION['userID']);
 
 if ($addPhoto) {
-    addPhotoToHouse($newName, $placeID);
+ addPhotoToHouse($newName, $placeID);
 }
 
 header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);

@@ -111,6 +111,7 @@ $image_name = $user['image_name'];if (empty($image_name)) {
   <?php
 $id = getUserId($username);
 $houses = getHouseWithOwnerID($id);
+
 foreach ($houses as $entry) {
  $photos = getHousePhotos($entry['id']);
  if ($photos == false) {
@@ -132,5 +133,6 @@ foreach ($houses as $entry) {
 
 <!-- FOOTER -->
 <?
+
 include_once 'templates/footer.php';
 ?>
