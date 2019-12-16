@@ -1,6 +1,6 @@
 
+<div id="houses_rented_tab" class="tabcontent">
 <section id="profile_houses_rented" class="flex_row">
-  <a class="user_tab_title"> <?php echo $username; ?>'s Rented Houses</a>
   <div class="user_house_list">
   <?php
     $rented = getUserHousesReservations($id, date("Y-m-d"));
@@ -25,3 +25,4 @@
   ?>
   </div>
 </section>
+</div>

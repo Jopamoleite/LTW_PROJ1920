@@ -264,16 +264,9 @@
   margin-top: 2em;
 }
 
-.user_tab_title {
-  background-color: #fdfdfd;
-  color: #252525;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1em;
-  margin: 15%;
-  padding: 0.7em;
-  padding-bottom: 3%;
-  border-top-left-radius: 1.4em;
-  border-top-right-radius: 1.4em;
-  position: relative;
-  top: 1.4em;
+.tabcontent {
+  display: none;
+}
+#create_houses_button {
+  float: bottom;
 }

@@ -1,13 +1,12 @@
 
-<form action="../pages/add_house_page.php" method="post">
-<?php if ($username == $_SESSION['username']) { ?>
-    <input id="create_houses_button" class="button" type="submit" value="Add House">
-<?php } ?>
-</form>
-
+<div id="house_tab" class="tabcontent">
 <section id="profile_houses" class="flex_row">
-  <a class="user_tab_title"> <?php echo $username; ?>'s Houses</a>
   <div class="user_house_list">
+    <form action="../pages/add_house_page.php" method="post">
+    <?php if ($username == $_SESSION['username']) { ?>
+        <input id="create_houses_button" class="button" type="submit" value="Add House">
+    <?php } ?>
+    </form>
   <?php
 $id = getUserId($username);
 $houses = getHouseWithOwnerID($id);
@@ -35,3 +34,4 @@ if(empty($houses)){
 ?>
   </div>
 </section>
+</div>
