@@ -5,7 +5,7 @@
   width: 60%;
   padding: 0.6em 3.4em;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
   background-color: #fdfdfd;
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 80%;
+  width: 50%;
 }
 
 #profile_pic {
@@ -261,6 +261,7 @@
 #no_house_msg {
   text-align: center;
   width: 100%;
+  margin-top: 2em;
 }
 
 .user_tab_title {
