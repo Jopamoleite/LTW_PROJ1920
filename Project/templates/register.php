@@ -4,13 +4,13 @@ include_once 'database/user.php';
 ?>
 
 <body>
-  <script src="../js/register.js"></script>
+  <script src="../js/register.js" defer></script>
   <div class="main" id="register_page">
     <h1><a href="../index.php">HouseHunt</a></h1>
     <h2><a>Create a new profile</a></h2>
     <form action="../actions/action_insert_user.php" method="post" id="register">
       <div>
-        <label><input type="text" name="username" oninput="validate_user()" id="username" maxlength="20" placeholder="  Username" required minlength="4" pattern="[\w]+"> </label>
+        <label><input type="text" name="username" oninput="validate_user()" id="username" maxlength="20" placeholder="  Username" required minlength="4" maxlength="20" pattern="[\w]+"> </label>
           <div id="error_username"></div><br>
         <label><input type="email" name="email" oninput="validate_email()"  id="email" maxlength="35" placeholder="  Email" required> </label><br>
           <div id="error_email"></div><br>

@@ -41,7 +41,7 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 
 ?>
 
-<script src="../js/editprofilepic.js"></script>
+<script src="../js/editprofilepic.js" defer></script>
 <div class="profile flex-container">
       <div id="profile_error_msg">
         <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>

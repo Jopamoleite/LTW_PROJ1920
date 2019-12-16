@@ -1,4 +1,4 @@
-<script src="../js/searchbar_scroll.js"></script>
+<script src="../js/searchbar_scroll.js" defer></script>
 
 <?php
 $destination;

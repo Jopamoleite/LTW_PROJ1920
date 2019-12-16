@@ -27,7 +27,7 @@ $description = $house['description'];
 $owner_id = $house['ownerID'];
 ?>
 
-<!-- BODY -->
+
 <div id="house_photos">
 <?php
 $photos = getHousePhotos($house_id);

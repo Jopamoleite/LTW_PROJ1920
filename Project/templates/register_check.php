@@ -19,5 +19,10 @@ if ($type == "user") {
  } else {
   echo "Valid";
  }
+} elseif ($type == "pass") {
+ if (!isLoginCorrect($_SESSION['username'], $value)) {
+  echo "Incorrect password";
+ } else {
+  echo "Valid";
+ }
 }
-?>

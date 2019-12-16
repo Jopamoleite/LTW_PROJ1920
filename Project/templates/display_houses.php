@@ -4,7 +4,7 @@ include_once 'includes/start.php';
 ?>
 
 <section id="houses_list" class="flex_row">
-  <script src="../js/positionhouses.js"></script>
+  <script src="../js/positionhouses.js" defer></script>
   <?php
 $destination;
 $checkin;
@@ -90,7 +90,7 @@ if(empty($houses)){
     } else {
      $photo = $photos['image_name'];
     }
-   
+
     echo '<a class="house" href="../pages/house_page.php?house=' . $entry['id'] . '">';
     echo '<img src="../images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
     echo '<h1>' . $entry['location'] . '</h1>';
