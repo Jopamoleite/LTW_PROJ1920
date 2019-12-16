@@ -56,11 +56,15 @@ $capacity = $_POST['capacity'];
 $description = $_POST['description'];
 
 $title = trim(htmlspecialchars($title));
+if($title == ""){$_SESSION['infomsg'] = "Invalid title!";header('Location: ../pages/add_house_page.php');}
 $location = trim(htmlspecialchars($location));
+if($location == ""){$_SESSION['infomsg'] = "Invalid location!";header('Location: ../pages/add_house_page.php');}
 $address = trim(htmlspecialchars($address));
+if($address == ""){$_SESSION['infomsg'] = "Invalid address!";header('Location: ../pages/add_house_page.php');}
 $price = trim(htmlspecialchars($price));
 $capacity = trim(htmlspecialchars($capacity));
 $description = trim(htmlspecialchars($description));
+if($description == ""){$_SESSION['infomsg'] = "Invalid description!";header('Location: ../pages/add_house_page.php');}
 
 $placeID = addHouse($title, $location, $address, $price, $capacity, $description, $_SESSION['userID']);
 

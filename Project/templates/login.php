@@ -42,7 +42,7 @@ function print_body()
 {
  ?>
     <body>
-      <script src="../js/login.js" ></script>
+      <script src="../js/login.js" defer></script>
       <div class="main">
         <h1><a href="../index.php">HouseHunt</a></h1>
         <h2>The hunt is on!</h2>

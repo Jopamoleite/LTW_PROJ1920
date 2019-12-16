@@ -41,7 +41,7 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 
 ?>
 
-<script src="../js/editprofilepic.js"></script>
+<script src="../js/editprofilepic.js" defer></script>
 <div class="profile flex-container">
   <div id="profile_picture_settings">
   <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
