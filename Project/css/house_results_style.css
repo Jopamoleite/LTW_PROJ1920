@@ -17,6 +17,7 @@ a.house {
 a.house img {
   border-top-left-radius: 1.4em;
   border-top-right-radius: 1.4em;
+  object-fit: cover;
 }
 
 a.house h1 {
