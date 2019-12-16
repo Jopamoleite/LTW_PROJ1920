@@ -197,4 +197,32 @@ function getUser($username)
   error_log('Error: ' . $e->getMessage());
  }
 }
+
+function getUserReservations($id)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Reservations WHERE touristID = ?;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($id));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
+
+function getUserHousesReservations($id, $date)
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Reservations R JOIN Place P ON R.placeID = P.id WHERE P.ownerID = ? AND date(end_date) >= date(?) ORDER BY begin_date ASC;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($id, $date));
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
 ?>

@@ -43,17 +43,16 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 
 <script src="../js/editprofilepic.js" defer></script>
 <div class="profile flex-container">
-      <div id="profile_error_msg">
-        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
-      </div>
+  <div id="profile_picture_settings">
   <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
-
   <?php if ($username == $_SESSION['username']) { ?>
   <form id ="edit_profile_pic_form" action="../actions/action_edit_picture.php" method="post" enctype="multipart/form-data">
       <input oninput="upload()" id="profile_pic_upload" type="file" name="picture">
       <label for="profile_pic_upload">Select file</label>
   </form>
   <?php } ?>
+  <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo "<div class='error_message'>" . $_SESSION['infomsg'] . "</div>";unset($_SESSION['infomsg']);} ?>
+  </div>
 
 
 

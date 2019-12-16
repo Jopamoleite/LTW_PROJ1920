@@ -5,7 +5,7 @@
   width: 60%;
   padding: 0.6em 3.4em;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
   background-color: #fdfdfd;
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 80%;
+  width: 50%;
 }
 
 #profile_pic {
@@ -166,6 +166,10 @@
   text-shadow: 0px 0px 5px #bbbbbb;
 }
 
+#house_desc{
+    min-height: 11em;
+}
+
 #profile_pic_upload {
   width: 0.1px;
   height: 0.1px;
@@ -257,18 +261,12 @@
 #no_house_msg {
   text-align: center;
   width: 100%;
+  margin-top: 2em;
 }
 
-#users_houses_title {
-  background-color: #fdfdfd;
-  color: #252525;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1em;
-  margin: 15%;
-  padding: 0.7em;
-  padding-bottom: 3%;
-  border-top-left-radius: 1.4em;
-  border-top-right-radius: 1.4em;
-  position: relative;
-  top: 1.4em;
+.tabcontent {
+  display: none;
+}
+#create_houses_button {
+  float: bottom;
 }
