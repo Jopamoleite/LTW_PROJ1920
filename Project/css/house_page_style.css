@@ -1,8 +1,9 @@
 #house_page{
     background-color: #FDFDFD;
     padding-bottom: 2em;
-    margin-left: 8%;
-    margin-right: 8%;
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     grid-template-columns: auto auto;
@@ -64,14 +65,22 @@
     grid-column: 1/2;
     display: block;
 
-    margin-top: 4em;
+    margin-top: 2em;
+
+    font-weight: lighter;
+    color: #555555;
 }
 
 #booking{
     grid-row: 4/6;
     grid-column: 2/3;
 
+    float: right;
+    text-align: right;
+    
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     font-style: normal;
+
+
 }

@@ -49,9 +49,9 @@ if ($photos == false) {
   <div id="house_info">
     <h1><?echo $title ?></h1>
     <h2><?echo $location ?></h2>
-    <h2><?echo $address ?></h2>
-    <h3><?echo $capacity ?></h3>
-    <h4><?echo $description ?></h4>
+    <h3><?echo $capacity ?> guests</h3>
+    <h3><?echo $address ?></h3>
+    <a><?echo $description ?></a>
   </div>
   <?php if($owner_id != $_SESSION['userID']){ ?>
   <div id="booking" class="flex-container">

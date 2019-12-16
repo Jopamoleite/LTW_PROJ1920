@@ -21,7 +21,7 @@ include_once 'templates/header.php';
           <label>House capacity:</label><br>
           <input type="number" name="capacity" placeholder="Capacity" min="1" max="100" required/><br><br>
           <label>Description:</label><br>
-          <textarea name="description" rows="3" cols="50" maxlength="200" placeholder="Write something about the house"></textarea><br><br>
+          <textarea id="house_desc" name="description" rows="3" cols="50" maxlength="500" placeholder="Write something about the house"></textarea><br><br>
           <input type="file" name="picture" id="house_pic">
           <input id="add_house_button" class="button" type="submit" name="submit" value="Create House">
       </form>
