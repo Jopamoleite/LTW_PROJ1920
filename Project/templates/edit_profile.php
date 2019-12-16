@@ -10,7 +10,6 @@ $email = $user['email'];
 $bio = $user['bio'];
 ?>
 
-<!-- PROFILE -->
 <div class="profile flex-container">
   <img src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
