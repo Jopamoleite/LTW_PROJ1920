@@ -254,6 +254,11 @@
   border-radius: 1em;
 }
 
+#no_house_msg {
+  text-align: center;
+  width: 100%;
+}
+
 #users_houses_title {
   background-color: #fdfdfd;
   color: #252525;

@@ -20,3 +20,4 @@ if ($type == "user") {
   echo "Valid";
  }
 }
+?>

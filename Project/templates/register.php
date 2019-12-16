@@ -8,7 +8,7 @@ include_once 'database/user.php';
   <div class="main" id="register_page">
     <h1><a href="../index.php">HouseHunt</a></h1>
     <h2><a>Create a new profile</a></h2>
-    <form action="../templates/insert_user.php" method="post" id="register">
+    <form action="../actions/action_insert_user.php" method="post" id="register">
       <div>
         <label><input type="text" name="username" oninput="validate_user()" id="username" maxlength="20" placeholder="  Username" required minlength="4" pattern="[\w]+"> </label>
           <div id="error_username"></div><br>
@@ -20,7 +20,7 @@ include_once 'database/user.php';
           <div id="error_repeat"></div><br>
       <input onclick="check_form()" class="button" id="create_button" type="button" value="Create profile">
     </form>
-    <div id="error_all"><?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?></div>
+    <div id="error_all"><?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?></div>
   </div>
 </body>
 

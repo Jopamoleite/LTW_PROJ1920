@@ -9,12 +9,12 @@ include_once 'database/houses.php';
 // HEADER
 include_once 'templates/header.php';
 
-// SEARCHBAR
-include_once 'templates/searchbar.php';
+// PROFILE
+include_once 'templates/profile_info.php';
 
-// HOUSES
-include_once 'templates/display_houses.php';
+// HOUSES TAB
+include_once 'templates/user_houses.php';
 
 // FOOTER
-include_once 'templates/initial_footer.php'
+include_once 'templates/footer.php';
 ?>

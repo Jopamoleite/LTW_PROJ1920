@@ -1,12 +1,3 @@
-<!-- HEADER -->
-<?php
-chdir('..');
-
-include_once 'includes/start.php';
-include_once 'database/user.php';
-include_once 'database/houses.php';
-include_once 'templates/header.php';
-?>
 
 <?php
 $username = $_GET['user'];
@@ -50,17 +41,15 @@ $image_name = $user['image_name'];if (empty($image_name)) {
 
 ?>
 
-<!-- PROFILE -->
 <script src="../js/editprofilepic.js"></script>
 <div class="profile flex-container">
-        <?php if (isset($_SESSION["errormsg"]) && !empty($_SESSION["errormsg"])) {echo $_SESSION["errormsg"];unset($_SESSION["errormsg"]);} ?>
-
-
-
+      <div id="profile_error_msg">
+        <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo $_SESSION['infomsg'];unset($_SESSION['infomsg']);} ?>
+      </div>
   <img src="../images/<?php echo $image_name ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
 
   <?php if ($username == $_SESSION['username']) { ?>
-  <form id ="edit_profile_pic_form" action="../templates/action_edit_picture.php" method="post" enctype="multipart/form-data">
+  <form id ="edit_profile_pic_form" action="../actions/action_edit_picture.php" method="post" enctype="multipart/form-data">
       <input oninput="upload()" id="profile_pic_upload" type="file" name="picture">
       <label for="profile_pic_upload">Select file</label>
   </form>
@@ -89,11 +78,11 @@ $image_name = $user['image_name'];if (empty($image_name)) {
       <?php echo $bio; ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
+      <a id='edit_profile_link' href='../pages/edit_profile_page.php'>Edit Profile</a>
     <?php } ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='change_password_link' href='change_password.php'>Change Password</a>
+      <a id='change_password_link' href='../pages/change_password_page.php'>Change Password</a>
     <?php } ?>
   </div>
 </div>

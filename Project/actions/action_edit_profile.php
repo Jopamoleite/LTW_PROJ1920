@@ -13,8 +13,8 @@ $bio = $_POST['bio'];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
  $error = "Invalid email format";
- $_SESSION['errormsg'] = $error;
- header('Location: ../pages/edit_profile.php');
+ $_SESSION['infomsg'] = $error;
+ header('Location: ../pages/edit_profile_page.php');
  die();
 }
 
@@ -27,10 +27,11 @@ $mybio = trim(htmlspecialchars($bio));
 
 $error = updateUser($_SESSION['userID'], $myusername, $myname, $mylocation, $myphone, $myemail, $mybio);
 if (!empty($error)) {
- header('Location: ../pages/edit_profile.php');
+ header('Location: ../pages/edit_profile_page.php');
  die();
 }
 
 setUser($myusername);
 
-header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile_page.php?user=' . $_SESSION['username']);
+?>

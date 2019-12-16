@@ -34,3 +34,22 @@ a.house h2 {
   color: #303030;
   margin: 0.2em 0.1em 0.2em 0.5em;
 }
+
+a.no_match h1 {
+  position: absolute;
+  text-align: center;
+  vertical-align:bottom;
+  color: #000000;
+  line-height:100%;     
+}
+
+a.no_match img {
+  position: relative;
+  display: block;
+} 
+a.no_match {
+  position:relative;
+  margin: 1% 1%;
+  padding-bottom: 0.5em;
+  border-radius: 1.4em;
+}
