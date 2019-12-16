@@ -88,17 +88,17 @@ $image_name = $user['image_name'];if (empty($image_name)) {
       <?php echo $bio; ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='edit_profile_link' href='edit_profile.php'>Edit Profile</a>
+      <a id='edit_profile_link' href='../pages/edit_profile_page.php'>Edit Profile</a>
     <?php } ?>
     </p>
     <?php if ($username == $_SESSION['username']) { ?>
-      <a id='change_password_link' href='change_password.php'>Change Password</a>
+      <a id='change_password_link' href='../pages/change_password_page.php'>Change Password</a>
     <?php } ?>
   </div>
 </div>
 
 <!-- TABS -->
-<form action="add_houses.php" method="post">
+<form action="../pages/add_house_page.php" method="post">
 <?php if ($username == $_SESSION['username']) { ?>
     <input id="create_houses_button" class="button" type="submit" value="Add House">
 <?php } ?>

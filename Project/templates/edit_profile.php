@@ -1,11 +1,3 @@
-<!-- HEADER -->
-<?php
-chdir('..');
-
-include_once 'includes/start.php';
-include_once 'database/user.php';
-include_once 'templates/header.php';
-?>
 
 <?php
 $user = getUser($_SESSION['username']);
@@ -43,11 +35,3 @@ $bio = $user['bio'];
       <a id="backtoprofile_link" href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>
-
-<!-- TABS -->
-
-
-<!-- FOOTER -->
-<?php
-include_once 'templates/footer.php'
-?>

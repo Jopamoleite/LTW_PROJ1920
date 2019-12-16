@@ -1,13 +1,4 @@
-<!-- HEADER -->
-<?php
-chdir('..');
 
-include_once 'includes/start.php';
-include_once 'database/user.php';
-include_once 'templates/header.php';
-?>
-
-<!-- PROFILE -->
 <div class="profile flex-container">
   <img src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
@@ -23,11 +14,6 @@ include_once 'templates/header.php';
           <input type="password" name="repeat" placeholder="Confirm Password" maxlength="20" required/><br>
           <input id="change_password_button" class="button" type="submit" value="Apply Change">
       </form>
-      <a id="backtoprofile_link" href="user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="../pages/user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>
-
-<!-- FOOTER -->
-<?php
-include_once 'templates/footer.php'
-?>
