@@ -1,14 +1,14 @@
 
-<div id="reservation_tab" class="tabcontent">
-<section id="profile_reservations" class="flex_row">
+<div id="houses_rented_tab" class="tabcontent">
+<section id="profile_houses_rented" class="flex_row">
   <div class="user_house_list">
   <?php
-    $reservations = getUserReservations($id);
+    $rented = getUserHousesReservations($id, date("Y-m-d"));
 
-    if(empty($reservations)){
-      echo '<a id="no_house_msg">This user has not placed reservations yet.</a>';
+    if(empty($rented)){
+      echo '<a id="no_house_msg">No one has rented this user\'s houses.</a>';
     }else{
-      foreach ($reservations as $entry) {
+      foreach ($rented as $entry) {
         $photos = getHousePhotos($entry['placeID']);
         if ($photos == false) {
         $photo = "default_house.jpg";
