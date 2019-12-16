@@ -20,6 +20,11 @@ if ($username == $_SESSION['username']) {
     include_once 'templates/user_reservations.php';
 }
 
+// HOUSES RENTED TAB
+if ($username == $_SESSION['username']) {
+    include_once 'templates/user_houses_reserved.php';
+}
+
 // FOOTER
 include_once 'templates/footer.php';
 ?>
