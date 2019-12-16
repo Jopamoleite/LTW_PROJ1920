@@ -83,20 +83,28 @@ if (empty($destination) && empty($checkin) && empty($checkout)) {
 }
 /*TO DO: GET HOUSES AVAILABLE FOR DAYS BETWEEN CHECKIN AND CHECKOUT AND LOCATION = DESTINATION;*/
 
-foreach ($houses as $entry) {
- $photos = getHousePhotos($entry['id']);
- if ($photos == false) {
-  $photo = "default_house.jpg";
- } else {
-  $photo = $photos['image_name'];
- }
-
- echo '<a class="house" href="../pages/house_page.php?house=' . $entry['id'] . '">';
- echo '<img src="../images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
- echo '<h1>' . $entry['location'] . '</h1>';
- echo '<h2>' . $entry['title'] . '</h2>';
- echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
- echo '</a>';
+if(empty($houses)){
+  echo '<a class="no_match" href="../pages/main_page.php">';
+  echo '<img src="../images/no_matches.png" id="no_match" alt="No matches"">';
+  echo '<h1>It appears there are no houses matching that criteria :( </h1>';
+  echo '</a>';
+}else{
+  foreach ($houses as $entry) {
+    $photos = getHousePhotos($entry['id']);
+    if ($photos == false) {
+     $photo = "default_house.jpg";
+    } else {
+     $photo = $photos['image_name'];
+    }
+   
+    echo '<a class="house" href="../pages/house_page.php?house=' . $entry['id'] . '">';
+    echo '<img src="../images/' . $photo . '" id="house pic" alt="House pic" width="300" height="300">';
+    echo '<h1>' . $entry['location'] . '</h1>';
+    echo '<h2>' . $entry['title'] . '</h2>';
+    echo '<h2>' . $entry['price_day'] . '€ / night</h2>';
+    echo '</a>';
+   }
 }
+
 ?>
 </section>

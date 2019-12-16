@@ -24,7 +24,8 @@ function getHouseReservations($id)
   $qry = 'SELECT * FROM Reservations WHERE placeID = ?';
   $stmt = $dbh->prepare($qry);
   $stmt->execute(array($id));
-  return $stmt;
+  $table = $stmt->fetchAll();
+  return $table;
  } catch (PDOException $e) {
   error_log('Error: ' . $e->getMessage());
  }
@@ -48,7 +49,8 @@ function getHousesAtLocation($location, $guests)
   $qry = 'SELECT * FROM Place WHERE location LIKE ? COLLATE NOCASE AND capacity >= ? ORDER BY price_day ASC ;';
   $stmt = $dbh->prepare($qry);
   $stmt->execute(array("%" . $location . "%", $guests));
-  return $stmt;
+  $table = $stmt->fetchAll();
+  return $table;
  } catch (PDOException $e) {
   error_log('Error: ' . $e->getMessage());
  }
@@ -61,7 +63,22 @@ function getHousesWithGuests($guests)
   $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
   $stmt = $dbh->prepare($qry);
   $stmt->execute(array($guests));
-  return $stmt;
+  $table = $stmt->fetchAll();
+  return $table;
+ } catch (PDOException $e) {
+  error_log('Error: ' . $e->getMessage());
+ }
+}
+
+function getHousesWithCheckin($checkin) //TO DO ------------------------------------------------------------------
+{
+ global $dbh;
+ try {
+  $qry = 'SELECT * FROM Place WHERE capacity >= ? COLLATE NOCASE ORDER BY price_day ASC;';
+  $stmt = $dbh->prepare($qry);
+  $stmt->execute(array($guests));
+  $table = $stmt->fetchAll();
+  return $table;
  } catch (PDOException $e) {
   error_log('Error: ' . $e->getMessage());
  }
@@ -74,7 +91,8 @@ function getHouseWithOwnerID($id)
   $qry = 'SELECT * FROM Place WHERE ownerID = ? ORDER BY price_day ASC;';
   $stmt = $dbh->prepare($qry);
   $stmt->execute(array($id));
-  return $stmt;
+  $table = $stmt->fetchAll();
+  return $table;
  } catch (PDOException $e) {
   error_log('Error: ' . $e->getMessage());
  }
