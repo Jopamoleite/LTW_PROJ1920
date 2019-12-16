@@ -34,5 +34,5 @@ if ($error) {
  die();
 }
 
-header('Location: ../pages/user_profile.php?user=' . $_SESSION['username']);
+header('Location: ../pages/user_profile_page.php?user=' . $_SESSION['username']);
 ?>

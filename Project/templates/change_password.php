@@ -14,6 +14,6 @@
           <input type="password" name="repeat" placeholder="Confirm Password" maxlength="20" required/><br>
           <input id="change_password_button" class="button" type="submit" value="Apply Change">
       </form>
-      <a id="backtoprofile_link" href="../pages/user_profile.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
+      <a id="backtoprofile_link" href="../pages/user_profile_page.php?user=<?php echo $_SESSION['username'] ?>">Back to Profile</a>
   </div>
 </div>
