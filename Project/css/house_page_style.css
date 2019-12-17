@@ -220,6 +220,7 @@
   position: relative;
   left: 5%;
   margin-top: 1em;
+  margin-right: 1em;
 
   cursor: pointer;
 }
