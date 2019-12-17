@@ -212,12 +212,14 @@
   color: #41b3a3;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  font-size: 0.9em;
+  font-size: 1em;
 
-  
+  padding: 0.5em;
+  min-width: 6em;
+
   position: relative;
   left: 5%;
-  top: 10%;
+  margin-top: 1em;
 
   cursor: pointer;
 }
