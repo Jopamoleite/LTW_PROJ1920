@@ -15,11 +15,13 @@ body {
   overflow-x: hidden;
 }
 
-.page_header {
-  display: flex;
-  justify-content: space-between;
+.page_header { 
+  position: fixed;
   top: 0;
   width: 100%;
+
+  display: flex;
+  justify-content: space-between;
 
   background-color: #fdfdfd;
   color: #252525;
