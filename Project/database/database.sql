@@ -31,9 +31,7 @@ CREATE TABLE Place
     price_day REAL CHECK (price_day > 0),
     capacity INTEGER NOT NULL CHECK (capacity > 0),
     description TEXT NOT NULL,
-    ownerID INTEGER NOT NULL,
-    rating REAL,
-    num_rents INTEGER,
+    ownerID     INTEGER NOT NULL,
 
     FOREIGN KEY (ownerID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE

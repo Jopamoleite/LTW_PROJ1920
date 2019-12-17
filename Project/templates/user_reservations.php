@@ -6,7 +6,7 @@
         $reservations = getUserReservations($id);
 
         if (empty($reservations)) { ?>
-          <a id="no_house_msg">This user has not placed reservations yet.</a>
+          <a id="no_reservation_rent">This user has not placed reservations yet.</a>
         <?php
         } else {
           foreach ($reservations as $entry) {
