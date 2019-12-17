@@ -1,5 +1,7 @@
 .profile {
   border-radius: 1.4em;
+  border-style: solid;
+  border-color: #41b3a3;
   margin: auto;
   margin-top: 5%;
   width: 60%;
@@ -195,37 +197,52 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   width: 70%;
   height: 30%;
   margin: auto;
-  margin-top: 3%;
+  margin-top: -5.5%;
   margin-bottom: 5%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-width: 2em;
-  border-top-width: 0.6em;
-  border-bottom-width: 0.6em;
   border-style: solid;
-  border-color: #fdfdfd;
-  border-radius: 1.4em;
-  border-top-left-radius: 0em;
+  border-color: #41b3a3;
+  border-radius: 0.4em;
   background-color: #fdfdfd;
   color: #252525;
   font-family: "Roboto", sans-serif;
   box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  line-height: 80%;
+  padding-bottom: 0.5em;
 }
 
-.user_house_list .user_house {
-  flex: 0 0 auto;
+.user_house_list #create_houses_button{
+  position: relative;
+  top: 25%;
   margin: 1em;
   margin-bottom: 0.5em;
 }
 
-.user_house_list .user_house img {
-  border-radius: 1.4em;
+.user_house_list #filler{
+  margin: 0em;
+  padding: 0em;
+  visibility: hidden;
+}
 
+.user_house_list .user_house {
+  border-style: solid;
+  border-radius: 0.4em;
+  border-style: none;
+  box-shadow: 0 0 0.5em #41b3a3;
+  margin: 1em;
+  padding: 1em;
+  padding-bottom: 0em;
+}
+
+.user_house_list .user_house img {
+  border-radius: 0.4em;
   width: 15em;
   height: 15em;
   object-fit: cover;
@@ -234,13 +251,12 @@
 .user_house_list .user_house h1 {
   font-size: 1.3em;
   font-weight: bold;
-  margin-bottom: 0.7em;
+  line-height: 1%;
 }
 
 .user_house_list .user_house h2 {
   font-size: 1em;
   font-weight: lighter;
-  margin-bottom: 0.7em;
 }
 
 .user_house_list::-webkit-scrollbar {
@@ -249,13 +265,13 @@
 
 .user_house_list::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 1em;
+  border-radius: 0.4em;
 }
 
 .user_house_list::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
-  border-radius: 1em;
+  border-radius: 0.4em;
 }
 
 #no_house_msg {
@@ -269,4 +285,47 @@
 }
 #create_houses_button {
   float: bottom;
+}
+
+.tab_links{
+  margin: 0.7em;
+  margin-left: 20%;
+  margin-right: auto;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  align-self: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: initial;
+
+  border: none;
+  border-radius: 0.7em;
+  opacity: 1;
+  background-color: #252525;
+  color: #fdfdfd;
+  height: 3em;
+  width: 11.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width:69%;
+  height: 30%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 6%;
+  justify-content: flex-start;
+  vertical-align: auto;
+  color: #252525;
+  font-family: "Roboto", sans-serif;
 }

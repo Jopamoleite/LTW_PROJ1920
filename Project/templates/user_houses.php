@@ -1,6 +1,6 @@
 
 <div id="house_tab" class="tabcontent">
-<section id="profile_houses" class="flex_row">
+<section id="profile_houses" class="flex-container">
   <div class="user_house_list">
     <form action="../pages/add_house_page.php" method="post">
     <?php if ($username == $_SESSION['username']) { ?>
@@ -32,6 +32,12 @@ if(empty($houses)){
 }
 
 ?>
+
+<form action="../pages/add_house_page.php" method="post">
+    <?php if ($username == $_SESSION['username']) { ?>
+        <input id="create_houses_button" class="button" type="submit" value="Add House">
+    <?php } ?>
+    </form>
   </div>
 </section>
 </div>

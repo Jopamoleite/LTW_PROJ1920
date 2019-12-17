@@ -3,7 +3,7 @@
 include_once 'includes/start.php';
 ?>
 
-<section id="houses_list" class="flex_row">
+<section id="houses_list" class="flex-container">
   <script src="../js/positionhouses.js" defer></script>
   <?php
 $destination;
