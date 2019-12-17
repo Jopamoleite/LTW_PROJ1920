@@ -12,7 +12,11 @@ $id = getUserId($username);
 $houses = getHouseWithOwnerID($id);
 
 if(empty($houses)){
-  echo '<a id="no_house_msg">This user has not added houses yet.</a>';
+  if ($username == $_SESSION['username']) { 
+    echo '<a id="no_house_msg">This user has not added houses yet.</a>';
+  }else{
+    echo '<a id="no_reservation_rent">This user has not added houses yet.</a>';
+  }
 }else{
   foreach ($houses as $entry) {
     $photos = getHousePhotos($entry['id']);
