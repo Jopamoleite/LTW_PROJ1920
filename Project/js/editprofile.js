@@ -10,7 +10,7 @@ function validate_username() {
   let error_user = document.getElementById("error_username");
   let regex = /[\W]+/;
 
-  if(user.value == current_user){
+  if (user.value == current_user) {
     error_user.innerHTML = "";
     user.setCustomValidity("");
     return;
@@ -43,7 +43,11 @@ function validate_username() {
         }
       }
     };
-    current_user_request.open("GET", "../templates/register_check.php?type=user&value=" + user.value, true);
+    current_user_request.open(
+      "GET",
+      "../templates/register_check.php?type=user&value=" + user.value,
+      true
+    );
     current_user_request.send();
   }
 }
@@ -104,13 +108,13 @@ function validate_email() {
   let error_email = document.getElementById("error_email");
   let regex = /^(?!(?:(?:\x22?\x5C[\x00-\x7E]\x22?)|(?:\x22?[^\x5C\x22]\x22?)){255,})(?!(?:(?:\x22?\x5C[\x00-\x7E]\x22?)|(?:\x22?[^\x5C\x22]\x22?)){65,}@)(?:(?:[\x21\x23-\x27\x2A\x2B\x2D\x2F-\x39\x3D\x3F\x5E-\x7E]+)|(?:\x22(?:[\x01-\x08\x0B\x0C\x0E-\x1F\x21\x23-\x5B\x5D-\x7F]|(?:\x5C[\x00-\x7F]))*\x22))(?:\.(?:(?:[\x21\x23-\x27\x2A\x2B\x2D\x2F-\x39\x3D\x3F\x5E-\x7E]+)|(?:\x22(?:[\x01-\x08\x0B\x0C\x0E-\x1F\x21\x23-\x5B\x5D-\x7F]|(?:\x5C[\x00-\x7F]))*\x22)))*@(?:(?:(?!.*[^.]{64,})(?:(?:(?:xn--)?[a-z0-9]+(?:-+[a-z0-9]+)*\.){1,126})+(?:(?:[a-z][a-z0-9]*)|(?:(?:xn--)[a-z0-9]+))(?:-+[a-z0-9]+)*)|(?:\[(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){7})|(?:(?!(?:.*[a-f0-9][:\]]){7,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?)))|(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){5}:)|(?:(?!(?:.*[a-f0-9]:){5,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3}:)?)))?(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))(?:\.(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))){3}))]))$/i;
 
-  if(email.value == current_mail){
+  if (email.value == current_mail) {
     error_email.innerHTML = "";
     email.setCustomValidity("");
     return;
   }
 
-  if(email.value.length > 35){
+  if (email.value.length > 35) {
     error_email.innerHTML = "Must be less than 35 characters long";
     email.setCustomValidity("Invalid field.");
   } else if (!regex.test(email.value)) {
@@ -134,7 +138,11 @@ function validate_email() {
         }
       }
     };
-    current_mail_request.open("GET", "../templates/register_check.php?type=email&value=" + email.value, true);
+    current_mail_request.open(
+      "GET",
+      "../templates/register_check.php?type=email&value=" + email.value,
+      true
+    );
     current_mail_request.send();
   }
 }
@@ -166,8 +174,8 @@ function validate_form() {
 
   /* Check if any field invalid */
   error_all.innerHTML = "";
-  for(const error of error_array){
-    if(error != "Valid" && error != ""){
+  for (const error of error_array) {
+    if (error != "Valid" && error != "") {
       error_all.innerHTML = "Fill valid information";
       return;
     }
@@ -175,5 +183,4 @@ function validate_form() {
 
   /* If all fields valid */
   form.submit();
-
 }

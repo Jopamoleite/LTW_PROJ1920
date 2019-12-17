@@ -45,17 +45,17 @@ a.house h2 {
 a.no_match h1 {
   position: absolute;
   text-align: center;
-  vertical-align:bottom;
+  vertical-align: bottom;
   color: #000000;
-  line-height:100%;     
+  line-height: 100%;
 }
 
 a.no_match img {
   position: relative;
   display: block;
-} 
+}
 a.no_match {
-  position:relative;
+  position: relative;
   margin: 1% 1%;
   padding-bottom: 0.5em;
   border-radius: 1.4em;

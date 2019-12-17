@@ -168,8 +168,8 @@
   text-shadow: 0px 0px 5px #bbbbbb;
 }
 
-#house_desc{
-    min-height: 11em;
+#house_desc {
+  min-height: 11em;
 }
 
 #profile_pic_upload {
@@ -218,14 +218,14 @@
   padding-bottom: 0.5em;
 }
 
-.user_house_list #create_houses_button{
+.user_house_list #create_houses_button {
   position: relative;
   top: 25%;
   margin: 1em;
   margin-bottom: 0.5em;
 }
 
-.user_house_list #filler{
+.user_house_list #filler {
   margin: 0em;
   padding: 0em;
   visibility: hidden;
@@ -287,7 +287,7 @@
   float: bottom;
 }
 
-.tab_links{
+.tab_links {
   margin: 0.7em;
   margin-left: 20%;
   margin-right: auto;
@@ -319,7 +319,7 @@
   flex-wrap: nowrap;
   overflow-y: hidden;
   overflow-x: auto;
-  width:69%;
+  width: 69%;
   height: 30%;
   margin: auto;
   margin-top: 3%;

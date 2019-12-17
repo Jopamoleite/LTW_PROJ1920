@@ -3,7 +3,7 @@
 function validate_old() {
   let old = document.getElementById("old");
 
-  if(old.value.length < 8){
+  if (old.value.length < 8) {
     error_new.innerHTML = "Must be 8+ characters long";
     old.setCustomValidity("Invalid field.");
   } else {
@@ -55,11 +55,15 @@ function validate_form() {
       }
     }
   };
-  req.open("GET", "../templates/register_check.php?type=pass&value=" + old.value, true);
+  req.open(
+    "GET",
+    "../templates/register_check.php?type=pass&value=" + old.value,
+    true
+  );
   req.send();
 }
 
-function validate_form_(){
+function validate_form_() {
   let error_array = [];
   error_array.push(document.getElementById("error_old"));
   error_array.push(document.getElementById("error_new"));
@@ -70,8 +74,8 @@ function validate_form_(){
 
   /* Check if any field invalid */
   error_all.innerHTML = "";
-  for(const error of error_array){
-    if(error != "Valid" && error != "" ) {
+  for (const error of error_array) {
+    if (error != "Valid" && error != "") {
       error_all.innerHTML = "Fill valid information";
       return;
     }

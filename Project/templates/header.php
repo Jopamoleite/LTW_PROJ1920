@@ -15,11 +15,7 @@
     <link href="../css/error_message_style.css" rel="stylesheet">
   </head>
   <body>
-    <?php
-      if (!isset($_SESSION['userID']) || empty($_SESSION['userID'])) {
-      header("Location: ../pages/invalid_back_page.php");
-      }
-    ?>
+    <?php if (!isset($_SESSION['userID']) || empty($_SESSION['userID'])) { header("Location: ../pages/invalid_back_page.php"); } ?>
     <div class="page_header">
       <div id="logo_name">
           <a href="main_page.php">
@@ -34,7 +30,7 @@
           </a>
         </div>
           <span>
-            <img href="../pages/user_profile_page.php?user=<?echo $_SESSION['username']; ?>" src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" alt="User icon" width="20" height="20">
+            <img href="../pages/user_profile_page.php?user=<?php echo $_SESSION['username']; ?>" src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" alt="User icon" width="20" height="20">
           </span>
             <div class="dropdown_content">
               <br>
