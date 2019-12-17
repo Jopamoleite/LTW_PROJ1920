@@ -1,10 +1,9 @@
 <?php
-include_once 'includes/start.php';
-include_once 'database/user.php';
+  include_once 'includes/start.php';
+  include_once 'database/user.php';
 ?>
 
 <body>
-  <script src="../js/register.js" defer></script>
   <div class="main" id="register_page">
     <h1><a href="../index.php">HouseHunt</a></h1>
     <h2><a>Create a new profile</a></h2>
@@ -25,5 +24,6 @@ include_once 'database/user.php';
 </body>
 
 <?php
-include_once 'templates/initial_footer.php';
+  include_once 'templates/initial_footer.php';
 ?>
+<script src="../js/register.js" defer></script>

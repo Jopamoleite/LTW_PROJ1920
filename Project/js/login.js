@@ -12,7 +12,8 @@ function login() {
       if (this.responseText == "Valid") {
         form.submit();
       } else {
-        error_all.innerHTML =  "<div class='error_message'> Invalid credentials </div>";
+        error_all.innerHTML =
+          "<div class='error_message'> Invalid credentials </div>";
       }
     } else {
       return false;
