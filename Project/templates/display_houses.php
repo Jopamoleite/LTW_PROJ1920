@@ -90,7 +90,7 @@ include_once 'includes/start.php';
         } else {
           $photo = $photos['image_name'];
         } ?>
-        <a class="house" href="../pages/house_page.php?house=' . $entry['id'] . '">
+        <a class="house" href="../pages/house_page.php?house=<?php echo $entry['id'] ?>">
           <img src="../images/<?php echo $photo ?>" id="house pic" alt="House pic" width="300" height="300">
           <h1> <?php echo $entry['location']; ?> </h1>
           <h2> <?php echo $entry['title']; ?> </h2>
