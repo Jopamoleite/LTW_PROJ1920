@@ -1,4 +1,4 @@
-    <div id="booking" class="flex-container">
+<div id="booking" class="flex-container">
         <?php echo_error(); echo_info(); ?>
         <p>BOOKING</p>
         <form action="../actions/action_booking.php" method="post" id="booking_form">
@@ -25,11 +25,13 @@
     </div>
     <div id="overlay_black"></div>
     <div id="overlay">
+        <h1>Please confirm your reservation:</h1>
         <h3>Check-in:   </h3><span id="confirm_in"></span>
         <h3>Check-out:  </h3><span id="confirm_out"></span>
         <h3>Guests:     </h3><span id="confirm_guest"></span>
-        <h3>Price:      </h3><span id="confirm_price"></span>
+        <h3>Total price:      </h3><span id="confirm_price"></span>
         <button onclick="confirmed()">Confirm</button>
+        <button onclick="window.location.reload();">Back</button>
     </div>
 </div>
 
