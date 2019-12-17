@@ -11,7 +11,7 @@
     $guests = $_GET['guests'];
 
     if (getConflict_($house, $in, $out)) {
-      echo "Invalid dates";
+      echo "House is occupied during reservation";
       die();
     }
 
