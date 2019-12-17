@@ -40,6 +40,7 @@ if ($photos == false) {
 ?>
   <img src="../images/<?php echo $photo ?>">
 </div>
+<div id="houseinfo_booking">
   <div id="house_info">
     <h1><?php echo $title ?></h1>
     <section id="house_data">

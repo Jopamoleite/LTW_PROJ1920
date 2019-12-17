@@ -1,7 +1,7 @@
 
 <div id="booking" class="flex-container">
 <?php if (isset($_SESSION['infomsg']) && !empty($_SESSION['infomsg'])) {echo "<div class='error_message'>" . $_SESSION['infomsg'] . "</div>";unset($_SESSION['infomsg']);} ?>
-    <h1>BOOKING</h1>
+    <p>Booking</p>
     <script src="../js/booking.js" defer></script>
     <form action="../actions/action_booking.php" method="post" id="booking_form">
 
@@ -25,4 +25,5 @@
         <input onclick="check_dates()" class="button" id="booking_button" type="submit" value="BOOK">
     </form>
     <div id="error_all"></div>
+</div>
 </div>

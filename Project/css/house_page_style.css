@@ -7,13 +7,18 @@
     display: grid;
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
     grid-template-areas:"photo photo"
-                        "h1    booking"
-                        "data ."
-                        "desc  .";
+                        "housebooking housebooking";
 
     box-shadow: inset 0px 7px 3px -3px rgba(50, 50, 50, 0.75);
+}
+
+#houseinfo_booking{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-area: housebooking;
 }
 
 #house_photos {
@@ -33,18 +38,13 @@
 
 #house_info{
     margin: 2em;
-    margin-top: 1em;
+    margin-top: 0em;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     font-style: normal;
 }
 
-#house_data{
-    grid-area: data;
-}
-
 #house_info h1{
-    grid-area: h1;
     font-weight: bolder;
     font-size: 2.5em;
     margin-bottom: 0em;
@@ -72,7 +72,6 @@
 }
 
 #house_info a{
-    grid-area: desc;
     display: block;
 
     margin-top: 2em;
@@ -83,30 +82,76 @@
 }
 
 #booking{
-    grid-area: booking;
 
-    max-width: 80%;
-    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #eeeeee;
+    background: linear-gradient(to bottom right, rgba(247,247,247,1) 0%, rgba(253,253,253,1) 50%, rgba(247,247,247,1) 100%);
+    min-width: 40%;
+    max-width: 100%;
     height: fit-content;
-
-    display: inline-block;
 
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     font-style: normal;
 
+    margin: 1em;
+    padding: 0.5em;
+
     border-radius: 1.4em;
     border-style: none;
-    box-shadow: 0 0 1em rgba(50, 50, 50, 0.75);
-
-    
+    box-shadow: 0 0 0.4em rgba(70, 70, 70, 0.5);    
 }
 
-#booking h1{
-    margin: 1em;
+#booking p{
+    margin: 0.5em;
     text-align: center;
+    font-size: 2em;
+    color: #41b3a3;
 }
 
 #booking_form{
-    margin: 2em;
+    margin: 1%;
+    justify-self: center;
 }
+
+#booking_button{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+
+  align-self: center;
+  align-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: initial;
+
+  margin-top: 1em;
+
+  border: none;
+  border-radius: 2px;
+  opacity: 1;
+  background-color: #252525;
+  color: #fdfdfd;
+  height: 3em;
+  width: 11.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+
+  cursor: pointer;
+
+  position: relative;
+  left: 2em;
+}
+
+#booking_button:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  
+    text-shadow: 0px 0px 5px #bbbbbb;
+  }
