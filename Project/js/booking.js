@@ -139,3 +139,10 @@ function confirmed() {
   overlay.style.display = 'none';
   form.submit();
 }
+
+function cancel(){
+  let overlay = document.getElementById("overlay");
+  let overlayb = document.getElementById("overlay_black");
+  overlayb.style.display = 'none';
+  overlay.style.display = 'none';
+}
