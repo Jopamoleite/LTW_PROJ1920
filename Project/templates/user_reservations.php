@@ -1,6 +1,6 @@
 
 <div id="reservation_tab" class="tabcontent">
-<section id="profile_reservations" class="flex_row">
+<section id="profile_reservations" class="flex-container">
   <div class="user_house_list">
   <?php
     $reservations = getUserReservations($id);
@@ -23,6 +23,7 @@
       }
     }
   ?>
+  <div id="filler"> Easter Egg </div>
   </div>
 </section>
 </div>
