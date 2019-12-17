@@ -50,6 +50,25 @@ function check_dates() {
     return;
   }
 
+  if(check_in.value > check_out.value){
+    error.innerHTML = "Dates are switched";
+    return;
+  }
+
+  let today = new Date();
+  let check_in_date = new Date(check_in.value);
+  let check_out_date = new Date(check_out.value);
+
+  if(check_in_date.getTime() < today.getTime()){
+    error.innerHTML = "Check-in too early";
+    return;
+  }
+
+  if(check_out_date.getTime() < today.getTime()){
+    error.innerHTML = "Check-out too early";
+    return;
+  }
+
   if (!guests.checkValidity() || !check_in.checkValidity() || !check_out.checkValidity()) {
     error.innerHTML = "Fill with valid information";
     return;
@@ -114,6 +133,8 @@ function confirmation() {
 }
 
 function confirmed() {
+  let overlay = document.getElementById("overlay");
+  let overlayb = document.getElementById("overlay_black");
   overlayb.style.display = 'none';
   overlay.style.display = 'none';
   form.submit();
