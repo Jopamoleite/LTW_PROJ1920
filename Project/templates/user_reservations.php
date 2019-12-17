@@ -6,7 +6,7 @@
     $reservations = getUserReservations($id);
 
     if(empty($reservations)){
-      echo '<a id="no_house_msg">This user has not placed reservations yet.</a>';
+      echo '<a id="no_reservation_rent">This user has not placed reservations yet.</a>';
     }else{
       foreach ($reservations as $entry) {
         $photos = getHousePhotos($entry['placeID']);

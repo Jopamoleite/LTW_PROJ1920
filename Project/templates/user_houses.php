@@ -30,14 +30,8 @@ if(empty($houses)){
     echo '</a>';
    }
 }
-
 ?>
-
-<form action="../pages/add_house_page.php" method="post">
-    <?php if ($username == $_SESSION['username']) { ?>
-        <input id="create_houses_button" class="button" type="submit" value="Add House">
-    <?php } ?>
-    </form>
+<div id="filler"> Easter Egg </div>
   </div>
 </section>
 </div>

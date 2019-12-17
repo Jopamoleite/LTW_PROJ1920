@@ -30,8 +30,6 @@ CREATE TABLE Place(
     capacity    INTEGER NOT NULL CHECK (capacity > 0),
     description TEXT NOT NULL,
     ownerID     INTEGER NOT NULL,
-    rating      REAL,
-    num_rents   INTEGER,
 
     FOREIGN KEY (ownerID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE

@@ -6,7 +6,7 @@
     $rented = getUserHousesReservations($id, date("Y-m-d"));
 
     if(empty($rented)){
-      echo '<a id="no_house_msg">No one has rented this user\'s houses.</a>';
+      echo '<a id="no_reservation_rent">No one has rented this user\'s houses.</a>';
     }else{
       foreach ($rented as $entry) {
         $photos = getHousePhotos($entry['placeID']);
