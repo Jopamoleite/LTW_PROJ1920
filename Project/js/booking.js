@@ -64,7 +64,7 @@ function check_dates() {
     !check_in.checkValidity() ||
     !check_out.checkValidity()
   ) {
-    error.innerHTML = "Fill valid information";
+    error.innerHTML = "Fill with valid information";
     return;
   }
 
