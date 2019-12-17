@@ -21,7 +21,6 @@ if($owner_id != $_SESSION['userID']){
 }
 ?>
 </div>
-</div>
 
 <?php
 // FOOTER
