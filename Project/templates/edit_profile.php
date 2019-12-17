@@ -20,7 +20,7 @@
 <div class="profile flex-container">
   <img src="../images/<?php echo getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
-  <?php echo_info(); ?>
+  <?php echo_error(); ?>
     <h1>  <?php echo $_SESSION['username']; ?> </h1>
     <h3>Update Profile Information</h3>
       <form method="post" id="form" action="../actions/action_edit_profile.php">

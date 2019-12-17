@@ -1,5 +1,5 @@
     <div id="booking" class="flex-container">
-        <?php echo_info(); ?>
+        <?php echo_error(); echo_info(); ?>
         <p>BOOKING</p>
         <form action="../actions/action_booking.php" method="post" id="booking_form">
             <div class="search_input_field_medium">
