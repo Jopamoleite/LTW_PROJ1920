@@ -193,4 +193,32 @@ function getHouse($house_id)
   error_log('Error: ' . $e->getMessage());
  }
 }
+
+function getConflict($house_id, $date) {
+  global $dbh;
+  try {
+   $stmt = $dbh->prepare('SELECT * FROM Reservations WHERE placeID = ? AND begin_date <= ? AND end_date >= ?;');
+   $stmt->execute(array($house_id, $date, $date));
+   $table = $stmt->fetchAll();
+   if (sizeof($table) != 1)  return false;
+   else return true;
+  } catch (PDOException $e) {
+   error_log('Error: ' . $e->getMessage());
+  }
+}
+
+
+function getConflict_($house_id, $date_in, $date_out) {
+  global $dbh;
+  try {
+   $stmt = $dbh->prepare('SELECT * FROM Reservations WHERE placeID = ? AND begin_date >= ? AND end_date <= ?;');
+   $stmt->execute(array($house_id, $date_in, $date_out));
+   $table = $stmt->fetchAll();
+   if (sizeof($table) != 1)  return false;
+   else return true;
+  } catch (PDOException $e) {
+   error_log('Error: ' . $e->getMessage());
+  }
+}
+
 ?>
