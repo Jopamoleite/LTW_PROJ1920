@@ -18,13 +18,13 @@
   if (isset($_POST['submit']) && !empty($fileName)) {
 
   if (!in_array($fileExtension, $extensions)) {
-    $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
+    $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
     header('Location: ../pages/add_house_page.php');
     die();
   }
 
   if ($fileSize > 3000000) {
-    $_SESSION['infomsg'] = "Please upload a file with less than 3MB";
+    $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
     header('Location: ../pages/add_house_page.php');
     die();
   }
@@ -39,7 +39,7 @@
   $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
   if (!$uploadSuccess) {
-    $_SESSION['infomsg'] = "Error uploading file!";
+    $_SESSION['errormsg'] = "Error uploading file!";
     header('Location: ../pages/add_house_page.php');
     die();
   } else {
@@ -56,18 +56,18 @@
   $description = $_POST['description'];
 
   $title = trim(htmlspecialchars($title));
-  if ($title == "") {$_SESSION['infomsg'] = "Invalid title!";
+  if ($title == "") {$_SESSION['errormsg'] = "Invalid title!";
   header('Location: ../pages/add_house_page.php');}
   $location = trim(htmlspecialchars($location));
-  if ($location == "") {$_SESSION['infomsg'] = "Invalid location!";
+  if ($location == "") {$_SESSION['errormsg'] = "Invalid location!";
   header('Location: ../pages/add_house_page.php');}
   $address = trim(htmlspecialchars($address));
-  if ($address == "") {$_SESSION['infomsg'] = "Invalid address!";
+  if ($address == "") {$_SESSION['errormsg'] = "Invalid address!";
   header('Location: ../pages/add_house_page.php');}
   $price = trim(htmlspecialchars($price));
   $capacity = trim(htmlspecialchars($capacity));
   $description = trim(htmlspecialchars($description));
-  if ($description == "") {$_SESSION['infomsg'] = "Invalid description!";
+  if ($description == "") {$_SESSION['errormsg'] = "Invalid description!";
   header('Location: ../pages/add_house_page.php');}
 
   $placeID = addHouse($title, $location, $address, $price, $capacity, $description, $_SESSION['userID']);

@@ -30,7 +30,7 @@
       header('Location: main_page.php');
     } else {
       $error = 'Invalid credentials';
-      $_SESSION['infomsg'] = $error;
+      $_SESSION['errormsg'] = $error;
       header('Location: ../index.php');
     }
   }
