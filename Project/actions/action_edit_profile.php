@@ -13,7 +13,7 @@
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $error = "Invalid email format";
-    $_SESSION['infomsg'] = $error;
+    $_SESSION['errormsg'] = $error;
     header('Location: ../pages/edit_profile_page.php');
     die();
   }

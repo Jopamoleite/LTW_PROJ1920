@@ -2,7 +2,7 @@
 <div class="profile flex-container">
   <img src="../images/<?php getUserPhoto($_SESSION['username']); ?>" id="profile_pic" alt="Profile Pic" width="300" height="300">
   <div class="profile_info">
-  <?php echo_info(); ?>
+  <?php echo_error(); ?>
     <h1>  <?php echo $_SESSION['username']; ?> </h1>
     <h3>Change Password</h3>
       <form id="form" method="post" action="../actions/action_change_password.php">

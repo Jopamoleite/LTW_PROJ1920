@@ -14,13 +14,13 @@
   if (isset($_POST['submit'])) {
 
     if (!in_array($fileExtension, $extensions)) {
-      $_SESSION['infomsg'] = "Please upload a jpeg or png file ";
+      $_SESSION['errormsg'] = "Please upload a jpeg or png file ";
       header('Location: user_profile_page.php?user=' . $_SESSION['username']);
       die();
     }
 
     if ($fileSize > 3000000) {
-      $_SESSION['infomsg'] = "Please upload a file with less than 3MB";
+      $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
       header('Location: user_profile_page.php?user=' . $_SESSION['username']);
       die();
     }
@@ -35,7 +35,7 @@
     $uploadSuccess = move_uploaded_file($fileTmpName, $uploadPath);
 
     if (!$uploadSuccess) {
-      $_SESSION['infomsg'] = "Error uploading file!";
+      $_SESSION['errormsg'] = "Error uploading file!";
     } else {
       editPhoto($_SESSION['userID'], $newName);
     }

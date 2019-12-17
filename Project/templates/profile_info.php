@@ -23,7 +23,7 @@
           <label for="profile_pic_upload">Select file</label>
       </form>
     <?php } ?>
-    <?php echo_info(); ?>
+    <?php echo_error(); ?>
   </div>
 
   <div class="profile_info">
