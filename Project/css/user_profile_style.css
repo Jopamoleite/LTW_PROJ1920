@@ -232,13 +232,12 @@
 }
 
 .user_house_list .user_house {
-  border-style: solid;
   background-color: #41b3a3;
-  border-color: #ff9c59;
   border-width: 0.4em;
   border-radius: 0.4em;
   margin: 1em;
   padding: 1em;
+  padding-bottom: 0em;
 }
 
 .user_house_list .user_house img {
@@ -251,6 +250,7 @@
 .user_house_list .user_house h1 {
   font-size: 1.3em;
   font-weight: bold;
+  line-height: 1%;
 }
 
 .user_house_list .user_house h2 {
