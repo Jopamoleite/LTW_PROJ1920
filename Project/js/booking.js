@@ -23,14 +23,7 @@ function valid_in() {
       }
     }
   };
-  req1.open(
-    "GET",
-    "../templates/booking_check.php?in=" +
-      check_in.value +
-      "&house=" +
-      house.value,
-    true
-  );
+  req1.open("GET", "../templates/booking_check.php?in=" + check_in.value + "&house=" + house.value, true);
   req1.send();
 }
 
@@ -47,23 +40,17 @@ function valid_out() {
       }
     }
   };
-  req2.open(
-    "GET",
-    "../templates/booking_check.php?out=" +
-      check_out.value +
-      "&house=" +
-      house.value,
-    true
-  );
+  req2.open("GET", "../templates/booking_check.php?out=" + check_out.value + "&house=" + house.value, true);
   req2.send();
 }
 
 function check_dates() {
-  if (
-    !guests.checkValidity() ||
-    !check_in.checkValidity() ||
-    !check_out.checkValidity()
-  ) {
+  if (!guests.value || !check_in.value || !check_out.value) {
+    error.innerHTML = "Fill all inputs";
+    return;
+  }
+
+  if (!guests.checkValidity() || !check_in.checkValidity() || !check_out.checkValidity()) {
     error.innerHTML = "Fill valid information";
     return;
   }
@@ -74,7 +61,7 @@ function check_dates() {
   req3.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       if (this.responseText == "Valid") {
-        form.submit();
+        confirmation();
       } else if (this.responseText == "Guests over capacity") {
         error.innerHTML = this.responseText;
         guests.setCustomValidity("Invalid field.");
@@ -85,17 +72,49 @@ function check_dates() {
       }
     }
   };
-  req3.open(
-    "GET",
-    "../templates/booking_check.php?in=" +
-      check_in.value +
-      "&out=" +
-      check_out.value +
-      "&guests=" +
-      guests.value +
-      "&house=" +
-      house.value,
-    true
-  );
+  req3.open("GET", "../templates/booking_check.php?in=" + check_in.value + "&out=" + check_out.value + "&guests=" + guests.value + "&house=" + house.value, true);
   req3.send();
+}
+
+function confirmation() {
+  let overlay = document.getElementById("overlay");
+  let overlayb = document.getElementById("overlay_black");
+  let confirm_in = document.getElementById("confirm_in");
+  let confirm_out = document.getElementById("confirm_out");
+  let confirm_guest = document.getElementById("confirm_guest");
+  let confirm_price = document.getElementById("confirm_price");
+
+  if (req3 != null) req3.abort();
+  req3 = new XMLHttpRequest();
+  req3.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      let price = parseFloat(this.responseText);
+      if (!isNaN(price)) {
+        let in_ = new Date(check_in.value);
+        let out = new Date(check_out.value);
+        let price_final = ((out.getTime() - in_.getTime()) / (1000 * 3600 * 24)) * price;
+
+        confirm_in.innerHTML = in_;
+        confirm_out.innerHTML = out;
+        confirm_guest.innerHTML = parseInt(guests.value);
+        confirm_price.innerHTML = price_final;
+
+      } else {
+        error.innerHTML = this.responseText;
+        check_in.setCustomValidity("Invalid field.");
+        check_out.setCustomValidity("Invalid field.");
+      }
+    }
+  };
+  req3.open("GET", "../templates/booking_check.php?price=1&house=" + house.value, true);
+  req3.send();
+
+  overlayb.style.display = 'block';
+  overlay.style.display = 'block';
+}
+
+function confirmed() {
+  overlayb.style.display = 'none';
+  overlay.style.display = 'none';
+  form.submit();
 }
