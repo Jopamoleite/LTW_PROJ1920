@@ -232,12 +232,7 @@
 }
 
 .user_house_list .user_house {
-<<<<<<< HEAD
   border-style: solid;
-=======
-  background-color: #41b3a3;
-  border-width: 0.4em;
->>>>>>> 14a7f5349ed6c95e5f9e5185502529bd778fc30f
   border-radius: 0.4em;
   border-style: none;
   box-shadow: 0 0 0.5em #41b3a3;
