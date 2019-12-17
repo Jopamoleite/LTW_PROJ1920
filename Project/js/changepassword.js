@@ -71,7 +71,7 @@ function validate_form_(){
   /* Check if any field invalid */
   error_all.innerHTML = "";
   for(const error of error_array){
-    if(error != "Valid") {
+    if(error != "Valid" && error != "" ) {
       error_all.innerHTML = "Fill valid information";
       return;
     }

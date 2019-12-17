@@ -8,7 +8,7 @@ let current_mail = document.getElementById("email").value;
 function validate_username() {
   let user = document.getElementById("username");
   let error_user = document.getElementById("error_username");
-  let regex = /[\w]+/;
+  let regex = /[\W]+/;
 
   if(user.value == current_user){
     error_user.innerHTML = "";
@@ -22,7 +22,7 @@ function validate_username() {
   } else if (user.value.length > 20) {
     error_user.innerHTML = "Must be less than 20 characters long";
     user.setCustomValidity("Invalid field.");
-  } else if (!regex.test(user.value)) {
+  } else if (regex.test(user.value)) {
     error_user.innerHTML = "Must not contain special characters";
     user.setCustomValidity("Invalid field.");
   } else {

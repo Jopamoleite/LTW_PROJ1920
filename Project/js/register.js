@@ -34,7 +34,7 @@ function check_form() {
 function validate_user() {
   let user = document.getElementById("username");
   let error_user = document.getElementById("error_username");
-  let regex = /[\w]+/;
+  let regex = /[\W]+/;
 
   if (user.value.length < 4) {
     error_user.innerHTML = "Must be 4+ characters long";
@@ -42,7 +42,7 @@ function validate_user() {
   } else if (user.value.length > 20) {
     error_user.innerHTML = "Must be less than 20 characters long";
     user.setCustomValidity("Invalid field.");
-  } else if (!regex.test(user.value)) {
+  } else if (regex.test(user.value)) {
     error_user.innerHTML = "Must not contain special characters";
     user.setCustomValidity("Invalid field.");
   } else {
