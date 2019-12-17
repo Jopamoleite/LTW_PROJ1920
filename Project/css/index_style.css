@@ -3,20 +3,26 @@ a {
   color: inherit;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #e8a87c;
+  background-image: url(/images/index_house1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-left: 10%;
-  margin-bottom: 5%;
   margin-top: 0;
-  max-width: 30em;
-  max-height: 50em;
-  height: fit-content;
 }
 
 div.main {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 20% 40% 20%;
+
+  max-width: 30em;
+  max-height: 50em;
+  height: fit-content;
 
   color: #252525;
   background-color: #fdfdfd;

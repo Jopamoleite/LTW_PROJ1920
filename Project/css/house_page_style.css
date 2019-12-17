@@ -85,7 +85,9 @@
 #booking{
     grid-area: booking;
 
-    width: 100%;
+    max-width: 80%;
+    width: fit-content;
+    height: fit-content;
 
     display: inline-block;
 
@@ -93,7 +95,18 @@
     font-weight: bolder;
     font-style: normal;
 
-    border-width: 1px;
-    border-color: #AAAAAA;
-    border-style: solid;
+    border-radius: 1.4em;
+    border-style: none;
+    box-shadow: 0 0 1em rgba(50, 50, 50, 0.75);
+
+    
+}
+
+#booking h1{
+    margin: 1em;
+    text-align: center;
+}
+
+#booking_form{
+    margin: 2em;
 }

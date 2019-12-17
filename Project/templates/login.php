@@ -55,6 +55,9 @@ function print_body()
           <input id="register_button" name="submit" class="button" type="submit" value="Register">
         </form>
         <div id="error_all"></div>
+        <!--<div class="index_img">
+          <img src="../images/index_house1.jpg">
+        </div>-->
       </div>
     </body>
 <?php
