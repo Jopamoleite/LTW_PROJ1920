@@ -40,12 +40,13 @@ if ($photos == false) {
 ?>
   <img src="../images/<?php echo $photo ?>">
 </div>
-<div class="house">
   <div id="house_info">
     <h1><?php echo $title ?></h1>
-    <h2><?php echo $location ?></h2>
-    <h3><?php echo $price ?>€/night</h3>
-    <h3><?php echo $capacity ?> guests</h3>
+    <section id="house_data">
+      <h2><?php echo $location ?></h2>
+      <h3><?php echo $price ?>€/night</h3>
+      <h3><?php echo $capacity ?> guests</h3>
+    </section>
     <h4><?php echo $address ?></h4>
     <a><?php echo $description ?></a>
   </div>

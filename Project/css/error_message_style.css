@@ -20,13 +20,13 @@
     content: '';
     border: 7px solid transparent;
     position: absolute;
-    top: 11px;
+    top: 0.7em;
   }
   .error_message:after {
     border-right: 7px solid #fce4e4;
-    left: -14px;
+    left: -0.9em;
   }
   .error_message:before {
     border-right: 7px solid #fcc2c3;
-    left: -15px;
+    left: -0.9em;
   }
