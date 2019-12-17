@@ -1,10 +1,8 @@
-.error_message {
-    background-color: #fce4e4;
-    border: 1px solid #fcc2c3;
+.error_message, .info_message {
+    
     border-radius: 0.5em;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
-    color: #cc0033;
     float: left;
     font-weight: bold;
     line-height: 1.5em;
@@ -14,5 +12,17 @@
     padding-right: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 1em;
-  } 
+} 
+
+.error_message{
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  color: #cc0033;
+}
+
+.info_message{
+  background-color: #dff2bf;
+  border: 1px solid #5fd09e;
+  color: #4f8a10;
+}
   

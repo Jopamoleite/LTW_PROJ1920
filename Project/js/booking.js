@@ -70,7 +70,7 @@ function check_dates() {
   }
 
   if (!guests.checkValidity() || !check_in.checkValidity() || !check_out.checkValidity()) {
-    error.innerHTML = "Fill valid information";
+    error.innerHTML = "Fill with valid information";
     return;
   }
 

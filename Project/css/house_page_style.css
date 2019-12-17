@@ -42,6 +42,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     font-style: normal;
+    max-width: 40%;
 }
 
 #house_info h1{
@@ -92,9 +93,9 @@
     max-width: 100%;
     height: fit-content;
 
-  font-family: "Open Sans", sans-serif;
-  font-weight: bolder;
-  font-style: normal;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
 
     margin: 1em;
     padding: 0.5em;

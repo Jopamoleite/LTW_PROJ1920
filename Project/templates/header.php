@@ -12,7 +12,7 @@
     <link href="../css/user_profile_style.css" rel="stylesheet">
     <link href="../css/house_results_style.css" rel="stylesheet">
     <link href="../css/house_page_style.css" rel="stylesheet">
-    <link href="../css/error_message_style.css" rel="stylesheet">
+    <link href="../css/messages_style.css" rel="stylesheet">
   </head>
   <body>
     <?php if (!isset($_SESSION['userID']) || empty($_SESSION['userID'])) { header("Location: ../pages/invalid_back_page.php"); } ?>
