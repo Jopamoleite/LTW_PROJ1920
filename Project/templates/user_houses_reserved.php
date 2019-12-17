@@ -1,6 +1,6 @@
 
 <div id="houses_rented_tab" class="tabcontent">
-<section id="profile_houses_rented" class="flex_row">
+<section id="profile_houses_rented" class="flex-container">
   <div class="user_house_list">
   <?php
     $rented = getUserHousesReservations($id, date("Y-m-d"));
@@ -23,6 +23,7 @@
       }
     }
   ?>
+  <div id="filler"> Easter Egg </div>
   </div>
 </section>
 </div>
