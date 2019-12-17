@@ -97,7 +97,7 @@ function confirmation() {
         confirm_in.innerHTML = in_;
         confirm_out.innerHTML = out;
         confirm_guest.innerHTML = parseInt(guests.value);
-        confirm_price.innerHTML = price_final;
+        confirm_price.innerHTML = price_final + "€";
 
       } else {
         error.innerHTML = this.responseText;
