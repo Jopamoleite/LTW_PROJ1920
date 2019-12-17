@@ -13,7 +13,7 @@ a.house {
   padding-bottom: 0.5em;
   border-top-left-radius: 1.6em;
   border-top-right-radius: 1.6em;
-  box-shadow: 0px 2px 5px rgba(0.7, 0.7, 0.7, 0.4);
+  box-shadow: 0 0 0.5em #41b3a3;
 }
 
 a.house img {
@@ -23,7 +23,7 @@ a.house img {
   border-style: solid;
   border-width: 0em;
   border-bottom-width: 0.2em;
-  border-color: #000000;
+  border-color: #41b3a3;
 }
 
 a.house h1 {
