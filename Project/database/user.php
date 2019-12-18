@@ -195,6 +195,18 @@
     }
   }
 
+  function getUserFromId($id) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('SELECT * FROM User_ WHERE id = ?;');
+      $stmt->execute(array($id));
+      $user = $stmt->fetch();
+      return $user;
+    } catch (PDOException $e) {
+      error_log('Error: ' . $e->getMessage());
+    }
+  }
+
   function getUserReservations($id) {
     global $dbh;
     try {

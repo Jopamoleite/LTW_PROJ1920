@@ -72,14 +72,29 @@
   font-size: 1.1em;
 }
 
-#house_info a{
-    display: block;
+#house_info span{
+  display: block;
 
   margin-top: 2em;
 
   font-weight: lighter;
   color: #555555;
   font-size: 1em;
+}
+#house_info a{
+  display: inline-block;
+
+  margin-top: 5em;
+  vertical-align: 50%;
+
+  font-weight: lighter;
+  color: #555555;
+  font-size: 2em;
+  font-weight: 900;
+}
+#house_info a b{
+  text-align: center;
+  vertical-align: 10%;
 }
 
 #booking{

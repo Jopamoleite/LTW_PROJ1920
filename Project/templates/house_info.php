@@ -25,6 +25,10 @@
   $capacity = $house['capacity'];
   $description = $house['description'];
   $owner_id = $house['ownerID'];
+  $owner = getUserFromId($owner_id);
+  $owner_name = $owner['name'];
+  $owner_user = $owner['username'];
+  $owner_img = $owner['image_name'];
   $price = $house['price_day'];
 ?>
 
@@ -49,5 +53,9 @@
       <h3><?php echo $capacity ?> guests</h3>
     </section>
     <h4><?php echo $address ?></h4>
-    <a><?php echo $description ?></a>
+    <span><?php echo $description ?></span>
+    <a href="user_profile_page.php?user=<?php echo $owner_user ?>">
+      <img src="../images/<?php echo $owner_img ?>" width="30" height="30">
+      <b><?php echo $owner_name ?></b>
+    </a>
   </div>
