@@ -29,7 +29,7 @@
     $in = $_GET['in'];
     $house = $_GET['house'];
     if (getConflict($house, $in)) {
-      echo "Invalid check-in";
+      echo "Check-in conflicts with other reservations";
       die();
     }
 
@@ -42,7 +42,7 @@
     $house = $_GET['house'];
 
     if (getConflict($house, $out)) {
-      echo "Invalid check-out";
+      echo "Check-out conflicts with other reservations";
       die();
     }
 

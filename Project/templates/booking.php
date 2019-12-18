@@ -31,7 +31,7 @@
         <h3>Guests:     </h3><span id="confirm_guest"></span>
         <h3>Total price:      </h3><span id="confirm_price"></span>
         <button onclick="confirmed()">Confirm</button>
-        <button onclick="window.location.reload();">Back</button>
+        <button onclick="cancel()">Back</button>
     </div>
 </div>
 

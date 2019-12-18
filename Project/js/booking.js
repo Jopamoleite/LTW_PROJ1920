@@ -60,17 +60,27 @@ function check_dates() {
   let check_out_date = new Date(check_out.value);
 
   if(check_in_date.getTime() < today.getTime()){
-    error.innerHTML = "Check-in too early";
+    error.innerHTML = "Check-in date must be after today's date";
     return;
   }
 
   if(check_out_date.getTime() < today.getTime()){
-    error.innerHTML = "Check-out too early";
+    error.innerHTML = "Check-out date must be after today's date";
     return;
   }
 
-  if (!guests.checkValidity() || !check_in.checkValidity() || !check_out.checkValidity()) {
-    error.innerHTML = "Fill with valid information";
+  if (!guests.checkValidity()) {
+    error.innerHTML = "Error in guests!";
+    return;
+  }
+
+  if (!check_in.checkValidity()) {
+   error.innerHTML = "Error in check-in";
+    return;
+  }
+
+  if (!check_out.checkValidity()) {
+    error.innerHTML = "Error in check-out";
     return;
   }
 
@@ -111,7 +121,7 @@ function confirmation() {
       if (!isNaN(price)) {
         let in_ = new Date(check_in.value);
         let out = new Date(check_out.value);
-        let price_final = ((out.getTime() - in_.getTime()) / (1000 * 3600 * 24)) * price;
+        let price_final = ((out.getTime() - in_.getTime()) / (1000 * 3600 * 24) + 1) * price;
 
         confirm_in.innerHTML = in_;
         confirm_out.innerHTML = out;
@@ -138,4 +148,11 @@ function confirmed() {
   overlayb.style.display = 'none';
   overlay.style.display = 'none';
   form.submit();
+}
+
+function cancel(){
+  let overlay = document.getElementById("overlay");
+  let overlayb = document.getElementById("overlay_black");
+  overlayb.style.display = 'none';
+  overlay.style.display = 'none';
 }
