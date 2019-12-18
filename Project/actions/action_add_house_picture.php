@@ -20,7 +20,7 @@
     }
 
     if ($fileSize > 2000000) {
-      $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
+      $_SESSION['errormsg'] = "Please upload a file with less than 2MB";
       header('Location: user_profile_page.php?user=' . $_SESSION['username']);
       die();
     }
