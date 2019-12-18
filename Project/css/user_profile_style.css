@@ -188,9 +188,18 @@
   height: 3em;
   border-radius: 2em;
 
-  position: absolute;
-  left: 21%;
-  top: 52%;
+  position: relative;
+  left: 0;
+  bottom: 5em;
+  border: 0.05em solid #fdfdfd;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#profile_pic_upload + label:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .user_house_list {
