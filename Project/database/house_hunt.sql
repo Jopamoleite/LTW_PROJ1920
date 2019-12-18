@@ -70,6 +70,7 @@ INSERT INTO User_(username, password_, email, image_name, name, phone_num) VALUE
 INSERT INTO User_(username, password_, email, image_name, name, bio) VALUES ("Nuguets", "$2y$10$9VzBrfzfbJSJVxMzlv/WsOmT8E56vkg497cn08NpNe5dt1ZspfO4m", "jopamoleite@gmail.com", "5744c041c34c028ff7bcb5065ebecc06305fd175.png", "Joao Leite", "Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 INSERT INTO User_(username, password_, email, image_name, name, bio) VALUES ("marciat", "$2y$10$2EnrKpZilQM87cEQ0I1toeIGwpOWw1pPo0gdkgg.foW4M6Uy0haPC", "jakelong@americandragon.com", "803e38e4892752ee5a25ee038f63ccbcf9c698f3.jpg", "Marcia Teixeira", "Welcome to my profile!");
 INSERT INTO User_(username, password_, email, image_name, name) VALUES ("pene_proud", "$2y$10$tZhXGYWDDZFGdILWmsCCvewmkpZFjTSMh32qs11tsOuIgNQ4ieUWG", "penelope@gmail.com", "5a210173fa657e111eb2c3275ff0021e3a90b171.jpg", "Joao Campos");
+INSERT INTO User_(username, password_, email, image_name) VALUES ("novo_user", "$2y$10$xghcdjmKKq4.Gx5koG2Mdu40mh4GzD/0nD9m2erJhlQJBeGFexuC6", "novo@user.pt", "default_pic.bmp");
 
 INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Cute house with a lake view", "Porto, Portugal", "Legit Address 1", 100, 5, "Great for people who just want to relax!", 1);
 INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("House on the hills", "Lisbon, Portugal", "Not Fake Address", 200, 10, "It's always nice to take a little trip with friends :)", 1);
