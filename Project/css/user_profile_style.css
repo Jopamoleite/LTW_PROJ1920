@@ -225,6 +225,8 @@
   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
   line-height: 80%;
   padding-bottom: 0.5em;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
 }
 
 
@@ -308,18 +310,19 @@
   border-top-left-radius: 0.7em;
   border-top-right-radius: 0.7em;
   opacity: 1;
-  background-color: #252525;
-  padding-bottom: 1.1em;
-  color: #fdfdfd;
-  height: 3em;
+  background-color: #fdfdfd;
+  padding-bottom: 1em;
+  color: #252525;
+  height: 5em;
   width: 11.1em;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-
+  box-shadow: 0em -0.7em 0.5em rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
 
 .tab_links:hover{
+  outline:none;
   position: relative;
   background-color: #fdfdfd;
   color: #E05A61;
