@@ -115,7 +115,7 @@
     justify-self: center;
 }
 
-#booking_button{
+.button{
   -webkit-appearance: button;
   -moz-appearance: button;
 
@@ -145,7 +145,7 @@
   left: 2em;
 }
 
-#booking_button:hover {
+.button:hover {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -223,4 +223,41 @@
   margin-right: 1em;
 
   cursor: pointer;
+}
+
+#img_upload {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: -1;
+}
+#img_upload + label{
+  cursor: pointer;
+  content: url(/images/edit.png);
+  background-color: #252525;
+  width: 3em;
+  height: 3em;
+  border-radius: 2em;
+
+  position:relative;
+  top: 1em;
+  left: -10em;
+
+  border: 0.05em solid #fdfdfd;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#img_upload + label :hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#delete_button{
+  position:relative;
+  top: 0.5em;
+  left: -10em;
+  width: 9em;
+  height: 3em;
 }
