@@ -1,7 +1,5 @@
 .profile {
   border-radius: 1.4em;
-  border-style: solid;
-  border-color: #41b3a3;
   margin: auto;
   margin-top: 5em;
   width: 60%;
@@ -14,7 +12,7 @@
   color: #252525;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.7);
 }
 
 .profile_info {
@@ -40,7 +38,7 @@
 
 #edit_profile_link,
 #change_password_link {
-  color: #41b3a3;
+  color: #E05A61;
   float: left;
 }
 
@@ -158,7 +156,7 @@
   cursor: pointer;
 }
 
-#create_houses_button:hover {
+#create_houses_button:hover, .tab_links:hover {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -188,9 +186,9 @@
   height: 3em;
   border-radius: 2em;
 
-  position: relative;
-  left: 0;
-  bottom: 5em;
+  position:relative;
+  top: -5em;
+
   border: 0.05em solid #fdfdfd;
 
   -webkit-transition: all 0.3s ease-in-out;
@@ -216,13 +214,12 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-style: solid;
-  border-color: #41b3a3;
+  border-style: none;
   border-radius: 0.4em;
   background-color: #fdfdfd;
   color: #252525;
   font-family: "Roboto", sans-serif;
-  box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.7);
   line-height: 80%;
   padding-bottom: 0.5em;
 }
@@ -242,7 +239,7 @@
   border-style: solid;
   border-radius: 0.4em;
   border-style: none;
-  box-shadow: 0 0 0.5em #41b3a3;
+  box-shadow: 0em 0em 0.3em rgb(200, 200, 200, 0.7);
   margin: 1em;
   padding: 1em;
   padding-bottom: 0em;
@@ -253,6 +250,7 @@
   width: 15em;
   height: 15em;
   object-fit: cover;
+  border: 0.05em solid #CCCCCC;
 }
 
 .user_house_list .user_house h1 {
