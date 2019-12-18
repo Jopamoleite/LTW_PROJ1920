@@ -326,6 +326,10 @@
   font-weight: bold;
 }
 
+.tab_links:focus{
+  outline:0;
+}
+
 .tabs {
   display: flex;
   flex-wrap: nowrap;
