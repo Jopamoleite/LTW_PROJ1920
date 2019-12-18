@@ -10,7 +10,10 @@ a {
 }
 
 body {
-  background-color: #e8a87c;
+  background-image: url(/images/background.jpg);
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0em;
   overflow-x: hidden;
 }
@@ -31,6 +34,8 @@ body {
   margin: 0em;
   box-shadow: 0em 0.1em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
   align-items: center;
+
+  z-index: 20;
 }
 
 .page_header h1 {
@@ -91,6 +96,7 @@ body {
   display: none;
   top: 1.3em;
   right: 1.5em;
+  box-shadow: 0.3em 0.9em 1em rgb(50, 50, 50, 0.1);
 }
 
 .dropdown_content div {
@@ -114,6 +120,12 @@ body {
 .logout_button {
   cursor: pointer;
   margin: 0.5em;
+}
+
+.dropdown_content a:hover,
+.logout_button:hover,
+#username_link:hover{
+  color: #fe8b8e;
 }
 
 .logout_button {
