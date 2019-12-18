@@ -73,12 +73,12 @@ function check_dates() {
     error.innerHTML = "Error in guests!";
     return;
   }
-  
+
   if (!check_in.checkValidity()) {
    error.innerHTML = "Error in check-in";
     return;
   }
-  
+
   if (!check_out.checkValidity()) {
     error.innerHTML = "Error in check-out";
     return;
@@ -121,7 +121,7 @@ function confirmation() {
       if (!isNaN(price)) {
         let in_ = new Date(check_in.value);
         let out = new Date(check_out.value);
-        let price_final = (((out.getTime() - in_.getTime()) / (1000 * 3600 * 24))+1) * price;
+        let price_final = ((out.getTime() - in_.getTime()) / (1000 * 3600 * 24) + 1) * price;
 
         confirm_in.innerHTML = in_;
         confirm_out.innerHTML = out;

@@ -3,7 +3,7 @@
   border-style: solid;
   border-color: #41b3a3;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 5em;
   width: 60%;
   padding: 0.6em 3.4em;
   flex-direction: row;
@@ -82,13 +82,13 @@
 #change_password_button {
   border-style: solid;
   border-width: 1.5px;
-  border-color: #41b3a3;
+  border-color: #E05A61;
   border-radius: 1.4em;
   background-color: #fdfdfd;
 
   text-align: center;
 
-  color: #41b3a3;
+  color: #E05A61;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
   font-size: 0.9em;
