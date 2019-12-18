@@ -22,6 +22,10 @@ a.house:hover {
   transform: scale(1.05);
 }
 
+a.house h1:hover {
+  color: #E05A61;
+}
+
 a.house img {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
