@@ -65,3 +65,12 @@ CREATE TABLE Reservations
     FOREIGN KEY (touristID) REFERENCES User_(id)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO User_(username, password_, email, image_name) VALUES ("conta_generica", "$2y$10$eGBjQpixwBE/TwwR0y9jZeZSfKrazKo6rsocOL/upEOCRIxV3yJgu", "conta@gen.com", "default_pic.bmp");
+INSERT INTO User_(username, password_, email, image_name) VALUES ("Nuguets", "$2y$10$9VzBrfzfbJSJVxMzlv/WsOmT8E56vkg497cn08NpNe5dt1ZspfO4m", "jopamoleite@gmail.com", "5744c041c34c028ff7bcb5065ebecc06305fd175.png");
+INSERT INTO User_(username, password_, email, image_name) VALUES ("marciat", "$2y$10$2EnrKpZilQM87cEQ0I1toeIGwpOWw1pPo0gdkgg.foW4M6Uy0haPC", "jakelong@americandragon.com", "default_pic.bmp");
+INSERT INTO User_(username, password_, email, image_name) VALUES ("pene_proud", "$2y$10$tZhXGYWDDZFGdILWmsCCvewmkpZFjTSMh32qs11tsOuIgNQ4ieUWG", "penelope@gmail.com", "default_pic.bmp");
+
+
+
+
