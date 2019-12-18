@@ -23,8 +23,8 @@
     die();
   }
 
-  if ($fileSize > 3000000) {
-    $_SESSION['errormsg'] = "Please upload a file with less than 3MB";
+  if ($fileSize > 2000000) {
+    $_SESSION['errormsg'] = "Please upload a file with less than 2MB";
     header('Location: ../pages/add_house_page.php');
     die();
   }

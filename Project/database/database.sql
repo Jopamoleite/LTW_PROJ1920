@@ -82,6 +82,13 @@ INSERT INTO Place(title, location, address_, price_day, capacity, description, o
 INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("One small room", "London, England", "Great Address", 25, 1, "You know why you're here, just do it...", 4);
 INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Big house with beautiful garden", "Stockholm, Sweden", "Aadrrees", 350, 15, "Take some time off with a group of friends, and enjoy this beautiful house, ready to accommodate you all =)", 4);
 
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("513c1bb31411042befc2a516b63b77939d8cd539.jpg", 1);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("2d705ab7a503ef5b821336102ec39410203aefff.jpg", 2);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("92fb3a9e3b46b902a1cdeceda4ee64aad1b25bd6.png", 3);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("6fff03eb1d4db3b980eb3c3710b67b8e0eb0b8c0.png", 5);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("0abf937f486c0ba6ae471c2482b894eacde389d1.jpg", 8);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("e8379282fb2bca795984f8698b5dd094d8d9d274.png", 9);
+INSERT INTO PlaceImages(image_name, placeID) VALUES ("3a21e46f77d72882c94e3f29513f4c2a894c8aa0.png", 10);
 
 
 
