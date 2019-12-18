@@ -77,7 +77,7 @@ include_once 'includes/start.php';
     }
 
     if (empty($houses)) { ?>
-      <a class="no_match" href="../pages/main_page.php">';
+      <a class="no_match" href="../pages/main_page.php">
         <img src="../images/no_matches.png" id="no_match" alt="No matches">
         <h1>It appears there are no houses matching that criteria :( </h1>
       </a>
