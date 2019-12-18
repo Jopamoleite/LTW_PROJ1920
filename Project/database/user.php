@@ -155,6 +155,18 @@
     }
   }
 
+  function checkUserFromId($userID) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('SELECT * FROM User_ WHERE id = ?;');
+      $stmt->execute(array($userID));
+      $user = $stmt->fetch();
+      return $user;
+    } catch (PDOException $e) {
+      error_log('Error: ' . $e->getMessage());
+    }
+  }
+
   function checkEmail($email) {
     global $dbh;
     try {

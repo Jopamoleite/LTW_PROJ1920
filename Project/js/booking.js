@@ -70,17 +70,17 @@ function check_dates() {
   }
 
   if (!guests.checkValidity()) {
-    error.innerHTML = "Error in guests!";
+    error.innerHTML = "Invalid number of guests!";
     return;
   }
 
   if (!check_in.checkValidity()) {
-   error.innerHTML = "Error in check-in";
+   error.innerHTML = "Check-in conflicts with other reservations";
     return;
   }
 
   if (!check_out.checkValidity()) {
-    error.innerHTML = "Error in check-out";
+    error.innerHTML = "Check-out conflicts with other reservations";
     return;
   }
 

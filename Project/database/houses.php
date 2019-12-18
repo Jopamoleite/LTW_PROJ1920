@@ -212,4 +212,14 @@
       error_log('Error: ' . $e->getMessage());
     }
   }
+
+  function removeHouse($house_id){
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('DELETE FROM Place WHERE id = ?;');
+      return $stmt->execute(array($house_id));
+    } catch (PDOException $e) {
+      error_log('Error: ' . $e->getMessage());
+    }
+  }
 ?>

@@ -20,6 +20,7 @@
             <img src="../images/<?php echo $photo ?>" id="house_pic" alt="House pic" width="300" height="300">
             <h2> Check-in: <?php echo $entry['begin_date'] ?></h2>
             <h2> Check-out: <?php echo $entry['end_date'] ?></h2>
+            <h2> Tourist: <?php echo checkUserFromId($entry['touristID'])['username'] ?></h2>
           </a>
           <?php
         }
