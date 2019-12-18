@@ -13,7 +13,6 @@
     <link href="../css/house_results_style.css" rel="stylesheet">
     <link href="../css/house_page_style.css" rel="stylesheet">
     <link href="../css/messages_style.css" rel="stylesheet">
-    <script src="../js/snow.js"></script>
   </head>
   <body>
     <?php if (!isset($_SESSION['userID']) || empty($_SESSION['userID'])) { header("Location: ../pages/invalid_back_page.php"); } ?>
