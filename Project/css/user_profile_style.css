@@ -130,14 +130,16 @@
 }
 
 #create_houses_button {
-  margin: 0.7em;
-  margin-left: 20%;
-  margin-right: auto;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
 
   align-self: center;
+
+  position: relative;
+  top: 45%;
+
+  margin: 0.7em;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -224,10 +226,6 @@
   padding-bottom: 0.5em;
 }
 
-.user_house_list #create_houses_button {
-  position: relative;
-  margin: 2em 2em;
-}
 
 .user_house_list #filler {
   margin: 0em;
@@ -292,9 +290,6 @@
 
 .tabcontent {
   display: none;
-}
-#create_houses_button {
-  float: bottom;
 }
 
 .tab_links {
