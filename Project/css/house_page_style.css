@@ -276,3 +276,13 @@
   width: 9em;
   height: 3em;
 }
+
+#house_owner_img{
+  border-radius: 0.2em;
+}
+
+#house_owner_link{
+  font-size: medium;
+  font-weight: bolder;
+  color: #000;
+}

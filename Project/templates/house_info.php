@@ -55,7 +55,7 @@
     <h4><?php echo $address ?></h4>
     <span><?php echo $description ?></span>
     <a href="user_profile_page.php?user=<?php echo $owner_user ?>">
-      <img src="../images/<?php echo $owner_img ?>" width="30" height="30">
-      <b><?php echo $owner_name ?></b>
+      <img id="house_owner_img" src="../images/<?php echo $owner_img ?>" width="30" height="30">
+      <b id="house_owner_link"><?php echo $owner_name ?></b>
     </a>
   </div>
