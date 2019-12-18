@@ -10,7 +10,7 @@ a {
 }
 
 body {
-  background-image: url(/images/background.jpg);
+  background-image: url(../images/background.jpg);
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-size: cover;

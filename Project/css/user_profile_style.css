@@ -183,7 +183,7 @@
 
 #profile_pic_upload + label {
   cursor: pointer;
-  content: url(/images/edit.png);
+  content: url(../images/edit.png);
   background-color: #252525;
   width: 3em;
   height: 3em;
