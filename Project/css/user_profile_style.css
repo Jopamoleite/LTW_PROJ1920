@@ -141,7 +141,7 @@
   top: 25%;
 
   margin: 2em;
-
+  
   text-decoration: none;
   text-transform: uppercase;
   color: initial;
@@ -244,6 +244,7 @@
   margin: 1em;
   padding: 1em;
   padding-bottom: 0em;
+  overflow-wrap: break-word;
 }
 
 .user_house_list .user_house img {
@@ -257,7 +258,7 @@
 .user_house_list .user_house h1 {
   font-size: 1.3em;
   font-weight: bold;
-  line-height: 1%;
+  line-height: 100%;
 }
 
 .user_house_list .user_house h2 {
@@ -317,13 +318,12 @@
   width: 11.1em;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  box-shadow: 0em -0.7em 0.5em rgba(0, 0, 0, 0.7);
+  box-shadow: 0em -0.2em 0.5em rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
 
 .tab_links:hover{
   outline:none;
-  position: relative;
   background-color: #fdfdfd;
   color: #E05A61;
   font-weight: bold;
