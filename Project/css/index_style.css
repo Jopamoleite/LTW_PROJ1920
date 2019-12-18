@@ -31,7 +31,7 @@ div.main {
   padding-bottom: 0.5em;
   line-height: 0.4em;
   text-align: center;
-  box-shadow: 0em 0.6em 0.5em rgba(0.7, 0.7, 0.7, 0.4);
+  box-shadow: 0em 0.6em 0.5em rgba(0, 0, 0, 0.4);
 }
 
 div.main h1 {
