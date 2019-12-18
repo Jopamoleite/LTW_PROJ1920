@@ -109,7 +109,7 @@
 
   position: relative;
   left: 7.6em;
-  top: -5.55em;
+  top: -4.2em;
 }
 
 #edit_profile_button,
@@ -126,7 +126,8 @@
 }
 
 #change_password_button {
-  margin-top: 2em;
+  position: relative;
+  top: 1.3em;
 }
 
 #create_houses_button {
