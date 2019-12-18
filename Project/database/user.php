@@ -198,9 +198,9 @@
   function getUserReservations($id) {
     global $dbh;
     try {
-      $qry = 'SELECT * FROM Reservations WHERE touristID = ?;';
+      $qry = 'SELECT * FROM Reservations WHERE touristID = ? AND date(?) <= date(end_date) ORDER BY begin_date, end_date;';
       $stmt = $dbh->prepare($qry);
-      $stmt->execute(array($id));
+      $stmt->execute(array($id, date("Y-m-d")));
       $table = $stmt->fetchAll();
       return $table;
     } catch (PDOException $e) {

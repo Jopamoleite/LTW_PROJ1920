@@ -12,7 +12,7 @@ a.house {
   margin: 1% 1%;
   padding-bottom: 0.5em;
   border-radius: 0.5em;
-  box-shadow: 0.1em 0.1em 0.3em rgb(200, 200, 200, 0.7);
+  box-shadow: 0.1em 0.1em 0.3em rgb(0, 0, 0, 0.7);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -58,15 +58,17 @@ a.no_match h1 {
   vertical-align: bottom;
   color: #000000;
   line-height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 a.no_match img {
   position: relative;
   display: block;
 }
+
 a.no_match {
   position: relative;
+  top: 8em;
   margin: 1% 1%;
   padding-bottom: 0.5em;
-  border-radius: 1.4em;
 }
