@@ -167,6 +167,16 @@
     }
   }
 
+  function removePhotoFromHouse($image, $house_id) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('DELETE FROM PlaceImages WHERE image_name = ? AND placeID = ? ;');
+      $stmt->execute(array($image, $house_id));
+    } catch (PDOException $e) {
+      error_log('Error: ' . $e->getMessage());
+    }
+  }
+
   function getHouse($house_id) {
     global $dbh;
     try {
