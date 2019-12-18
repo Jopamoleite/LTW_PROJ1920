@@ -40,6 +40,7 @@
     addPhotoToHouse($newName, $houseID);
     if ($old_photo != "default_house.jpg") {
       unlink("images/" . $old_photo);
+      removePhotoFromHouse($old_photo, $houseID);
     }
   }
 
