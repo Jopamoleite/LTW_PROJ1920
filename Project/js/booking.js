@@ -60,17 +60,27 @@ function check_dates() {
   let check_out_date = new Date(check_out.value);
 
   if(check_in_date.getTime() < today.getTime()){
-    error.innerHTML = "Check-in too early";
+    error.innerHTML = "Check-in date must be after today's date";
     return;
   }
 
   if(check_out_date.getTime() < today.getTime()){
-    error.innerHTML = "Check-out too early";
+    error.innerHTML = "Check-out date must be after today's date";
     return;
   }
 
-  if (!guests.checkValidity() || !check_in.checkValidity() || !check_out.checkValidity()) {
-    error.innerHTML = "Fill with valid information";
+  if (!guests.checkValidity()) {
+    error.innerHTML = "Error in guests!";
+    return;
+  }
+
+  if (!check_in.checkValidity()) {
+   error.innerHTML = "Error in check-in";
+    return;
+  }
+
+  if (!check_out.checkValidity()) {
+    error.innerHTML = "Error in check-out";
     return;
   }
 
