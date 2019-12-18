@@ -42,7 +42,7 @@
 
   addReservation($houseID, $_SESSION['userID'], $checkin, $checkout);
 
-  $_SESSION['infomsg'] = "Reservations made!";
+  $_SESSION['infomsg'] = "Reservation made!";
 
   header('Location: ../pages/house_page.php?house=' . $houseID);
 ?>

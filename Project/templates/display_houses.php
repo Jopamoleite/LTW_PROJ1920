@@ -92,8 +92,8 @@ include_once 'includes/start.php';
         } ?>
         <a class="house" href="../pages/house_page.php?house=<?php echo $entry['id'] ?>">
           <img src="../images/<?php echo $photo ?>" id="house pic" alt="House pic" width="300" height="300">
-          <h1> <?php echo $entry['location']; ?> </h1>
-          <h2> <?php echo $entry['title']; ?> </h2>
+          <h2> <?php echo $entry['location']; ?> </h2>
+          <h1> <?php echo $entry['title']; ?> </h1>
           <h2> <?php echo $entry['price_day']; ?> € / night</h2>
         </a>
         <?php
