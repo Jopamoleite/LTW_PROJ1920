@@ -71,16 +71,16 @@ INSERT INTO User_(username, password_, email, image_name, name, bio) VALUES ("Nu
 INSERT INTO User_(username, password_, email, image_name, name, bio) VALUES ("marciat", "$2y$10$2EnrKpZilQM87cEQ0I1toeIGwpOWw1pPo0gdkgg.foW4M6Uy0haPC", "jakelong@americandragon.com", "803e38e4892752ee5a25ee038f63ccbcf9c698f3.jpg", "Marcia Teixeira", "Welcome to my profile!");
 INSERT INTO User_(username, password_, email, image_name, name) VALUES ("pene_proud", "$2y$10$tZhXGYWDDZFGdILWmsCCvewmkpZFjTSMh32qs11tsOuIgNQ4ieUWG", "penelope@gmail.com", "5a210173fa657e111eb2c3275ff0021e3a90b171.jpg", "Joao Campos");
 
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Cute house with a lake view", ?, ?, ?, ?, ?, 1);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("House on the hills", ?, ?, ?, ?, ?, 1);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Huge house with a pool", ?, ?, ?, ?, ?, 2);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Small apartment", ?, ?, ?, ?, ?, 3);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("House near the beach", ?, ?, ?, ?, ?, 3);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Great house with great prices!", ?, ?, ?, ?, ?, 3);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Good home", ?, ?, ?, ?, ?, 4);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Suitable for ", ?, ?, ?, ?, ?, 4);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?, 4);
-INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES (?, ?, ?, ?, ?, ?, 4);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Cute house with a lake view", "Porto, Portugal", "Legit Address 1", 100, 5, "Great for people who just want to relax!", 1);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("House on the hills", "Lisbon, Portugal", "Not Fake Address", 200, 10, "It's always nice to take a little trip with friends :)", 1);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Huge house with a pool", "Lisbon, Portugal", "Yes, Address", 500, 10, "Enjoy the house with your group of friends! Can bring one or two people over the limit ;)))", 2);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Small apartment", "Madrid, Spain", "Not using word Address", 35, 2, "Just take it", 3);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("House near the beach", "Algarve, Portugal", "Address, yes", 250, 6, "Rent me and you'll always be ready to ride the waves!", 3);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Great house with great prices!", "Paris, France", "Bonjour", 1000, 3, "It's a really GREAT deal!!!!", 3);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Good home", "Dublin, Ireland", "Here", 300, 5, "Spend some nice moments :D", 4);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Nice house in the hills", "Porto, Portugal", "Help Me", 400, 7, "Better than any other house on the hills!", 4);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("One small room", "London, England", "Great Address", 25, 1, "You know why you're here, just do it...", 4);
+INSERT INTO Place(title, location, address_, price_day, capacity, description, ownerID) VALUES ("Big house with beautiful garden", "Stockholm, Sweden", "Aadrrees", 350, 15, "Take some time off with a group of friends, and enjoy this beautiful house, ready to accommodate you all =)", 4);
 
 
 
